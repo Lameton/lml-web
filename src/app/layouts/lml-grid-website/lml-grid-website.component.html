@@ -1,0 +1,8 @@
+<div class="flex h-screen bg-[var(--color-dark01)] z-10">
+  @for (column of columns(); track $index) {
+  <div
+    [style.width]="column.width"
+    class="h-full border-r border-[var(--color-dark02)] last:border-r-0"
+  ></div>
+  }
+</div>

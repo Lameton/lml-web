@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-inknut-antiqua: 'Inknut Antiqua', serif;
+
+  --color-dark01: #242423;
+  --color-dark02: #333533;
+  --color-yellow: #f5cb5c;
+  --color-clear01: #cfdbd5;
+  --color-clear02: #e8eddf;
+}

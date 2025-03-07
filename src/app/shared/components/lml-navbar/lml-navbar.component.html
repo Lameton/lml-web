@@ -1,0 +1,34 @@
+<nav class="font-inknut-antiqua font-bold fixed top-0 left-0 right-0 z-50 grid grid-cols-12 items-center p-4">
+  <!-- Logo -->
+  <div class="col-span-2 flex items-center">
+    <img src="/src/app/assets/logo/lml-logo-01.svg" alt="lml Logo" class="h-10 w-auto">
+  </div>
+
+  <!-- Enlaces de navegación (visibles en pantallas grandes) -->
+  @if (!isCompactMenu()) {
+    <div class="col-span-8 grid grid-cols-8 gap-2 items-center">
+      <div class=" bg-[var(--color-clear01)] shadow-md rounded-full p-1 col-start-3 col-span-4 grid grid-cols-4 gap-2">
+        @for (link of navLinks; track link.name) {
+          <a [href]="link.href" 
+          class="text-center text-sm hover:text-[var(--color-dark02)] transition duration-300 ">
+         {{ link.name }}
+       </a>
+       
+        }
+      </div>
+    </div>
+  }
+
+  <!-- Iconos de redes sociales -->
+  <div class="col-span-2 flex justify-end space-x-2">
+    @for (icon of socialIcons; track icon.name) {
+      <button (click)="openLink(icon.href)" 
+              class=" bg-[var(--color-clear02)] p-2 rounded-full hover:bg-[var(--color-dark02)] hover:bg-opacity-20 transition-all duration-300 focus:outline-none focus:ring-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path [attr.d]="icon.icon"/>
+        </svg>
+      </button>
+    }
+  </div>
+</nav>
+
