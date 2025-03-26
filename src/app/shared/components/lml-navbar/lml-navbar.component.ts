@@ -6,16 +6,13 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   templateUrl: './lml-navbar.component.html',
 })
 export default class LmlNavbarComponent implements OnInit {
-
-  // Enlaces de navegación
   navLinks = [
-    { name: 'Inicio', href: '#', visibleFrom: 'lg' },
-    { name: 'Proyectos', href: '#', visibleFrom: 'sm' },
-    { name: 'Sobre mí', href: '#', visibleFrom: 'md' },
-    { name: 'Contacto', href: '#', visibleFrom: 'lg' }
+    { name: 'Inicio', href: '#' },
+    { name: 'Proyectos', href: '#' },
+    { name: 'Sobre mí', href: '#' },
+    { name: 'Contacto', href: '#' },
   ];
 
-  // Iconos de redes sociales
   socialIcons = [
     {
       name: 'LinkedIn',
@@ -34,40 +31,39 @@ export default class LmlNavbarComponent implements OnInit {
     },
   ];
 
-  // Estado del menú desplegable
   isDropdownOpen = signal(false);
-
-  // Estado para determinar si se debe mostrar el botón de menú
   isCompactMenu = signal(false);
 
   private breakpointObserver = inject(BreakpointObserver);
 
+  logoNormal = '/assets/logo/lml-logo-01.svg';
+  logoHover = '/assets/logo/lml-logo-02.svg';
+  currentLogo = this.logoNormal;
+
   ngOnInit() {
-    // Observa cambios en los breakpoints
-    this.breakpointObserver.observe([Breakpoints.Small, Breakpoints.XSmall])
+    this.breakpointObserver
+      .observe([Breakpoints.Handset])
       .subscribe((state) => {
-        this.isCompactMenu.set(state.matches); // Activa el menú compacto si la pantalla es pequeña
+        this.isCompactMenu.set(state.matches);
+        if (!state.matches) {
+          this.isDropdownOpen.set(false);
+        }
       });
   }
 
-  // Alternar el estado del menú desplegable
   toggleDropdown(): void {
-    this.isDropdownOpen.update(value => !value);
+    this.isDropdownOpen.update((value) => !value);
   }
 
-  // Método para obtener la clase de visibilidad (para responsive design)
-  getVisibilityClass(visibleFrom: string): string {
-    switch (visibleFrom) {
-      case 'xs': return 'hidden xs:block';
-      case 'sm': return 'hidden sm:block';
-      case 'md': return 'hidden md:block';
-      case 'lg': return 'hidden lg:block';
-      default: return '';
-    }
-  }
-
-  // Método para abrir enlaces en una nueva pestaña
   openLink(url: string): void {
     window.open(url, '_blank');
+  }
+
+  onLogoHover() {
+    this.currentLogo = this.logoHover;
+  }
+
+  onLogoLeave() {
+    this.currentLogo = this.logoNormal;
   }
 }

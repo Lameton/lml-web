@@ -1,12 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
-@import "tailwindcss";
-@theme {
-  --font-inknut-antiqua: 'Inknut Antiqua', serif;
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss';
 
-  --color-dark01: #242423;
-  --color-dark02: #333533;
-  --color-yellow: #f5cb5c;
-  --color-clear01: #cfdbd5;
-  --color-clear02: #e8eddf;
+:root {
+  --color-dark: #1f2020;
+  --color-magenta: #ed6c80;
+  --color-blue: #386bb3;
+  --color-clear-blue: #d2e2f5;
+  --color-clear-gray: #e5e5e5;
+}
+
+[ngIf]:not(.active) {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
