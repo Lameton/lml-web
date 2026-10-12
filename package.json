@@ -9,7 +9,7 @@
     "lint": "eslint",
     "images": "tsx scripts/optimize-images.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "next": "16.4.0",
