@@ -11,7 +11,8 @@
  *
  * La clave de cada imagen es su ruta dentro de recursos/ sin extensión:
  * recursos/artabrian/web-escritorio.png → "artabrian/web-escritorio".
- * Las imágenes dentro de recursos/carteles/ se comprimen con más calidad
+ * Las imágenes dentro de cualquier carpeta "carteles" (recursos/carteles/,
+ * recursos/artabrian/carteles/…) se comprimen con más calidad
  * porque tienen texto fino.
  */
 import { existsSync } from "node:fs";
@@ -70,7 +71,9 @@ async function processImage(file: string): Promise<[string, ImageEntry]> {
     );
   }
 
-  const isPoster = key.startsWith(`${POSTERS_DIR}/`);
+  // Carpetas de la ruta, sin el nombre del archivo: "artabrian/carteles/pokemon" → ["artabrian", "carteles"].
+  const folders = key.split("/").slice(0, -1);
+  const isPoster = folders.includes(POSTERS_DIR);
   const quality = isPoster ? QUALITY.poster : QUALITY.default;
 
   // autoOrient() gira la imagen según su EXIF (fotos de móvil) y

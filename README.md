@@ -37,7 +37,7 @@ npm run dev       # servidor de desarrollo en http://localhost:3000
 Los originales a máxima calidad van en `recursos/`, que no se sube al repositorio. `npm run images` genera en `public/images/`:
 
 - versiones AVIF y WebP a 640, 1024, 1600 y 2400 px de ancho, sin ampliar nunca el original;
-- más calidad para las imágenes de `recursos/carteles/`, que tienen texto fino;
+- más calidad para las imágenes de cualquier carpeta `carteles/`, que tienen texto fino;
 - `manifest.json` con el ancho, el alto, las rutas y una miniatura difuminada de cada imagen.
 
 Los nombres de archivo van en minúsculas y con guiones (`cartel-honeytomb.jpg`). La clave de cada imagen es su ruta sin extensión:
