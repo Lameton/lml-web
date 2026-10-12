@@ -35,7 +35,7 @@ Con la exportación estática **no** se pueden usar: Server Actions, rutas diná
 ## Estructura de carpetas
 
 ```
-web-portfolio/
+lml-web/
 ├── recursos/                 # Originales a máxima calidad. FUERA DE GIT (.gitignore)
 ├── public/images/            # Imágenes optimizadas generadas por el script. No editar a mano
 ├── scripts/
