@@ -51,15 +51,22 @@ web-portfolio/
 
 ## Imágenes
 
-- Los originales van en `recursos/`, que no se sube a GitHub.
+- Los originales van en `recursos/`, que no se sube a GitHub, con una subcarpeta por categoría: `perfil/`, `artabrian/` (con `artabrian/carteles/`), `marcas/` y `carteles/`. Nombres en minúsculas y con guiones.
 - `scripts/optimize-images.ts` usa `sharp` para generar en `public/images/`: AVIF y WebP en varios anchos (640, 1024, 1600 y 2400 px, sin ampliar nunca el original), una miniatura difuminada y un JSON con ancho y alto.
-- Los carteles con texto fino usan más calidad o WebP sin pérdida. Rodrigo valida el resultado visual.
+- Los carteles (cualquier carpeta llamada `carteles/`) tienen texto fino y usan más calidad. Rodrigo valida el resultado visual.
 - El componente `ResponsiveImage` sirve las imágenes con `<picture>`, `srcset` y `sizes`, con `width` y `height` siempre definidos. La imagen principal de la portada carga con prioridad; el resto, en diferido.
 - Logotipos e iconos en SVG optimizado.
 
 ## Contenido de la web
 
-1. **Inicio** (`/`): presentación (nombre, frase sobre lo que hace, foto, franja de datos), proyecto destacado (Artabrian Weekend), Marcas, Carteles, Qué hago (Desarrollo y Diseño), Fuera del trabajo (juegos de cartas, eventos, esports) y Contacto.
+1. **Inicio** (`/`), en este orden (primero lo que busca un reclutador front-end):
+   1. Presentación: nombre, frase sobre lo que hace, foto y franja de datos.
+   2. Proyecto destacado: Artabrian Weekend.
+   3. Qué hago: Desarrollo y Diseño.
+   4. Experiencia: línea temporal breve con los puestos de los CV y descarga de los dos PDF.
+   5. Galería de diseño: marcas y carteles mezclados, con un filtro para ver una categoría o ambas. Sin JavaScript se ven todas las piezas; el filtro solo oculta.
+   6. Fuera del trabajo: juegos de cartas, eventos y esports.
+   7. Contacto.
 2. **Caso de estudio** (`/proyectos/artabrian-weekend`): contexto, papel de Rodrigo, la web (de Angular a React, arquitectura basada en JSON), la identidad, resultados y qué haría distinto.
 3. **404** con enlace al inicio.
 
