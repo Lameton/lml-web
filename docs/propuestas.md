@@ -8,6 +8,8 @@ Nada de lo que hay aquí está aplicado. Las propuestas visuales son solo propue
 
 ### 1.1 El repositorio `Lameton/lml-web` ya existe
 
+> **Resuelto:** se sobrescribe `main` con este proyecto y el código de Angular queda guardado en la rama `angular-2025`.
+
 Es tu portfolio anterior en Angular: público, tres commits (3 al 26 de marzo de 2025). No he subido nada para no sobrescribirlo. Opciones:
 
 | Opción | Qué pasa | Mi opinión |
@@ -22,6 +24,8 @@ Cuando elijas, son tres comandos (`gh repo rename`, `gh repo archive`, `gh repo 
 
 ### 1.2 Las 5 vulnerabilidades altas de `npm audit`
 
+> **Resuelto:** no se tocan las dependencias; Dependabot avisará cuando haya arreglo.
+
 Son **una sola**, encadenada: `braces` ≤ 3.0.3 (denegación de servicio con patrones glob muy anidados) ← `micromatch` ← `fast-glob` ← `@next/eslint-plugin-next` ← `eslint-config-next`.
 
 - Solo afecta a ESLint en tu equipo y en la CI. No llega a la web publicada.
@@ -33,9 +37,13 @@ Son **una sola**, encadenada: `braces` ≤ 3.0.3 (denegación de servicio con pa
 
 ### 1.3 El CV front-end dice que la web del Artabrian usa Node.js
 
+> **Pendiente de Rodrigo:** corregir la frase en el original del CV (*«y después con React, Vite y Material UI»*).
+
 En el perfil profesional: *«primero con Angular y Tailwind CSS, y después con React y Node.js»*. CLAUDE.md dice que **no** se mencione Node.js, y la experiencia del mismo CV dice *«React 19, Vite y Material UI»*. Como el PDF va a ser público, conviene corregirlo antes de publicarlo.
 
 ### 1.4 El mapa de la portada no coincide entre el briefing y CLAUDE.md
+
+> **Resuelto:** orden A (Presentación, Proyecto destacado, Qué hago, Experiencia, Galería de diseño, Fuera del trabajo, Contacto). Marcas y carteles van en una galería mezclada con filtro por categoría. Actualizado en CLAUDE.md.
 
 | Briefing | CLAUDE.md y maqueta |
 | --- | --- |
@@ -55,12 +63,12 @@ Para ofrecerlos en la web, propongo copiarlos a `public/cv/` con nombres sin til
 
 ## 2. Mejoras técnicas
 
-1. **Dependabot** (`.github/dependabot.yml`): revisión semanal de npm y de GitHub Actions. Avisa de parches de seguridad, como el de 1.2.
+1. **Dependabot.** Hecho: `.github/dependabot.yml`, revisión semanal de npm y de GitHub Actions.
 2. **Claves de imagen tipadas.** Ahora `<ResponsiveImage src="…">` acepta cualquier texto y una errata falla al hacer el build. Con `type ImageKey = keyof typeof manifest`, fallaría ya en el editor, con autocompletado. Lo dejé fuera porque, con el manifiesto vacío, ese tipo no admite ningún valor.
 3. **Precarga de la imagen principal.** `fetchPriority="high"` ya ayuda. Si Lighthouse marca el LCP, se puede añadir `preload()` de `react-dom` con `imageSrcSet` y `imageSizes`.
 4. **Lighthouse CI en GitHub Actions**, para que el criterio «95 o más» se compruebe en cada push y no a mano. Mismo enfoque para la accesibilidad con `@axe-core/playwright`.
 5. **Prettier**, para que el formato del código no dependa de quién lo escriba. Una dependencia y un `npm run format`.
-6. **Favicon propio.** Sigue el de Next.js. Propongo `src/app/icon.svg` con tu monograma `lml` y `apple-icon.png`.
+6. **Favicon propio.** Hecho de forma provisional con `lml_favicon_web.ico`. Más adelante: `src/app/icon.svg` (nítido a cualquier tamaño) y `apple-icon.png` para iOS.
 7. **SVG optimizado** para logotipos e iconos con `svgo`, sea como paso del script de imágenes o por separado. Aún no está hecho.
 8. **Cabeceras de seguridad** en `vercel.json` (CSP, `Referrer-Policy`, `X-Content-Type-Options`). Con la exportación estática, `headers()` de `next.config.ts` no funciona, así que tiene que ser en Vercel. Suben la nota de «Buenas prácticas».
 9. **Inglés.** Sin servidor no hay middleware para detectar el idioma. Propongo dejar `/` en español y crear `/en/…` como rutas propias que lean `src/content/en/`. No hace falta un segmento `[lang]` hasta que exista el inglés.
