@@ -87,6 +87,7 @@ Datos del perfil: usa siempre los de los CV de Rodrigo. La web del Artabrian Wee
 npm run dev       # servidor de desarrollo
 npm run build     # exportación estática en out/
 npm run lint      # ESLint
+npm run typecheck # comprobación de tipos (tsc)
 npm run test      # Vitest
 npm run images    # optimiza las imágenes de recursos/
 ```
