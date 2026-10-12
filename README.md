@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# lml-web
 
-## Getting Started
+Web profesional de **Rodrigo Lamela**, desarrollador front-end (React) y diseñador de marcas en A Coruña.
 
-First, run the development server:
+Incluye una portada con mis trabajos de desarrollo, marcas y carteles, y un caso de estudio del Artabrian Weekend, un evento de juegos de cartas del que hice la web y la identidad visual.
+
+> En construcción. Se publicará en Vercel cuando esté completa.
+
+## Stack
+
+- **Next.js 16** (App Router) con exportación estática: el build genera HTML en `out/` sin servidor.
+- **TypeScript** en modo estricto.
+- **Tailwind CSS 4**, con los colores y tipografías de la marca como variables de tema en `src/app/globals.css`.
+- **sharp** para optimizar las imágenes con un script propio, y un componente `ResponsiveImage` que las sirve con `<picture>`.
+- **Vitest** y **Testing Library** para las pruebas.
+
+## Puesta en marcha
+
+Requiere Node.js 22 o superior.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # servidor de desarrollo en http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Comando | Qué hace |
+| --- | --- |
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Exportación estática en `out/` |
+| `npm run lint` | ESLint |
+| `npm run test` | Pruebas con Vitest |
+| `npm run images` | Optimiza las imágenes de `recursos/` |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Imágenes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Los originales a máxima calidad van en `recursos/`, que no se sube al repositorio. `npm run images` genera en `public/images/`:
 
-## Learn More
+- versiones AVIF y WebP a 640, 1024, 1600 y 2400 px de ancho, sin ampliar nunca el original;
+- más calidad para las imágenes de `recursos/carteles/`, que tienen texto fino;
+- `manifest.json` con el ancho, el alto, las rutas y una miniatura difuminada de cada imagen.
 
-To learn more about Next.js, take a look at the following resources:
+Los nombres de archivo van en minúsculas y con guiones (`cartel-honeytomb.jpg`). La clave de cada imagen es su ruta sin extensión:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```tsx
+<ResponsiveImage
+  src="carteles/cartel-honeytomb"
+  alt="Cartel del concierto de Honeytomb y Low Gain"
+  sizes="(min-width: 1024px) 33vw, 100vw"
+/>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estructura
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+recursos/          originales de las imágenes (fuera de git)
+public/images/     imágenes optimizadas (generadas, no editar a mano)
+scripts/           script de optimización de imágenes
+src/app/           rutas de la web
+src/components/    componentes reutilizables
+src/content/       textos y datos tipados
+src/lib/           utilidades
+docs/              briefing, dirección visual y CV
+```
