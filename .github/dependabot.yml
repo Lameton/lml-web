@@ -1,0 +1,18 @@
+# Dependabot revisa cada semana si hay versiones nuevas de las dependencias
+# y abre una pull request con la actualización; la CI la comprueba antes de
+# que la aceptes. Las versiones menores y los parches van agrupados en una
+# sola pull request para no llenar el repositorio de avisos.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      menores:
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
