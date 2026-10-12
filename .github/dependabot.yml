@@ -11,6 +11,11 @@ updates:
     groups:
       menores:
         update-types: [minor, patch]
+    ignore:
+      # Los tipos de Node deben coincidir con la versión que ejecuta la web
+      # (22, ver "engines" en package.json): se sube a mano al cambiar de Node.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: /
