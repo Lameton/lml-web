@@ -1,0 +1,4 @@
+# Normaliza los finales de línea a LF en el repositorio (evita avisos LF/CRLF en Windows)
+* text=auto eol=lf
+*.pdf binary
+*.ico binary

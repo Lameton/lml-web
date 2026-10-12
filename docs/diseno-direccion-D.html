@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Dirección D · Serigrafía</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@700;800;900&family=Archivo:ital,wght@0,400;0,500;0,700;1,700;1,800&display=swap">
+<style>
+body{margin:0}
+a{color:inherit}a:hover{opacity:.75}
+</style>
+</helmet>
+<div style="background: {{p.bg}}; color: {{p.ink}}; font-family: Archivo, sans-serif; font-size: 17px; line-height: 1.55">
+
+<section id="inicio" style="position: relative; overflow: hidden">
+<svg aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: {{p.blend}}; opacity: 0.5"><filter id="moteadoHero"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="matrix" values="{{p.noise}}"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#moteadoHero)"></rect></svg>
+<div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px)">
+
+<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 0; border-bottom: 3px solid {{p.ink}}">
+<a href="#inicio" style="font-family: Rubik, sans-serif; font-weight: 900; font-size: 22px; text-decoration: none; letter-spacing: -0.5px">lml<span style="font-family: Archivo, sans-serif; font-style: italic; font-weight: 700; font-size: 12px; letter-spacing: 0; margin-left: 8px">Rodrigo Lamela</span></a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 6px 22px; font-weight: 700; font-style: italic; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px">
+<a href="#proyectos" style="text-decoration: none">Proyectos</a>
+<a href="#marcas" style="text-decoration: none">Marcas</a>
+<a href="#carteles" style="text-decoration: none">Carteles</a>
+<a href="#sobre-mi" style="text-decoration: none">Sobre mí</a>
+<a href="#contacto" style="text-decoration: none">Contacto</a>
+</nav>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding: 48px 0 40px">
+<div style="flex: 999 1 560px; min-width: 0">
+<p style="margin: 0 0 16px; font-weight: 800; font-style: italic; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px">Desarrollador front-end <span style="color: {{p.accent}}">•</span> Diseñador de marcas <span style="color: {{p.accent}}">•</span> A Coruña</p>
+<h1 style="margin: 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(44px, 6.4vw, 92px); line-height: 0.92; letter-spacing: -1px">Rodrigo <span style="color: {{p.accent}}">Lamela</span></h1>
+<p style="margin: 24px 0 0; max-width: 640px; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.25; font-weight: 700">Construyo interfaces en React con ojo de director de arte.</p>
+<p style="margin: 12px 0 0; max-width: 600px; font-size: 18px; color: {{p.muted}}">Webs accesibles y rápidas, y las marcas que viven en ellas. Mi proyecto más completo: el Artabrian Weekend, de la identidad visual a su web en React.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px">
+<a href="#proyectos" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; background: {{p.ink}}; color: {{p.bg}}; text-decoration: none; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase; font-size: 15px; letter-spacing: 0.5px">Ver proyectos</a>
+<a href="https://github.com/Lameton" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; border: 3px solid {{p.ink}}; text-decoration: none; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase; font-size: 15px; letter-spacing: 0.5px">GitHub</a>
+</div>
+</div>
+<div role="img" aria-label="Hueco para la foto profesional de Rodrigo, tratada a dos tintas" style="flex: 1 1 240px; max-width: 300px; aspect-ratio: 3 / 4; background: {{p.fill}}; color: {{p.onFill}}; border-radius: 999px 999px 0 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; box-sizing: border-box; font-weight: 700; font-style: italic; font-size: 14px; text-transform: uppercase">[Tu foto, a dos tintas]</div>
+</div>
+<dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 0 0 64px; border: 3px solid {{p.ink}}">
+<div style="padding: 18px 22px; border-right: 3px solid {{p.ink}}"><dt style="font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 13px; color: {{p.muted}}">Stack</dt><dd style="margin: 4px 0 0; font-family: Rubik, sans-serif; font-weight: 900; font-size: 22px; line-height: 1.15">React • TypeScript • Next.js</dd></div>
+<div style="padding: 18px 22px; border-right: 3px solid {{p.ink}}"><dt style="font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 13px; color: {{p.muted}}">Artabrian Weekend 2026</dt><dd style="margin: 4px 0 0; font-family: Rubik, sans-serif; font-weight: 900; font-size: 34px; line-height: 1">+1.000 <span style="font-size: 18px">asistentes</span></dd></div>
+<div style="padding: 18px 22px; border-right: 3px solid {{p.ink}}"><dt style="font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 13px; color: {{p.muted}}">Formación</dt><dd style="margin: 4px 0 0; font-family: Rubik, sans-serif; font-weight: 900; font-size: 22px; line-height: 1.15">DAW + Diseño Gráfico</dd></div>
+<div style="padding: 18px 22px; background: {{p.fill}}; color: {{p.onFill}}"><dt style="font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 13px">Estado</dt><dd style="margin: 4px 0 0; font-family: Rubik, sans-serif; font-weight: 900; font-size: 22px; line-height: 1.15">Disponible para trabajar</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="proyectos" style="background: #0E0D0B; color: #F1EDE3; position: relative; overflow: hidden">
+<img src="/_blob/0b3f440b7fb36086b845025b942a6d86" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.18">
+<div style="position: relative; max-width: 1240px; margin: 0 auto; padding: 88px clamp(20px, 4vw, 48px)">
+<p style="margin: 0; font-weight: 800; font-style: italic; text-transform: uppercase; letter-spacing: 0.5px; color: #D4A72C">Proyecto destacado • Web + identidad • 2024 – actualidad</p>
+<div style="display: flex; flex-wrap: wrap; gap: 48px; margin-top: 24px; align-items: center">
+<div style="flex: 1 1 440px; min-width: 0">
+<h2 style="margin: 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(48px, 6vw, 88px); line-height: 0.9; letter-spacing: -1px">Artabrian<br><span style="color: #D4A72C">Weekend</span></h2>
+<p style="margin: 24px 0 0; font-size: 19px; max-width: 520px">La web de un evento de juegos de cartas coleccionables en Ferrol, desarrollada dos veces: primero en Angular y después en React, con una única plantilla que genera la página de cada juego a partir de un JSON. Y detrás, toda su identidad visual.</p>
+<p style="margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; font-weight: 700; font-size: 14px">
+<span style="padding: 4px 10px; border: 2px solid #D4A72C">React 19</span>
+<span style="padding: 4px 10px; border: 2px solid #D4A72C">Vite</span>
+<span style="padding: 4px 10px; border: 2px solid #D4A72C">Material UI</span>
+<span style="padding: 4px 10px; border: 2px solid #D4A72C">Datos en JSON</span>
+<span style="padding: 4px 10px; border: 2px solid #D4A72C">Identidad visual</span>
+</p>
+<div style="display: flex; flex-wrap: wrap; border: 2px solid #D4A72C; margin-top: 28px; max-width: 520px">
+<p style="flex: 1 1 200px; margin: 0; padding: 16px 20px; border-right: 2px solid #D4A72C"><span style="display: block; font-family: Rubik, sans-serif; font-weight: 900; font-size: 44px; line-height: 1; color: #D4A72C">+1.000</span><span style="font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 13px">Asistentes en 2026</span></p>
+<p style="flex: 1 1 200px; margin: 0; padding: 16px 20px"><span style="display: block; font-family: Rubik, sans-serif; font-weight: 900; font-size: 44px; line-height: 1; color: #D4A72C">+30%</span><span style="font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 13px">Participaciones en torneos</span></p>
+</div>
+<a href="#caso" style="display: inline-flex; align-items: center; min-height: 50px; margin-top: 32px; padding: 0 24px; background: #D4A72C; color: #0E0D0B; text-decoration: none; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase; font-size: 15px">Ver el caso completo →</a>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div role="img" aria-label="Hueco para una captura de la web del Artabrian Weekend" style="aspect-ratio: 16 / 10; border: 2px solid #D4A72C; background: #1A1813; display: flex; align-items: center; justify-content: center; color: #D4A72C; font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 14px">[Captura de la web en escritorio y móvil]</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<img src="/_blob/ea33888aee1740f5bddb0bd9be9ef69d" alt="Pieza cuadrada para redes del Artabrian Weekend 2026" style="width: 100%; display: block">
+<img src="/_blob/0846d3add54d875225cb9b22a01fcc33" alt="Pieza para redes con los premios del Modern Main Event" style="width: 100%; display: block">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="marcas" style="max-width: 1240px; margin: 0 auto; padding: 88px clamp(20px, 4vw, 48px) 64px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 3px solid {{p.ink}}; padding-bottom: 16px; margin-bottom: 40px">
+<h2 style="margin: 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(40px, 5vw, 64px); line-height: 1">Marcas</h2>
+<p style="margin: 0; font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 14px">Identidades registradas en la OEPM y la EUIPO</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 32px">
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><div style="aspect-ratio: 4 / 3; background: {{p.fill}}; color: {{p.onFill}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 14px">[Marca]</div><p style="margin: 14px 0 0; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase">Artabrian Nights</p><p style="margin: 0; font-size: 15px; color: {{p.muted}}">Rediseño de la identidad de la asociación</p></a>
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><div style="aspect-ratio: 4 / 3; background: {{p.fill}}; color: {{p.onFill}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 14px">[Marca]</div><p style="margin: 14px 0 0; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase">Kings Dragon</p><p style="margin: 0; font-size: 15px; color: {{p.muted}}">Marca del club y de sus jugadores</p></a>
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><div style="aspect-ratio: 4 / 3; background: {{p.fill}}; color: {{p.onFill}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 14px">[Marca]</div><p style="margin: 14px 0 0; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase">Galicia Esports</p><p style="margin: 0; font-size: 15px; color: {{p.muted}}">Identidad de una plataforma de torneos</p></a>
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><div style="aspect-ratio: 4 / 3; background: {{p.fill}}; color: {{p.onFill}}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 14px">[Marca]</div><p style="margin: 14px 0 0; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase">[Marca para pyme]</p><p style="margin: 0; font-size: 15px; color: {{p.muted}}">Identidad registrada en la OEPM</p></a>
+</div>
+</section>
+
+<section id="carteles" style="max-width: 1240px; margin: 0 auto; padding: 24px clamp(20px, 4vw, 48px) 88px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 3px solid {{p.ink}}; padding-bottom: 12px; margin-bottom: 32px">
+<h2 style="margin: 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: 32px; line-height: 1">Carteles</h2>
+<a href="https://www.behance.net/lameton/" style="font-weight: 700; font-style: italic; text-transform: uppercase; font-size: 14px">Todo en Behance →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px">
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><img src="/_blob/70cf185e5e06eed9c62cffb8716f852e" alt="Cartel del concierto de Honeytomb y Low Gain en la Sala Filomatic" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block"><p style="margin: 10px 0 0; font-weight: 700; font-size: 15px">Honeytomb + Low Gain</p></a>
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><img src="/_blob/9683ba98ebd1c5bb269d7be84f629c55" alt="Cartel ilustrado de una mujer con una cesta bajo una luna llena" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block"><p style="margin: 10px 0 0; font-weight: 700; font-size: 15px">Lameton Branding &amp; Posters</p></a>
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><img src="/_blob/98532d5d3519fae224c1dfd408f4fe7a" alt="Cartel del concierto de Chavalan y Turbo Kracks en Nave 1839" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block"><p style="margin: 10px 0 0; font-weight: 700; font-size: 15px">Chavalan + Turbo Kracks</p></a>
+<a href="https://www.behance.net/lameton/" style="text-decoration: none; display: block"><img src="/_blob/55b2ce1aba5a521d7cf827359ae63f4c" alt="Cartel general del Artabrian Weekend 2026" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; display: block"><p style="margin: 10px 0 0; font-weight: 700; font-size: 15px">Artabrian Weekend 2026</p></a>
+</div>
+</section>
+
+<section id="sobre-mi" style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px) 88px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<div style="border: 3px solid {{p.ink}}; padding: 28px"><p style="margin: 0; font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 14px; color: {{p.muted}}">Código</p><h3 style="margin: 6px 0 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: 36px">Desarrollo</h3><p style="margin: 12px 0 0">Interfaces front-end accesibles y rápidas que respetan el diseño al detalle.</p><p style="margin: 16px 0 0; font-weight: 700; font-size: 15px">React • TypeScript • Next.js • Angular • Tailwind CSS</p></div>
+<div style="border: 3px solid {{p.ink}}; padding: 28px"><p style="margin: 0; font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 14px; color: {{p.muted}}">Tinta</p><h3 style="margin: 6px 0 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: 36px">Diseño</h3><p style="margin: 12px 0 0">Identidad visual, dirección de arte, diseño de interfaz y cartelería.</p><p style="margin: 16px 0 0; font-weight: 700; font-size: 15px">Figma • Illustrator • Photoshop • InDesign • After Effects</p></div>
+<div style="background: {{p.fill}}; color: {{p.onFill}}; padding: 28px"><p style="margin: 0; font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 14px">Fuera del trabajo</p><h3 style="margin: 6px 0 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: 36px">Cartas y esports</h3><p style="margin: 12px 0 0">[Una o dos frases tuyas sobre los juegos de cartas, los eventos que organizas y los esports.]</p></div>
+</div>
+</section>
+
+<footer id="contacto" style="background: {{p.ink}}; color: {{p.bg}}">
+<div style="max-width: 1240px; margin: 0 auto; padding: 72px clamp(20px, 4vw, 48px) 80px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px">
+<div>
+<p style="margin: 0; font-family: Rubik, sans-serif; font-weight: 900; text-transform: uppercase; font-size: clamp(56px, 8vw, 120px); line-height: 0.88">¿Hablamos?</p>
+<p style="margin: 20px 0 0; font-weight: 800; font-style: italic; text-transform: uppercase; font-size: 18px"><a href="mailto:lameladev@gmail.com">lameladev@gmail.com</a> • A Coruña, Galicia</p>
+</div>
+<nav aria-label="Redes" style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: Rubik, sans-serif; font-weight: 800; text-transform: uppercase; font-size: 16px">
+<a href="https://github.com/Lameton">GitHub</a>
+<a href="https://www.linkedin.com/in/rodrigolamela/">LinkedIn</a>
+<a href="https://www.behance.net/lameton/">Behance</a>
+</nav>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"tinta":{"editor":"enum","default":"azul","options":["azul","oro","amarillo"]},"$preview":{"width":1440,"height":3500}}'>
+class Component extends DCLogic {
+renderVals() {
+const paletas = {
+azul: { bg: '#E8E1D1', ink: '#1C2647', accent: '#3F5894', fill: '#7C93C3', onFill: '#1C2647', muted: '#454B60', blend: 'multiply', noise: '0 0 0 0 0.11  0 0 0 0 0.15  0 0 0 0 0.28  0 0 0 -2.4 1.25' },
+oro: { bg: '#0E0D0B', ink: '#F1EDE3', accent: '#D4A72C', fill: '#D4A72C', onFill: '#0E0D0B', muted: '#BDB6A6', blend: 'screen', noise: '0 0 0 0 0.95  0 0 0 0 0.93  0 0 0 0 0.89  0 0 0 -2.4 1.25' },
+amarillo: { bg: '#F4F1EA', ink: '#171615', accent: '#8C4A2F', fill: '#E3D44F', onFill: '#171615', muted: '#55524B', blend: 'multiply', noise: '0 0 0 0 0.09  0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 -2.4 1.25' }
+};
+return { p: paletas[this.props.tinta ?? 'azul'] ?? paletas.azul };
+}
+}
+</script>
+</body>
+</html>
