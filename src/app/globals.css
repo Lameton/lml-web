@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+/*
+ * Tema de la marca (dirección D · Serigrafía, provisional).
+ * Cada variable --color-* genera las utilidades de Tailwind: bg-paper,
+ * text-ink, border-accent… Los componentes usan solo estos nombres, nunca
+ * colores a mano, así que cambiar la paleta es cambiar este bloque.
+ */
+@theme {
+  /* Paleta "azul" */
+  --color-paper: #e8e1d1;
+  --color-ink: #1c2647;
+  --color-accent: #3f5894;
+  --color-fill: #7c93c3;
+  --color-muted: #454b60;
+
+  /* Identidad propia del Artabrian Weekend */
+  --color-aw-black: #0e0d0b;
+  --color-aw-gold: #d4a72c;
+}
+
+/*
+ * `inline` hace que Tailwind escriba var(--font-rubik) tal cual en cada
+ * utilidad, en lugar de resolverla en :root, porque esas variables las
+ * define next/font en <html> (ver layout.tsx).
+ */
+@theme inline {
+  --font-display: var(--font-rubik), sans-serif; /* font-display: titulares */
+  --font-sans: var(--font-archivo), sans-serif; /* font-sans: texto */
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
