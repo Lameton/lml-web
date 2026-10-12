@@ -28,6 +28,7 @@ npm run dev       # servidor de desarrollo en http://localhost:3000
 | `npm run dev` | Servidor de desarrollo |
 | `npm run build` | Exportación estática en `out/` |
 | `npm run lint` | ESLint |
+| `npm run typecheck` | Comprobación de tipos con TypeScript |
 | `npm run test` | Pruebas con Vitest |
 | `npm run images` | Optimiza las imágenes de `recursos/` |
 
