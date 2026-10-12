@@ -18,6 +18,8 @@ import { existsSync } from "node:fs";
 import { mkdir, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
+// Solo el tipo: ResponsiveImage lee este mismo formato del manifiesto.
+import type { ImageEntry } from "../src/lib/images";
 
 const INPUT_DIR = "recursos";
 const OUTPUT_DIR = path.join("public", "images");
@@ -36,16 +38,6 @@ const QUALITY = {
 
 // Solo minúsculas, números, guiones y barras: las claves acaban en URLs.
 const VALID_KEY = /^[a-z0-9-]+(\/[a-z0-9-]+)*$/;
-
-type Variant = { width: number; src: string };
-
-type ManifestEntry = {
-  width: number;
-  height: number;
-  blurDataURL: string;
-  avif: Variant[];
-  webp: Variant[];
-};
 
 /** Devuelve todos los archivos de una carpeta y sus subcarpetas. */
 async function listFiles(dir: string): Promise<string[]> {
@@ -66,7 +58,7 @@ function getTargetWidths(originalWidth: number): number[] {
   return [...smaller, largest];
 }
 
-async function processImage(file: string): Promise<[string, ManifestEntry]> {
+async function processImage(file: string): Promise<[string, ImageEntry]> {
   const relative = path.relative(INPUT_DIR, file);
   const parsed = path.parse(relative);
   // path.join usa "\" en Windows; las claves y URLs siempre llevan "/".
@@ -88,7 +80,7 @@ async function processImage(file: string): Promise<[string, ManifestEntry]> {
 
   await mkdir(path.join(OUTPUT_DIR, parsed.dir), { recursive: true });
 
-  const entry: ManifestEntry = { width, height, blurDataURL: "", avif: [], webp: [] };
+  const entry: ImageEntry = { width, height, blurDataURL: "", avif: [], webp: [] };
 
   for (const targetWidth of getTargetWidths(width)) {
     // clone() reutiliza el original leído sin volver a abrir el archivo.
@@ -132,7 +124,7 @@ async function main() {
   await rm(OUTPUT_DIR, { recursive: true, force: true });
   await mkdir(OUTPUT_DIR, { recursive: true });
 
-  const manifest: Record<string, ManifestEntry> = {};
+  const manifest: Record<string, ImageEntry> = {};
   for (const file of images) {
     const [key, entry] = await processImage(file);
     if (manifest[key]) throw new Error(`Hay dos originales con la clave "${key}".`);
