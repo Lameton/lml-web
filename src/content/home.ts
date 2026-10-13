@@ -32,7 +32,7 @@ export const profile = {
   intro:
     "Desarrollador front-end en A Coruña. Creo interfaces con estructura clara, personalidad visual y atención al detalle de la experiencia.",
   statement: "Front-end con identidad clara.",
-  email: "rodrigolamela@gmail.com",
+  email: "lameladev@gmail.com",
 };
 
 export const highlights: Highlight[] = [
