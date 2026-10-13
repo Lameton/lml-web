@@ -72,12 +72,29 @@ lml-web/
 
 Datos del perfil: usa siempre los de los CV de Rodrigo. La web del Artabrian Weekend está hecha con **React 19, Vite y Material UI, en JavaScript**; no digas que usa TypeScript ni Node.js.
 
-## Diseño (dirección D · Serigrafía, en revisión)
+## Diseño (dirección editorial)
 
-- Lenguaje visual de los carteles de Rodrigo: tipografía de palo seco muy pesada, información en bloques con separadores (•), moteado de serigrafía y paletas de dos o tres tintas.
-- Tipografías provisionales: Rubik (titulares, 800-900) y Archivo (texto y etiquetas en cursiva y mayúsculas).
-- Paleta provisional "azul": papel `#E8E1D1`, tinta `#1C2647`, acento `#3F5894`, relleno `#7C93C3`, texto secundario `#454B60`.
+- Identidad editorial, sobria y contundente: más marca que aplicación. Poca densidad visual, jerarquía tipográfica clara y composición pensada primero para escritorio (sin descuidar los 360 px).
+- Tipografías: Inknut Antiqua para titulares y Archivo para texto y etiquetas. Se cargan con `next/font` en `src/app/fonts.ts` y se exponen como `font-display` y `font-sans`.
+- Paleta verde con dos modos, definida en `src/app/globals.css` (`.theme-light` y `.theme-dark`). Los componentes usan solo los nombres del tema (`bg-paper`, `text-ink`…):
+
+  | Variable | Claro | Oscuro |
+  | --- | --- | --- |
+  | `paper` (fondo) | `#E1E8E3` | `#071711` |
+  | `ink` (texto) | `#071711` | `#E1E8E3` |
+  | `accent` | `#0F6B60` | `#6FE7D3` |
+  | `fill` | `#A5CDBD` | `#2BB5A2` |
+  | `muted` (texto secundario) | `#52645D` | `#9EC7BB` |
+
+- El interruptor `ThemeToggle` cambia entre los dos modos. La página arranca en modo claro.
 - La sección del Artabrian Weekend usa su propia identidad: negro `#0E0D0B` y oro `#D4A72C`.
+
+### Pendiente de decidir
+
+- Textos definitivos de la portada y del caso de estudio.
+- Si el header y la hero finales van más minimalistas o más impactantes.
+- Ajustes visuales finos en algunas secciones.
+- Revisar portfolios reales de diseñadores-desarrolladores para cerrar la dirección.
 
 ## Calidad: criterios para dar la web por terminada
 
