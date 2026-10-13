@@ -30,10 +30,6 @@
   --panel: rgba(7, 23, 17, 0.04);
   --paper-strong: #f3f6f1;
   --ink-soft: rgba(7, 23, 17, 0.72);
-  --gradient-start: #f6f8f3;
-  --gradient-mid: #dce9e1;
-  --gradient-end: #a5cdbd;
-  --card-overlay: rgba(255, 255, 255, 0.42);
   --shadow-color: rgba(7, 23, 17, 0.12);
   --noise-opacity: 0.08;
   --noise-blend: multiply;
@@ -49,42 +45,10 @@
   --panel: rgba(255, 255, 255, 0.04);
   --paper-strong: #0d1f1b;
   --ink-soft: rgba(225, 232, 227, 0.72);
-  --gradient-start: #071711;
-  --gradient-mid: #0d2b27;
-  --gradient-end: #176b60;
-  --card-overlay: rgba(0, 0, 0, 0.15);
   --shadow-color: rgba(0, 0, 0, 0.35);
   --noise-opacity: 0.14;
   --noise-blend: screen;
   --selection-bg: rgba(111, 231, 211, 0.25);
-}
-
-.project-gradient-surface {
-  background-image: linear-gradient(
-    135deg,
-    var(--gradient-start),
-    var(--gradient-mid) 55%,
-    var(--gradient-end)
-  );
-}
-
-.gallery-gradient {
-  background-image: linear-gradient(
-    135deg,
-    var(--gradient-start),
-    var(--gallery-mid, var(--gradient-mid)) 55%,
-    var(--gallery-end, var(--gradient-end))
-  );
-}
-
-.gallery-gradient--sea-glass {
-  --gallery-mid: #124b43;
-  --gallery-end: #176b60;
-}
-
-.theme-light .gallery-gradient--sea-glass {
-  --gallery-mid: #cddfd5;
-  --gallery-end: #8fbba9;
 }
 
 /*
@@ -421,16 +385,31 @@ img {
   transition: all 180ms ease;
 }
 
+/* El radio está oculto: el foco de teclado se muestra en su etiqueta. */
+.gallery-filter-input:focus-visible + .gallery-filter-label {
+  outline: 3px solid var(--focus-ring, var(--color-accent));
+  outline-offset: 3px;
+}
+
 .gallery-filter-input:checked + .gallery-filter-label {
   background: var(--color-ink);
   border-color: var(--color-ink);
   color: var(--color-paper);
 }
 
+/* Rejilla alineada arriba: las piezas tienen formatos distintos (carteles
+   verticales, entradas apaisadas) y cada una conserva su proporción. */
 .gallery-grid {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.25rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .gallery-item {

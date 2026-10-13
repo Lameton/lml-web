@@ -24,6 +24,186 @@
       }
     ]
   },
+  "carteles/honeytomb-bandits-cartel": {
+    "width": 1768,
+    "height": 2500,
+    "blurDataURL": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAAAQBwCdASoUABwAPtFcp04oJSOiKAqpABoJZgCdMoSA/2IpL/AOj/G8C4VCR9qgavpzcJ9a9Wqj0751Aeja1W8X0gDh4MxwxA/WfrcbIfDWXqzQ2HI4Y1rhRedAIV7LkS2+N9bvDeMkVGK39B40NDtRqeourvysAs7+hDBULl1XNh7thW+GN8LY23SjIMy2PYuZFWIK5duzyd3s6aiDW+gNlGZKfNJXwNEFbnOVNBr6vnes8oBDmohbAIOeIxSrbd7fSefaVSeO9a8CP5qSz87K/u/vFvYF9Dzv8BagTcihkAqSr0YIyCZfcfJgRdEdDt60gR/2ZSICQAAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-bandits-cartel-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-bandits-cartel-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/honeytomb-bandits-cartel-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/honeytomb-bandits-cartel-1600.avif"
+      },
+      {
+        "width": 1768,
+        "src": "/images/carteles/honeytomb-bandits-cartel-1768.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-bandits-cartel-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-bandits-cartel-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/honeytomb-bandits-cartel-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/honeytomb-bandits-cartel-1600.webp"
+      },
+      {
+        "width": 1768,
+        "src": "/images/carteles/honeytomb-bandits-cartel-1768.webp"
+      }
+    ]
+  },
+  "carteles/honeytomb-bandits-entrada": {
+    "width": 662,
+    "height": 1783,
+    "blurDataURL": "data:image/webp;base64,UklGRoQBAABXRUJQVlA4IHgBAABwCQCdASoUADYAPtFgpk4oJaOiKBgMAQAaCWoAgxg4nx14tTG56rTK2sCnXQAe8YLJdPaGUEx2TEJDSdhzKYVJg96s3v3N5Zs8NFfZNwSmFoebZdAA/o5lPI7k0qxmw/TN9G+e7DW8Rn6t6PEmvEiAaOXj7xzeD6xEOKncNQJsSPJs49H/82GXELrsr3YtssR7e3I9xxAAa/2fBBS8Tgnn0tAuriRVfkBxd+p1IoSySgS03QtH8G/c2ckiQCdH/RnXOAlQkJI2h4ULJ2vTWZTTDKxYm2pVCcm5T5tOVzbE05iA6J5xB75wVJ42+lHzHp4fuvLv3nlKP2aRiv9FB4OHcMXkM/U1APC/cY8AA0fBks9q+Rvnl1slrcmIOJ5rW179Fpt6S9niS9+8zYprZ67w1FvP73sNgsfSmPHvbxO4IiR8whJFrtYwoghywMYWbQul/jlYBHR4TIyB8oCoCTEVYsQESrFW7KXWRf7vyXI+oXlVmYb4AAAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-bandits-entrada-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-bandits-entrada-640.avif"
+      },
+      {
+        "width": 662,
+        "src": "/images/carteles/honeytomb-bandits-entrada-662.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-bandits-entrada-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-bandits-entrada-640.webp"
+      },
+      {
+        "width": 662,
+        "src": "/images/carteles/honeytomb-bandits-entrada-662.webp"
+      }
+    ]
+  },
+  "carteles/honeytomb-low-gain-cartel": {
+    "width": 2121,
+    "height": 3000,
+    "blurDataURL": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAACwBQCdASoUABwAPtFcpk6oJSMiKAqpABoJQBgbsYxOFtvqNpzVeVhNIxzRJcDHn0/4xdr9eAAA/so5Io9GsegALsfXURgclMq26yFHdCgKOZxViB27bOZLzwj/UdjYOMiqY/7BrUxcXmYWFhQObwGbRsF38fQNh1cV9aphv4wSLRZNHu7LXDLu9ql/k1A9e28BYCebQlWAWLsYIOH5lN1nX61RUsgGyElsiTNBV1IPmedHnJAOD1tF2HjjLDGApq11RTCtuklZDOVbXAwSt+ahtnIizgFTkr/zkkz+NsXkNQ28y8vCP043fj/ZiIvCqVVLL7ptH5M/gAAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-1600.avif"
+      },
+      {
+        "width": 2121,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-2121.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-1600.webp"
+      },
+      {
+        "width": 2121,
+        "src": "/images/carteles/honeytomb-low-gain-cartel-2121.webp"
+      }
+    ]
+  },
+  "carteles/honeytomb-low-gain-entrada": {
+    "width": 1783,
+    "height": 662,
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoUAAcAPtFUo0uoJKMhsAgBABoJYwAAXuwXyenv7vCgAAD8rAndQ/d+8Kh742/NVLtkoKAyHl0n6Mh385REIinjWXNioyfPfFPZhpJ9k6m0Xlyxo7X+1q9q1CL73QoeIf57UPvBeLgAAA==",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-1600.avif"
+      },
+      {
+        "width": 1783,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-1783.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-1600.webp"
+      },
+      {
+        "width": 1783,
+        "src": "/images/carteles/honeytomb-low-gain-entrada-1783.webp"
+      }
+    ]
+  },
   "artabrian/fondo-grabado": {
     "width": 1920,
     "height": 1020,

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   cvFiles,
   education,
@@ -20,6 +21,18 @@ const navLinks = [
   { href: "#proyecto", label: "Proyecto" },
   { href: "#experiencia", label: "Experiencia" },
   { href: "#contacto", label: "Contacto" },
+];
+
+// Filtro de la galería: «Todo» más una opción por cada categoría presente.
+const galleryCategoryLabels = { marcas: "Marcas", carteles: "Carteles" };
+const galleryFilters = [
+  { id: "gallery-all", label: "Todo" },
+  ...[...new Set(galleryItems.map((item) => item.category))].map(
+    (category) => ({
+      id: `gallery-${category}`,
+      label: galleryCategoryLabels[category],
+    }),
+  ),
 ];
 
 // Palabras del nombre, para componer el titular en líneas.
@@ -237,85 +250,70 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Oculta mientras no haya piezas reales (ver galleryItems). */}
         {galleryItems.length > 0 && (
           <section
             id="galeria"
             className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
           >
-            <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="type-meta text-ink/60">Galería</p>
-                <h2 className="type-section mt-2 text-ink">
-                  Marca y cartelismo en una misma mirada.
-                </h2>
-              </div>
+            <p className="type-meta text-ink/60">Galería</p>
+            <h2 className="type-section mt-2 text-ink">
+              Carteles para conciertos.
+            </h2>
+            <p className="type-body mt-3 max-w-2xl text-ink/80">
+              Tipografía pesada, ilustración grabada y dos o tres tintas, con la
+              entrada a juego.
+            </p>
 
-              <div
-                className="flex flex-wrap gap-2"
-                aria-label="Filtro de galería"
-              >
-                <input
-                  type="radio"
-                  name="gallery-filter"
-                  id="gallery-all"
-                  defaultChecked
-                  className="gallery-filter-input"
-                />
-                <label
-                  htmlFor="gallery-all"
-                  className="type-meta gallery-filter-label"
-                >
-                  Todo
-                </label>
+            {/* Filtro sin JavaScript (ver .gallery-* en globals.css): los
+                radios, sus etiquetas y la lista tienen que ser hermanos para
+                que funcione el selector «~». Sin CSS se ven todas las piezas.
+                Solo aparece si hay más de una categoría. */}
+            <div className="mt-8 flex flex-wrap gap-2">
+              {galleryFilters.length > 2 &&
+                galleryFilters.map((filter, index) => (
+                  <Fragment key={filter.id}>
+                    <input
+                      type="radio"
+                      name="gallery-filter"
+                      id={filter.id}
+                      defaultChecked={index === 0}
+                      className="gallery-filter-input"
+                    />
+                    <label
+                      htmlFor={filter.id}
+                      className="type-meta gallery-filter-label"
+                    >
+                      {filter.label}
+                    </label>
+                  </Fragment>
+                ))}
 
-                <input
-                  type="radio"
-                  name="gallery-filter"
-                  id="gallery-marcas"
-                  className="gallery-filter-input"
-                />
-                <label
-                  htmlFor="gallery-marcas"
-                  className="type-meta gallery-filter-label"
-                >
-                  Marcas
-                </label>
-
-                <input
-                  type="radio"
-                  name="gallery-filter"
-                  id="gallery-carteles"
-                  className="gallery-filter-input"
-                />
-                <label
-                  htmlFor="gallery-carteles"
-                  className="type-meta gallery-filter-label"
-                >
-                  Carteles
-                </label>
-              </div>
-            </div>
-
-            <div className="gallery-grid">
-              {galleryItems.map((item) => (
-                <article
-                  key={item.title}
-                  className="gallery-item"
-                  data-category={item.category}
-                >
-                  <div
-                    className={`gallery-gradient gallery-gradient--${item.accent} h-72 rounded-[1.5rem] p-4`}
+              <ul className="gallery-grid mt-6 basis-full">
+                {galleryItems.map((item) => (
+                  <li
+                    key={item.src}
+                    className="gallery-item"
+                    data-category={item.category}
                   >
-                    <div className="flex h-full flex-col justify-between rounded-[1rem] border border-ink/20 bg-[var(--card-overlay)] p-4 text-ink backdrop-blur-[2px]">
-                      <span className="type-meta text-ink/80">{item.tag}</span>
-                      <div>
-                        <p className="type-card-title">{item.title}</p>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
+                    <figure>
+                      <ResponsiveImage
+                        src={item.src}
+                        alt={item.alt}
+                        sizes="(min-width: 768px) 25vw, 50vw"
+                        // Altura máxima: una entrada vertical no debe ocupar
+                        // el doble que un cartel.
+                        className="h-auto max-h-[28rem] w-auto max-w-full rounded-lg shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
+                      />
+                      <figcaption className="mt-3">
+                        <p className="type-card-title text-ink">{item.title}</p>
+                        <p className="type-meta mt-1 text-ink/60">
+                          {item.tag} • {item.year}
+                        </p>
+                      </figcaption>
+                    </figure>
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
         )}

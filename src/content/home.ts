@@ -13,8 +13,12 @@ export type SocialLink = {
 export type GalleryItem = {
   title: string;
   category: "marcas" | "carteles";
-  accent: "emerald" | "sea-glass";
+  /** Qué pieza es: cartel, entrada, logotipo… */
   tag: string;
+  year: string;
+  /** Clave de la imagen en public/images/manifest.json. */
+  src: string;
+  alt: string;
 };
 
 export type ProjectStat = {
@@ -155,8 +159,43 @@ export const services: Service[] = [
   },
 ];
 
-// Vacía hasta tener piezas reales: mientras lo esté, la galería no se muestra.
-export const galleryItems: GalleryItem[] = [];
+// Solo piezas reales. El filtro por categoría aparece cuando hay más de una.
+// PENDIENTE: marcas (Geomocyl, Valoe…) cuando Rodrigo confirme que puede
+// enseñarlas.
+export const galleryItems: GalleryItem[] = [
+  {
+    title: "Honeytomb + Low Gain",
+    category: "carteles",
+    tag: "Cartel",
+    year: "2026",
+    src: "carteles/honeytomb-low-gain-cartel",
+    alt: "Cartel del concierto de Honeytomb y Low Gain en la sala Filomatic: un lobo grabado en azul sobre papel crema.",
+  },
+  {
+    title: "Honeytomb + Low Gain",
+    category: "carteles",
+    tag: "Entrada",
+    year: "2026",
+    src: "carteles/honeytomb-low-gain-entrada",
+    alt: "Entrada numerada del concierto de Honeytomb y Low Gain, con el lobo del cartel.",
+  },
+  {
+    title: "The Bandits + Honeytomb",
+    category: "carteles",
+    tag: "Cartel",
+    year: "2025",
+    src: "carteles/honeytomb-bandits-cartel",
+    alt: "Cartel del concierto de The Bandits y Honeytomb en Malavida: una figura grabada con túnica y fusil sobre fondo azul y amarillo.",
+  },
+  {
+    title: "The Bandits + Honeytomb",
+    category: "carteles",
+    tag: "Entrada",
+    year: "2025",
+    src: "carteles/honeytomb-bandits-entrada",
+    alt: "Entrada vertical numerada del concierto de The Bandits y Honeytomb.",
+  },
+];
 
 // De más reciente a más antiguo, con los datos de los CV.
 export const experience: ExperienceItem[] = [
