@@ -25,6 +25,10 @@ export function BackToTop() {
     <a
       href="#top"
       aria-label="Volver arriba"
+      // Oculto, no debe recibir el foco ni leerse: el teclado acabaría en
+      // un botón invisible.
+      tabIndex={isVisible ? 0 : -1}
+      aria-hidden={!isVisible}
       className={`back-to-top fixed bottom-6 right-6 inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink/20 bg-paper text-lg text-ink shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-200 ${
         isVisible
           ? "translate-y-0 opacity-100"
