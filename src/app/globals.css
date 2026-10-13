@@ -107,10 +107,27 @@ footer[id],
   scroll-margin-top: 6rem;
 }
 
+/* Quien pide menos movimiento en su sistema: sin desplazamiento suave, sin
+   animaciones y sin transiciones (los cambios ocurren al instante). */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Foco visible al navegar con teclado, en toda la web. Las secciones con
+   fondo propio cambian --focus-ring (en las del Artabrian, oro). */
+:focus-visible {
+  outline: 3px solid var(--focus-ring, var(--color-accent));
+  outline-offset: 3px;
 }
 
 .type-display {
@@ -215,11 +232,6 @@ footer[id],
   cursor: pointer;
 }
 
-.theme-toggle:focus-visible {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 3px;
-}
-
 .theme-toggle-track {
   display: flex;
   width: 2.25rem;
@@ -268,16 +280,6 @@ footer[id],
   .type-display {
     font-size: 3.5rem;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-toggle-thumb {
-    transition: none;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -345,12 +347,6 @@ label {
 
 .back-to-top:hover {
   transform: translateY(-2px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .back-to-top {
-    transition: none;
-  }
 }
 
 .noise-surface::before {

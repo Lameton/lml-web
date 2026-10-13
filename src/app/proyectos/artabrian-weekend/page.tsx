@@ -43,7 +43,7 @@ export default function ArtabrianWeekendPage() {
       </div>
 
       {/* Cabecera con la identidad del evento, como en la portada. */}
-      <section className="relative mt-8 overflow-hidden bg-aw-black text-aw-cream">
+      <section className="relative mt-8 overflow-hidden bg-aw-black text-aw-cream [--focus-ring:var(--color-aw-gold)]">
         <ResponsiveImage
           src="artabrian/fondo-grabado"
           alt=""

@@ -18,8 +18,10 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
       id="proyecto"
       aria-labelledby="proyecto-titulo"
       // Los márgenes negativos compensan el padding del contenedor de la
-      // página para que el fondo llegue de borde a borde.
-      className="relative -mx-4 overflow-hidden bg-aw-black py-16 text-aw-cream sm:-mx-6 lg:-mx-8 lg:py-24"
+      // página para que el fondo llegue de borde a borde. --focus-ring pone
+      // en oro el contorno de foco, que en el color de acento no se vería
+      // sobre negro.
+      className="relative -mx-4 overflow-hidden bg-aw-black py-16 text-aw-cream [--focus-ring:var(--color-aw-gold)] sm:-mx-6 lg:-mx-8 lg:py-24"
     >
       {/* Fondo: el grabado de los carteles, oscurecido hacia la izquierda
           para que el texto se lea bien encima. */}
