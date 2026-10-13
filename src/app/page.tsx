@@ -48,9 +48,14 @@ export default function Home() {
             <a
               href="#top"
               className="flex items-center gap-3 transition hover:text-accent"
-              aria-label="Volver al inicio"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 bg-[var(--paper-strong)] text-[0.62rem] font-bold tracking-[0.14em] text-ink">
+              {/* El monograma es decorativo: el nombre accesible del enlace es
+                  el texto visible, "Rodrigo Lamela" (lo exige WCAG 2.5.3 para
+                  el control por voz). */}
+              <span
+                aria-hidden="true"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 bg-[var(--paper-strong)] text-[0.62rem] font-bold tracking-[0.14em] text-ink"
+              >
                 RL
               </span>
               <span className="type-meta text-ink/70">{profile.name}</span>
