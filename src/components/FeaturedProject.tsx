@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrowserFrame } from "@/components/BrowserFrame";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import type { FeaturedProject as FeaturedProjectData } from "@/content/home";
 
@@ -79,29 +80,12 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
             </p>
           </div>
 
-          {/* La captura comparte fondo con la sección: el marco de navegador
-              la separa y deja claro que es una web. */}
-          <figure className="overflow-hidden rounded-xl border border-aw-gold/50 bg-aw-black shadow-[0_24px_60px_rgba(0,0,0,0.6)]">
-            <div
-              className="flex items-center gap-3 border-b border-aw-gold/30 px-4 py-2.5"
-              aria-hidden="true"
-            >
-              <span className="flex gap-1.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-aw-cream/25" />
-                <span className="h-2.5 w-2.5 rounded-full bg-aw-cream/25" />
-                <span className="h-2.5 w-2.5 rounded-full bg-aw-cream/25" />
-              </span>
-              <span className="type-detail text-aw-cream/60">
-                {project.url}
-              </span>
-            </div>
-            <ResponsiveImage
-              src={project.screenshot.src}
-              alt={project.screenshot.alt}
-              sizes="(min-width: 1500px) 740px, (min-width: 1024px) 50vw, 100vw"
-              className="block h-auto w-full"
-            />
-          </figure>
+          <BrowserFrame
+            url={project.url}
+            src={project.screenshot.src}
+            alt={project.screenshot.alt}
+            sizes="(min-width: 1500px) 740px, (min-width: 1024px) 50vw, 100vw"
+          />
         </div>
 
         <ul className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
