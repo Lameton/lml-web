@@ -67,7 +67,8 @@ lml-web/
    5. Galería de diseño: marcas y carteles mezclados, con un filtro para ver una categoría o ambas. Sin JavaScript se ven todas las piezas; el filtro solo oculta.
    6. Fuera del trabajo: juegos de cartas, eventos y esports.
    7. Contacto.
-2. **Caso de estudio** (`/proyectos/artabrian-weekend`): contexto, papel de Rodrigo, la web (de Angular a React, arquitectura basada en JSON), la identidad, resultados y qué haría distinto.
+2. **Casos de estudio** con la plantilla `CaseStudyPage` (`src/components/case-study/`). Cada caso es un objeto `CaseStudy` en su archivo de `src/content/` (tipos en `src/content/case-study.ts`) con su propia paleta (`theme`), que se aplica como variables CSS a toda la página salvo el footer, que mantiene el estilo general. Para uno nuevo: archivo de contenido + ruta en `src/app/proyectos/<slug>/page.tsx` con sus metadatos.
+   - Artabrian Weekend (`/proyectos/artabrian-weekend`), en negro, crema y oro: contexto, papel de Rodrigo, la web (de Angular a React, arquitectura basada en JSON), la identidad, resultados y qué haría distinto.
 3. **404** con enlace al inicio.
 
 Datos del perfil: usa siempre los de los CV de Rodrigo. La web del Artabrian Weekend está hecha con **React 19, Vite y Material UI, en JavaScript**; no digas que usa TypeScript ni Node.js.
@@ -87,7 +88,7 @@ Datos del perfil: usa siempre los de los CV de Rodrigo. La web del Artabrian Wee
   | `muted` (texto secundario) | `#52645D` | `#9EC7BB` |
 
 - El interruptor `ThemeToggle` cambia entre los dos modos. La página arranca en modo claro.
-- La sección del Artabrian Weekend usa su propia identidad: negro `#0E0D0B` y oro `#D4A72C`.
+- El proyecto destacado y el caso de estudio del Artabrian Weekend usan su propia identidad: negro `#0E0D0B`, crema `#F1EDE3` y oro `#D4A72C` (variables `aw-*` del tema).
 
 ### Pendiente de decidir
 
