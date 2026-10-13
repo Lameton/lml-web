@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { archivo, rubik } from "./fonts";
+import { archivo, inknut } from "./fonts";
 import "./globals.css";
 
 // Metadatos provisionales; los definitivos (redes, datos estructurados)
@@ -12,7 +12,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${rubik.variable} ${archivo.variable}`}>
+    <html
+      lang="es"
+      className={`${archivo.variable} ${inknut.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
