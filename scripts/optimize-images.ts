@@ -26,7 +26,8 @@ const INPUT_DIR = "recursos";
 const OUTPUT_DIR = path.join("public", "images");
 const MANIFEST_PATH = path.join(OUTPUT_DIR, "manifest.json");
 
-const WIDTHS = [640, 1024, 1600, 2400];
+// 320: carteles y fotos pequeñas en móvil, para no descargar la versión de 640.
+const WIDTHS = [320, 640, 1024, 1600, 2400];
 const INPUT_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".avif", ".tif", ".tiff"];
 const POSTERS_DIR = "carteles";
 const BLUR_WIDTH = 20;

@@ -5,11 +5,19 @@
     "blurDataURL": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAABQBQCdASoUABwAPslSnkunpKKhsAwA8BkJQBOgMYdb7Ysx6DfbLaNeWLBrdaHnJvbAYgAA/vNxnU8qtXvMc0vL6o/GPGG+8Tq6WES3LTIhr1lAVYxmjVtMFJHhrx52sllaLTrlQ1X1tXYyI92VEC23i2mviElUH5b7UeaBPQ+06eIZrUUkII7xA8wXqQj+830H3qr71aO3NoZLQwfUgn2KFWovOFzLwErYA8qAAioATQAA",
     "avif": [
       {
+        "width": 320,
+        "src": "/images/perfil/rodrigo-lamela-foto-320.avif"
+      },
+      {
         "width": 496,
         "src": "/images/perfil/rodrigo-lamela-foto-496.avif"
       }
     ],
     "webp": [
+      {
+        "width": 320,
+        "src": "/images/perfil/rodrigo-lamela-foto-320.webp"
+      },
       {
         "width": 496,
         "src": "/images/perfil/rodrigo-lamela-foto-496.webp"
@@ -21,6 +29,10 @@
     "height": 1020,
     "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAgCdASoUAAsAPtFWo0uoJKMhsAgBABoJZwAAifQAAP7xDSSW8VuWnvKqQY//PdhfvKb9WYgmwu+WF4tDMRpcVnlQBZAA",
     "avif": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/fondo-grabado-320.avif"
+      },
       {
         "width": 640,
         "src": "/images/artabrian/fondo-grabado-640.avif"
@@ -39,6 +51,10 @@
       }
     ],
     "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/fondo-grabado-320.webp"
+      },
       {
         "width": 640,
         "src": "/images/artabrian/fondo-grabado-640.webp"
@@ -63,6 +79,10 @@
     "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJZQDImCHhxzXQdR4dgAD+9XmvxMQd44UaZWP84Y/DG+eN7/3BDyj84RDFzdfURwUmmWVQ+iBCgQH5dq/8aiFc2iMcnBNfFAAAAA==",
     "avif": [
       {
+        "width": 320,
+        "src": "/images/artabrian/web-escritorio-320.avif"
+      },
+      {
         "width": 640,
         "src": "/images/artabrian/web-escritorio-640.avif"
       },
@@ -80,6 +100,10 @@
       }
     ],
     "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/web-escritorio-320.webp"
+      },
       {
         "width": 640,
         "src": "/images/artabrian/web-escritorio-640.webp"
@@ -104,6 +128,10 @@
     "blurDataURL": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAABwBQCdASoUABwAPtFWpE2oJCMiMBgIAQAaCWwAxvcsHgBVKhuVgN4L1YcuJCkdJgu4v0XYAP7yvz/qdHCB1X3paWBHciEd1J0SBBCS3+PB6bYvk8/EY12jhGKWyNXQPwMOMy8MS2QpduljY6jdbPAP4g5JVgAe4Jv8Wd5MTOFYAru1xPETRC8eCUFPVPLBfnbaWWGD70UBj/+BELxtznvNYhTmWmmndeuquoSNa/mYlTG9vIGw4oJXKq5BjlkfCVF+g8WTbGcB0XYq2q0gkmDLWi31lHud775wcAAA",
     "avif": [
       {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-320.avif"
+      },
+      {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-mtg-640.avif"
       },
@@ -121,6 +149,10 @@
       }
     ],
     "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-320.webp"
+      },
       {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-mtg-640.webp"
@@ -145,6 +177,10 @@
     "blurDataURL": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAABwBQCdASoUABwAPtFWpE2oJCMiMBgIAQAaCWQAxNpsAE59UvQAYaFaz0yihVKWjY/qGooAAP70O7z5WkCuGH/ulA+IpU1WxLvztNSh/s0hj6424X40PmCM9/aaYeeJd3SRXsZs5cuR4d9iLG/x9kNuLVART6im2Fz3ou2lP6V5g0IAHyqfiPR53E+vsy4d8UT6FfRWRYKRuvtGsi5yXURHWFOylH/bOTSuPLBfbK9xAS6+nut1ZzS5Jvep3+mkACAAAA==",
     "avif": [
       {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-320.avif"
+      },
+      {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-onepiece-640.avif"
       },
@@ -162,6 +198,10 @@
       }
     ],
     "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-320.webp"
+      },
       {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-onepiece-640.webp"
@@ -186,6 +226,10 @@
     "blurDataURL": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAAAwBgCdASoUABwAPtFYpEyoJSOiKA1RABoJaACdM2aP+PoHEC4bTh3zJwQSBUBUUfXeyhyj0aeeO2+WAP7xfv5knxCuTEIxJUY5+UknKhC94iFIgtXjGGuVhFXZXOaRudqs5oBdEYyXpTUVOUW+C05+CgAJtsxqXXPFDyCWu+b1k8UYWhhazCug3ZDd/PO0klLdXGcZq9TUDbbMipKGBXQxhhkev1DsTB+bn8SZaTQ3/WK7ayfBI4MKWWwM9hbO20aDdRVoXFxz0zkArHk4lIYcSXNQoPbErDWdhiyuWKYsdQX1bNTPlvSBha541gAA",
     "avif": [
       {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-320.avif"
+      },
+      {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-riftbound-640.avif"
       },
@@ -203,6 +247,10 @@
       }
     ],
     "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-320.webp"
+      },
       {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-riftbound-640.webp"
@@ -227,6 +275,10 @@
     "blurDataURL": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACQBQCdASoUABwAPtFWokuoJKMhsBgMAQAaCWwAtswIAKLCEC8NrgdaN2WDCFXR8kez+a+XAAD+9YPOA+vNg5DddDM4/It7OTN8NYU9b1arkfMOObYHDYefuBnr/b2SNWc2nAQTGa08e4m/wXNYX1DKM6NtsMixgEgJwjwtY7NRmmH1jYos1HGlsEJ3OBPLA97EcnylKzCOkwWZEHo3wv5mI9k8OorS8x3FVhom2h2vxrWHDTQLIsAU76otFZ3iS6ArrHtT4MhxZwbRgAA=",
     "avif": [
       {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-320.avif"
+      },
+      {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-swu-640.avif"
       },
@@ -244,6 +296,10 @@
       }
     ],
     "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-320.webp"
+      },
       {
         "width": 640,
         "src": "/images/artabrian/carteles/cartel-2026-swu-640.webp"

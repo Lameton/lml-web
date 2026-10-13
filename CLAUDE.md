@@ -52,7 +52,7 @@ lml-web/
 ## Imágenes
 
 - Los originales van en `recursos/`, que no se sube a GitHub, con una subcarpeta por categoría: `perfil/`, `artabrian/` (con `artabrian/carteles/`), `marcas/` y `carteles/`. Nombres en minúsculas y con guiones.
-- `scripts/optimize-images.ts` usa `sharp` para generar en `public/images/`: AVIF y WebP en varios anchos (640, 1024, 1600 y 2400 px, sin ampliar nunca el original), una miniatura difuminada y un JSON con ancho y alto.
+- `scripts/optimize-images.ts` usa `sharp` para generar en `public/images/`: AVIF y WebP en varios anchos (320, 640, 1024, 1600 y 2400 px, sin ampliar nunca el original), una miniatura difuminada y un JSON con ancho y alto.
 - Los carteles (cualquier carpeta llamada `carteles/`) tienen texto fino y usan más calidad. Rodrigo valida el resultado visual.
 - El componente `ResponsiveImage` sirve las imágenes con `<picture>`, `srcset` y `sizes`, con `width` y `height` siempre definidos. La imagen principal de la portada carga con prioridad; el resto, en diferido.
 - Logotipos e iconos en SVG optimizado.
