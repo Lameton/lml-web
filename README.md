@@ -13,6 +13,14 @@ Incluye una portada con mis trabajos de desarrollo, marcas y carteles, y un caso
 - **Tailwind CSS 4**, con los colores y tipografías de la marca como variables de tema en `src/app/globals.css`.
 - **sharp** para optimizar las imágenes con un script propio, y un componente `ResponsiveImage` que las sirve con `<picture>`.
 - **Vitest** y **Testing Library** para las pruebas.
+- **Vercel Analytics**, sin cookies.
+
+## Calidad
+
+- El contenido se lee sin JavaScript: la portada es un componente de servidor y solo se hidratan el interruptor de tema y el botón de volver arriba.
+- Todo funciona con teclado, con un contorno de foco visible en todos los fondos, y se respeta `prefers-reduced-motion`.
+- Cada página tiene título, descripción e imagen para redes; `sitemap.xml`, `robots.txt` y datos estructurados de persona se generan al compilar.
+- Sin scroll horizontal desde 360 px de ancho.
 
 ## Puesta en marcha
 
@@ -36,7 +44,7 @@ npm run dev       # servidor de desarrollo en http://localhost:3000
 
 Los originales a máxima calidad van en `recursos/`, que no se sube al repositorio. `npm run images` genera en `public/images/`:
 
-- versiones AVIF y WebP a 640, 1024, 1600 y 2400 px de ancho, sin ampliar nunca el original;
+- versiones AVIF y WebP a 320, 640, 1024, 1600 y 2400 px de ancho, sin ampliar nunca el original;
 - más calidad para las imágenes de cualquier carpeta `carteles/`, que tienen texto fino;
 - `manifest.json` con el ancho, el alto, las rutas y una miniatura difuminada de cada imagen.
 
@@ -55,10 +63,11 @@ Los nombres de archivo van en minúsculas y con guiones (`cartel-honeytomb.jpg`)
 ```
 recursos/          originales de las imágenes (fuera de git)
 public/images/     imágenes optimizadas (generadas, no editar a mano)
+public/cv/         los dos CV en PDF
 scripts/           script de optimización de imágenes
 src/app/           rutas de la web
 src/components/    componentes reutilizables
 src/content/       textos y datos tipados
 src/lib/           utilidades
-docs/              briefing, dirección visual y CV
+docs/              briefing, propuestas e investigación de referencias
 ```
