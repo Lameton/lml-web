@@ -60,7 +60,7 @@ lml-web/
 ## Contenido de la web
 
 1. **Inicio** (`/`), en este orden (primero lo que busca un reclutador front-end):
-   1. Presentación: nombre, frase sobre lo que hace, foto y franja de datos.
+   1. Presentación: el nombre completo como titular de cartel a todo el ancho, rol, frase sobre lo que hace, descarga del CV, bloque «Ahora» (revisarlo cada pocos meses) y foto.
    2. Proyecto destacado: Artabrian Weekend.
    3. Qué hago: Desarrollo y Diseño.
    4. Experiencia: línea temporal breve con los puestos de los CV y descarga de los dos PDF.
