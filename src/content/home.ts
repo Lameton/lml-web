@@ -85,6 +85,12 @@ export const now = {
   ],
 };
 
+// Cómo está hecha esta web: para quien revise el portfolio como proyecto.
+export const colophon = {
+  text: "Esta web la he diseñado y programado yo: Next.js 16 con exportación estática, TypeScript estricto, Tailwind CSS e imágenes optimizadas con un script propio. Se lee sin JavaScript, funciona con teclado y respeta el movimiento reducido.",
+  repoUrl: "https://github.com/Lameton/lml-web",
+};
+
 export const socialLinks: SocialLink[] = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/rodrigolamela/" },
   { label: "GitHub", href: "https://github.com/Lameton" },

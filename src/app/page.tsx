@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import {
+  colophon,
   cvFiles,
   education,
   experience,
@@ -338,6 +339,26 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section
+          aria-labelledby="esta-web"
+          className="mx-auto max-w-[1500px] border-t border-ink/15 py-10"
+        >
+          <h2 id="esta-web" className="type-meta text-ink/60">
+            Esta web
+          </h2>
+          <p className="type-body mt-3 max-w-3xl text-ink/85">
+            {colophon.text}
+          </p>
+          <a
+            href={colophon.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="type-action mt-4 inline-flex text-ink underline-offset-4 transition hover:text-accent hover:underline"
+          >
+            Ver el código en GitHub ↗
+          </a>
         </section>
 
         <footer
