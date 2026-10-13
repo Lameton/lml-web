@@ -11,7 +11,6 @@ describe("Home navigation", () => {
 
     const navLinks = [
       { href: "#proyecto", label: "Proyecto" },
-      { href: "#que-hago", label: "Qué hago" },
       { href: "#experiencia", label: "Experiencia" },
       { href: "#contacto", label: "Contacto" },
     ];

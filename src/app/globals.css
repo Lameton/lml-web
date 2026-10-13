@@ -28,13 +28,11 @@
   --color-fill: #a5cdbd;
   --color-muted: #52645d;
   --panel: rgba(7, 23, 17, 0.04);
-  --inset-panel: rgba(255, 255, 255, 0.48);
   --paper-strong: #f3f6f1;
   --ink-soft: rgba(7, 23, 17, 0.72);
   --gradient-start: #f6f8f3;
   --gradient-mid: #dce9e1;
   --gradient-end: #a5cdbd;
-  --gradient-glow: rgba(15, 107, 96, 0.12);
   --card-overlay: rgba(255, 255, 255, 0.42);
   --shadow-color: rgba(7, 23, 17, 0.12);
   --noise-opacity: 0.08;
@@ -49,33 +47,16 @@
   --color-fill: #2bb5a2;
   --color-muted: #9ec7bb;
   --panel: rgba(255, 255, 255, 0.04);
-  --inset-panel: rgba(0, 0, 0, 0.2);
   --paper-strong: #0d1f1b;
   --ink-soft: rgba(225, 232, 227, 0.72);
   --gradient-start: #071711;
   --gradient-mid: #0d2b27;
   --gradient-end: #176b60;
-  --gradient-glow: rgba(111, 231, 211, 0.18);
   --card-overlay: rgba(0, 0, 0, 0.15);
   --shadow-color: rgba(0, 0, 0, 0.35);
   --noise-opacity: 0.14;
   --noise-blend: screen;
   --selection-bg: rgba(111, 231, 211, 0.25);
-}
-
-.profile-frame {
-  box-shadow: 0 30px 80px var(--shadow-color);
-}
-
-.profile-gradient-surface {
-  background-image:
-    radial-gradient(circle at top left, var(--gradient-glow), transparent 38%),
-    linear-gradient(
-      135deg,
-      var(--gradient-start),
-      var(--gradient-mid) 55%,
-      var(--gradient-end)
-    );
 }
 
 .project-gradient-surface {
@@ -199,6 +180,18 @@ footer[id],
   text-transform: uppercase;
 }
 
+/* Línea del rol bajo el nombre: las etiquetas en cursiva y mayúsculas,
+   pero a un tamaño que se lee de un vistazo. */
+.type-role {
+  font-family: var(--font-archivo), sans-serif;
+  font-size: clamp(0.875rem, 1.4vw, 1.05rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .type-action {
   font-size: 0.875rem;
   font-weight: 600;
@@ -216,10 +209,8 @@ footer[id],
   align-items: center;
   gap: 0.55rem;
   white-space: nowrap;
-  border: 1px solid color-mix(in srgb, var(--color-ink) 22%, transparent);
   border-radius: 9999px;
-  background: var(--panel);
-  padding: 0.35rem 0.65rem;
+  padding: 0.35rem;
   color: var(--color-ink);
   cursor: pointer;
 }

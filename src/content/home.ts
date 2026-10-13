@@ -1,8 +1,3 @@
-export type Highlight = {
-  label: string;
-  value: string;
-};
-
 export type Service = {
   title: string;
   text: string;
@@ -52,19 +47,12 @@ export type OutsideWorkItem = {
 };
 
 export const profile = {
-  location: "A Coruña",
-  availability: "Disponible para trabajar",
-  intro:
-    "Desarrollador front-end en A Coruña. Creo interfaces con estructura clara, personalidad visual y atención al detalle de la experiencia.",
-  statement: "Front-end con identidad clara.",
+  name: "Rodrigo Lamela",
+  roles: ["Desarrollador front-end", "Diseñador de marcas", "A Coruña"],
+  statement: "Construyo interfaces en React con ojo de director de arte.",
+  availability: "Disponible para trabajo presencial o híbrido en Galicia.",
   email: "lameladev@gmail.com",
 };
-
-export const highlights: Highlight[] = [
-  { label: "Frente", value: "React" },
-  { label: "Diseño", value: "Marca" },
-  { label: "Base", value: "A Coruña" },
-];
 
 export const featuredProject: FeaturedProject = {
   name: "Artabrian Weekend",

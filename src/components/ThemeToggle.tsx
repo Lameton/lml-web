@@ -31,13 +31,12 @@ export default function ThemeToggle() {
       role="switch"
       aria-label="Modo oscuro"
       aria-checked={theme === "dark"}
-      className="theme-toggle type-action"
+      className="theme-toggle"
       onClick={toggleTheme}
     >
       <span className="theme-toggle-track" aria-hidden="true">
         <span className="theme-toggle-thumb" />
       </span>
-      <span>{theme === "dark" ? "Oscuro" : "Claro"}</span>
     </button>
   );
 }

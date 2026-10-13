@@ -5,7 +5,6 @@ import {
   experience,
   featuredProject,
   galleryItems,
-  highlights,
   outsideWork,
   profile,
   services,
@@ -13,6 +12,13 @@ import {
 import { FeaturedProject } from "@/components/FeaturedProject";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import ThemeToggle from "@/components/ThemeToggle";
+
+// Solo las secciones principales: el resto se descubre al bajar.
+const navLinks = [
+  { href: "#proyecto", label: "Proyecto" },
+  { href: "#experiencia", label: "Experiencia" },
+  { href: "#contacto", label: "Contacto" },
+];
 
 export default function Home() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -35,77 +41,57 @@ export default function Home() {
     >
       <div id="top" className="w-full px-4 pb-20 pt-8 sm:px-6 lg:px-8">
         <header className="sticky top-0 z-50 mx-auto mb-12 w-full max-w-[1500px] border-b border-ink/10 bg-paper/80 backdrop-blur-sm">
-          <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-4 py-3">
             <a
               href="#top"
               className="flex items-center gap-3 transition hover:text-accent"
               aria-label="Volver al inicio"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 bg-[var(--paper-strong)] text-[0.62rem] font-bold tracking-[0.14em] text-ink">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 bg-[var(--paper-strong)] text-[0.62rem] font-bold tracking-[0.14em] text-ink">
                 RL
-              </div>
-              <div>
-                <p className="type-meta text-ink/70">Rodrigo Lamela</p>
-              </div>
+              </span>
+              <span className="type-meta text-ink/70">{profile.name}</span>
             </a>
 
-            <div className="ml-auto flex items-center gap-3">
-              <div className="flex items-center rounded-full border border-ink/10 bg-[var(--paper-strong)]/90 px-2 py-1.5 shadow-[0_6px_16px_rgba(0,0,0,0.03)]">
-                <ThemeToggle />
-              </div>
-
+            <div className="flex items-center gap-6">
+              {/* En móvil no hay menú: la página es una sola columna y se
+                  recorre bajando. */}
               <nav
                 aria-label="Navegación principal"
-                className="type-nav hidden items-center gap-2 rounded-full border border-ink/10 bg-[var(--paper-strong)]/90 px-2 py-2 text-ink/80 md:flex"
+                className="type-nav hidden items-center gap-6 text-ink/80 sm:flex"
               >
-                <a
-                  href="#proyecto"
-                  className="nav-link rounded-full px-3 py-1.5 transition hover:bg-ink/5 hover:text-accent"
-                >
-                  Proyecto
-                </a>
-                <a
-                  href="#que-hago"
-                  className="nav-link rounded-full px-3 py-1.5 transition hover:bg-ink/5 hover:text-accent"
-                >
-                  Qué hago
-                </a>
-                <a
-                  href="#experiencia"
-                  className="nav-link rounded-full px-3 py-1.5 transition hover:bg-ink/5 hover:text-accent"
-                >
-                  Experiencia
-                </a>
-                <a
-                  href="#fuera-del-trabajo"
-                  className="nav-link rounded-full px-3 py-1.5 transition hover:bg-ink/5 hover:text-accent"
-                >
-                  Fuera del trabajo
-                </a>
-                <a
-                  href="#contacto"
-                  className="nav-link rounded-full px-3 py-1.5 transition hover:bg-ink/5 hover:text-accent"
-                >
-                  Contacto
-                </a>
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="nav-link py-1.5 transition hover:text-accent"
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </nav>
+              <ThemeToggle />
             </div>
           </div>
         </header>
 
-        <section className="mx-auto grid max-w-[1500px] items-center gap-10 pb-16 pt-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:pb-20">
+        <section className="mx-auto grid max-w-[1500px] gap-8 pb-20 pt-4 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16 lg:pb-28 lg:pt-12">
           <div>
-            <p className="type-meta mb-5 inline-flex rounded-full border border-ink/20 bg-ink/5 px-3 py-1 text-ink/75">
-              {profile.location} · {profile.availability}
-            </p>
-
-            <h1 className="type-display max-w-[7.2ch] text-ink sm:max-w-[9ch] lg:max-w-[10ch]">
-              <span className="block">Front-end con</span>
-              <span className="block text-accent">identidad clara.</span>
+            <h1 className="type-display text-ink">
+              {/* Nombre y apellido en dos líneas, como en un cartel. */}
+              {profile.name.split(" ").map((word) => (
+                <span key={word} className="block">
+                  {word}
+                </span>
+              ))}
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/80 sm:text-lg lg:text-[1.125rem]">
-              {profile.intro}
+            <p className="type-role mt-6 text-accent">
+              {profile.roles.join(" • ")}
+            </p>
+
+            <p className="type-lead mt-6 max-w-xl text-ink/85">
+              {profile.statement}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -113,7 +99,7 @@ export default function Home() {
                 href="#proyecto"
                 className="type-action inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-accent"
               >
-                Ver proyecto
+                Ver el proyecto
               </a>
               <a
                 href="#contacto"
@@ -123,75 +109,20 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-7 flex flex-wrap gap-2 text-ink/70">
-              {["React", "Branding", "UI systems", "Cartelismo"].map((item) => (
-                <span
-                  key={item}
-                  className="inline-flex items-center rounded-full border border-ink/15 bg-[var(--paper-strong)] px-3 py-1.5 type-meta text-ink/75"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-
-            <dl className="mt-10 grid max-w-xl grid-cols-3 gap-4 sm:gap-5">
-              {highlights.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-2xl border border-ink/15 bg-ink/[0.02] p-4"
-                >
-                  <dt className="type-meta text-ink/60">{item.label}</dt>
-                  <dd className="type-stat mt-2 text-ink">{item.value}</dd>
-                </div>
-              ))}
-            </dl>
+            <p className="type-detail mt-6 text-ink/70">{profile.availability}</p>
           </div>
 
-          <aside className="relative">
-            <div className="profile-frame rounded-[2rem] border border-ink/10 bg-[var(--paper-strong)]/70 p-4 shadow-[0_18px_36px_rgba(0,0,0,0.04)]">
-              <div className="profile-gradient-surface relative overflow-hidden rounded-[1.5rem] border border-ink/10 p-5 text-ink">
-                <div className="pointer-events-none absolute -right-6 -top-6 h-28 w-28 rounded-full border border-white/10 bg-white/5 blur-2xl" />
-                <div className="pointer-events-none absolute -bottom-10 left-8 h-24 w-24 rounded-full border border-white/10 bg-white/5 blur-2xl" />
-
-                <div className="type-meta relative flex items-center justify-between text-ink/80">
-                  <span>Perfil</span>
-                  <span className="rounded-full border border-ink/15 bg-white/10 px-2 py-1 text-[0.62rem] uppercase tracking-[0.15em] text-ink/75">
-                    Disponible
-                  </span>
-                </div>
-
-                <div className="relative mt-7 rounded-[1.5rem] border border-ink/10 bg-[var(--inset-panel)] p-4 backdrop-blur-sm">
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <div className="h-20 w-20 overflow-hidden rounded-full border border-ink/30 bg-ink/10 shadow-[0_12px_28px_rgba(0,0,0,0.12)]">
-                      <ResponsiveImage
-                        src="perfil/rodrigo-lamela-foto"
-                        alt="Retrato de Rodrigo Lamela"
-                        sizes="(min-width: 1024px) 12rem, 8rem"
-                        priority
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <span className="type-meta rounded-full border border-ink/15 bg-white/10 px-2 py-1 text-ink/70">
-                      A Coruña
-                    </span>
-                  </div>
-
-                  <div className="border-t border-ink/15 pt-4">
-                    <p className="type-meta text-ink/70">Especialidad</p>
-                    <p className="type-card-title mt-2 text-ink">
-                      Front-end + branding
-                    </p>
-                  </div>
-
-                  <div className="type-detail mt-4 space-y-3 border-t border-ink/15 pt-4 text-ink/85">
-                    <p>Diseño de interfaces con estructura clara.</p>
-                    <p>Identidad visual con personalidad y consistencia.</p>
-                    <p>Comunicación gráfica para cultura, eventos y marcas.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </aside>
+          {/* En móvil la foto va primero y pequeña; en escritorio, a la
+              derecha y grande. */}
+          <div className="order-first w-24 overflow-hidden rounded-2xl border border-ink/15 sm:w-32 lg:order-last lg:w-72">
+            <ResponsiveImage
+              src="perfil/rodrigo-lamela-foto"
+              alt="Retrato de Rodrigo Lamela"
+              sizes="(min-width: 1024px) 18rem, (min-width: 640px) 8rem, 6rem"
+              priority
+              className="block h-auto w-full"
+            />
+          </div>
         </section>
 
         <FeaturedProject project={featuredProject} />
