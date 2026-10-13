@@ -177,60 +177,63 @@ export default function Home() {
             Experiencia y formación
           </h2>
 
-          {/* Lista ordenada: el orden (de más reciente a más antiguo)
+          {/* Dos columnas en escritorio: la experiencia a la izquierda y, a la
+              derecha, la formación y los CV, que se quedan fijos al bajar. */}
+          <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-16">
+            {/* Lista ordenada: el orden (de más reciente a más antiguo)
               forma parte del contenido. */}
-          <ol className="mt-10 max-w-4xl divide-y divide-ink/10 border-y border-ink/10">
-            {experience.map((item) => (
-              <li
-                key={`${item.organization}-${item.period}`}
-                className="grid gap-2 py-6 sm:grid-cols-[10rem_1fr] sm:gap-8"
-              >
-                <p className="type-meta text-ink/60">{item.period}</p>
-                <div>
-                  <h3 className="type-card-title text-ink">{item.role}</h3>
-                  <p className="type-meta mt-2 text-ink/70">
-                    {[item.organization, item.place]
-                      .filter(Boolean)
-                      .join(" • ")}
-                  </p>
-                  <p className="type-body mt-3 max-w-2xl text-ink/80">
-                    {item.summary}
-                  </p>
-                  <p className="type-meta mt-3 inline-flex rounded-full border border-accent/40 px-2.5 py-0.5 text-accent">
-                    {item.area}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
+            <ol className="divide-y divide-ink/10 border-y border-ink/10">
+              {experience.map((item) => (
+                <li
+                  key={`${item.organization}-${item.period}`}
+                  className="grid gap-2 py-6 sm:grid-cols-[10rem_1fr] sm:gap-8"
+                >
+                  <p className="type-meta text-ink/60">{item.period}</p>
+                  <div>
+                    <h3 className="type-card-title text-ink">{item.role}</h3>
+                    <p className="type-meta mt-2 text-ink/70">
+                      {[item.organization, item.place]
+                        .filter(Boolean)
+                        .join(" • ")}
+                    </p>
+                    <p className="type-body mt-3 max-w-2xl text-ink/80">
+                      {item.summary}
+                    </p>
+                    <p className="type-meta mt-3 inline-flex rounded-full border border-accent/40 px-2.5 py-0.5 text-accent">
+                      {item.area}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
 
-          <h3 className="type-meta mt-12 text-ink/60">Formación</h3>
-          <ul className="mt-4 max-w-4xl divide-y divide-ink/10 border-y border-ink/10">
-            {education.map((item) => (
-              <li
-                key={item.title}
-                className="grid gap-2 py-5 sm:grid-cols-[10rem_1fr] sm:gap-8"
-              >
-                <p className="type-meta text-ink/60">{item.period}</p>
-                <div>
-                  <p className="type-card-title text-ink">{item.title}</p>
-                  <p className="type-meta mt-2 text-ink/70">{item.school}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <h3 className="type-meta text-ink/60">Formación</h3>
+              <ul className="mt-4 divide-y divide-ink/10 border-y border-ink/10">
+                {education.map((item) => (
+                  <li key={item.title} className="py-5">
+                    <p className="type-meta text-ink/60">{item.period}</p>
+                    <p className="type-card-title mt-2 text-ink">
+                      {item.title}
+                    </p>
+                    <p className="type-meta mt-2 text-ink/70">{item.school}</p>
+                  </li>
+                ))}
+              </ul>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            {[cvFiles.frontend, cvFiles.design].map((cv) => (
-              <a
-                key={cv.href}
-                href={cv.href}
-                download
-                className="type-action inline-flex items-center justify-center rounded-full border border-ink/25 px-5 py-3 text-ink transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-              >
-                Descargar {cv.label} ↓
-              </a>
-            ))}
+              <div className="mt-8 flex flex-col items-start gap-3">
+                {[cvFiles.frontend, cvFiles.design].map((cv) => (
+                  <a
+                    key={cv.href}
+                    href={cv.href}
+                    download
+                    className="type-action inline-flex items-center justify-center rounded-full border border-ink/25 px-5 py-3 text-ink transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+                  >
+                    Descargar {cv.label} ↓
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
