@@ -15,6 +15,31 @@ export type GalleryItem = {
   tag: string;
 };
 
+export type ProjectStat = {
+  value: string;
+  label: string;
+};
+
+export type ProjectPoster = {
+  /** Clave de la imagen en public/images/manifest.json. */
+  src: string;
+  game: string;
+};
+
+export type FeaturedProject = {
+  name: string;
+  meta: string;
+  summary: string;
+  highlight: string;
+  url: string;
+  screenshot: { src: string; alt: string };
+  roles: string[];
+  stats: ProjectStat[];
+  stack: string[];
+  posters: ProjectPoster[];
+  caseStudyHref: string;
+};
+
 export type ExperienceItem = {
   kind: string;
   title: string;
@@ -40,6 +65,34 @@ export const highlights: Highlight[] = [
   { label: "Diseño", value: "Marca" },
   { label: "Base", value: "A Coruña" },
 ];
+
+export const featuredProject: FeaturedProject = {
+  name: "Artabrian Weekend",
+  meta: "Ferrol • 2024 – actualidad",
+  summary:
+    "Fin de semana de torneos de juegos de cartas coleccionables en el Pazo do Monte, en Ferrol. Diseño y desarrollo la web y dirijo la identidad gráfica de cada edición.",
+  highlight:
+    "Reescribí la web de Angular a React con una arquitectura basada en JSON: añadir un torneo nuevo no requiere tocar el código.",
+  url: "artabrianweekends.com",
+  screenshot: {
+    src: "artabrian/web-escritorio",
+    alt: "Portada de la web del Artabrian Weekend 2026, con el selector de juegos",
+  },
+  roles: ["Desarrollo front-end", "Dirección de arte"],
+  stats: [
+    { value: "720+", label: "Participaciones en 2026" },
+    { value: "1.000+", label: "Asistentes" },
+    { value: "3", label: "Ediciones" },
+  ],
+  stack: ["React 19", "Vite", "Material UI", "Datos en JSON"],
+  posters: [
+    { src: "artabrian/carteles/cartel-2026-mtg", game: "Magic: The Gathering" },
+    { src: "artabrian/carteles/cartel-2026-swu", game: "Star Wars: Unlimited" },
+    { src: "artabrian/carteles/cartel-2026-onepiece", game: "One Piece" },
+    { src: "artabrian/carteles/cartel-2026-riftbound", game: "Riftbound" },
+  ],
+  caseStudyHref: "/proyectos/artabrian-weekend",
+};
 
 export const services: Service[] = [
   {

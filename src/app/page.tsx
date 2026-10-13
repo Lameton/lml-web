@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import {
   experience,
+  featuredProject,
   galleryItems,
   highlights,
   outsideWork,
   profile,
   services,
 } from "@/content/home";
+import { FeaturedProject } from "@/components/FeaturedProject";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -192,77 +194,7 @@ export default function Home() {
           </aside>
         </section>
 
-        <section
-          id="proyecto"
-          className="scroll-mt-28 relative -mx-5 overflow-hidden bg-[#0E0D0B] py-10 text-[#F1EDE3] sm:-mx-6 lg:-mx-8 lg:py-12"
-        >
-          <div className="absolute inset-0 opacity-20" aria-hidden="true">
-            <div className="h-full w-full bg-[radial-gradient(circle_at_top_left,_rgba(212,167,44,0.35),transparent_35%)]" />
-          </div>
-
-          <div className="relative mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-            <div className="mb-6 flex flex-col gap-4 md:mb-8 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="type-meta text-[#D4A72C]">Proyecto destacado</p>
-                <h2 className="type-section mt-2 text-[#F1EDE3]">
-                  Artabrian Weekend
-                </h2>
-              </div>
-              <a
-                href="/proyectos/artabrian-weekend"
-                className="type-action inline-flex text-[#D4A72C] transition hover:text-[#F1EDE3]"
-              >
-                Ver caso completo
-              </a>
-            </div>
-
-            <div className="grid gap-6 rounded-[2rem] border border-[#D4A72C]/30 bg-[#17120F] p-6 text-[#F1EDE3] md:grid-cols-[1.15fr_0.85fr] md:p-8">
-              <div className="rounded-[1.5rem] border border-[#D4A72C]/35 bg-[linear-gradient(135deg,#0E0D0B,#17120F_55%,#1A1813)] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] lg:p-8">
-                <p className="type-meta text-[#D4A72C]">Identidad · Web · UX</p>
-                <h3 className="type-project-title mt-4 max-w-lg text-[#F1EDE3]">
-                  Una experiencia visual que convierte la energía del evento en
-                  estructura y claridad.
-                </h3>
-
-                <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                  {[
-                    { label: "Papel", value: "Diseño" },
-                    { label: "Web", value: "React" },
-                    { label: "Resultado", value: "Más claridad" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="rounded-2xl border border-[#D4A72C]/30 bg-white/5 p-3"
-                    >
-                      <p className="type-meta text-[#D4A72C]">{item.label}</p>
-                      <p className="type-card-title mt-2 text-[#F1EDE3]">
-                        {item.value}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-between gap-5 rounded-[1.5rem] border border-[#D4A72C]/25 bg-[#201A15] p-6 shadow-[0_10px_24px_rgba(0,0,0,0.16)]">
-                <p className="type-body text-[#F1EDE3]/85">
-                  Reimaginé la presencia digital del festival con una web que
-                  emula su energía, organiza la información y refuerza la
-                  identidad del evento sin perder claridad ni accesibilidad.
-                </p>
-
-                <ul className="type-detail space-y-3 text-[#F1EDE3]/80">
-                  <li>• React 19 y arquitectura basada en contenido.</li>
-                  <li>
-                    • Diseño visual con identidad propia y alta legibilidad.
-                  </li>
-                  <li>
-                    • Mejor flujo para navegación, información y conversión.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FeaturedProject project={featuredProject} />
 
         <section
           id="que-hago"

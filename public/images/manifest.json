@@ -15,5 +15,251 @@
         "src": "/images/perfil/rodrigo-lamela-foto-496.webp"
       }
     ]
+  },
+  "artabrian/fondo-grabado": {
+    "width": 1920,
+    "height": 1020,
+    "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAgCdASoUAAsAPtFWo0uoJKMhsAgBABoJZwAAifQAAP7xDSSW8VuWnvKqQY//PdhfvKb9WYgmwu+WF4tDMRpcVnlQBZAA",
+    "avif": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/fondo-grabado-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/fondo-grabado-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/fondo-grabado-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/artabrian/fondo-grabado-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/fondo-grabado-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/fondo-grabado-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/fondo-grabado-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/artabrian/fondo-grabado-1920.webp"
+      }
+    ]
+  },
+  "artabrian/web-escritorio": {
+    "width": 1776,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJZQDImCHhxzXQdR4dgAD+9XmvxMQd44UaZWP84Y/DG+eN7/3BDyj84RDFzdfURwUmmWVQ+iBCgQH5dq/8aiFc2iMcnBNfFAAAAA==",
+    "avif": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/web-escritorio-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/web-escritorio-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/web-escritorio-1600.avif"
+      },
+      {
+        "width": 1776,
+        "src": "/images/artabrian/web-escritorio-1776.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/web-escritorio-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/web-escritorio-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/web-escritorio-1600.webp"
+      },
+      {
+        "width": 1776,
+        "src": "/images/artabrian/web-escritorio-1776.webp"
+      }
+    ]
+  },
+  "artabrian/carteles/cartel-2026-mtg": {
+    "width": 1810,
+    "height": 2560,
+    "blurDataURL": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAABwBQCdASoUABwAPtFWpE2oJCMiMBgIAQAaCWwAxvcsHgBVKhuVgN4L1YcuJCkdJgu4v0XYAP7yvz/qdHCB1X3paWBHciEd1J0SBBCS3+PB6bYvk8/EY12jhGKWyNXQPwMOMy8MS2QpduljY6jdbPAP4g5JVgAe4Jv8Wd5MTOFYAru1xPETRC8eCUFPVPLBfnbaWWGD70UBj/+BELxtznvNYhTmWmmndeuquoSNa/mYlTG9vIGw4oJXKq5BjlkfCVF+g8WTbGcB0XYq2q0gkmDLWi31lHud775wcAAA",
+    "avif": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-1600.avif"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-1810.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-1600.webp"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-mtg-1810.webp"
+      }
+    ]
+  },
+  "artabrian/carteles/cartel-2026-onepiece": {
+    "width": 1810,
+    "height": 2560,
+    "blurDataURL": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAABwBQCdASoUABwAPtFWpE2oJCMiMBgIAQAaCWQAxNpsAE59UvQAYaFaz0yihVKWjY/qGooAAP70O7z5WkCuGH/ulA+IpU1WxLvztNSh/s0hj6424X40PmCM9/aaYeeJd3SRXsZs5cuR4d9iLG/x9kNuLVART6im2Fz3ou2lP6V5g0IAHyqfiPR53E+vsy4d8UT6FfRWRYKRuvtGsi5yXURHWFOylH/bOTSuPLBfbK9xAS6+nut1ZzS5Jvep3+mkACAAAA==",
+    "avif": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-1600.avif"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-1810.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-1600.webp"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-onepiece-1810.webp"
+      }
+    ]
+  },
+  "artabrian/carteles/cartel-2026-riftbound": {
+    "width": 1810,
+    "height": 2560,
+    "blurDataURL": "data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAAAwBgCdASoUABwAPtFYpEyoJSOiKA1RABoJaACdM2aP+PoHEC4bTh3zJwQSBUBUUfXeyhyj0aeeO2+WAP7xfv5knxCuTEIxJUY5+UknKhC94iFIgtXjGGuVhFXZXOaRudqs5oBdEYyXpTUVOUW+C05+CgAJtsxqXXPFDyCWu+b1k8UYWhhazCug3ZDd/PO0klLdXGcZq9TUDbbMipKGBXQxhhkev1DsTB+bn8SZaTQ3/WK7ayfBI4MKWWwM9hbO20aDdRVoXFxz0zkArHk4lIYcSXNQoPbErDWdhiyuWKYsdQX1bNTPlvSBha541gAA",
+    "avif": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-1600.avif"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-1810.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-1600.webp"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-riftbound-1810.webp"
+      }
+    ]
+  },
+  "artabrian/carteles/cartel-2026-swu": {
+    "width": 1810,
+    "height": 2560,
+    "blurDataURL": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAACQBQCdASoUABwAPtFWokuoJKMhsBgMAQAaCWwAtswIAKLCEC8NrgdaN2WDCFXR8kez+a+XAAD+9YPOA+vNg5DddDM4/It7OTN8NYU9b1arkfMOObYHDYefuBnr/b2SNWc2nAQTGa08e4m/wXNYX1DKM6NtsMixgEgJwjwtY7NRmmH1jYos1HGlsEJ3OBPLA97EcnylKzCOkwWZEHo3wv5mI9k8OorS8x3FVhom2h2vxrWHDTQLIsAU76otFZ3iS6ArrHtT4MhxZwbRgAA=",
+    "avif": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-1600.avif"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-1810.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-1600.webp"
+      },
+      {
+        "width": 1810,
+        "src": "/images/artabrian/carteles/cartel-2026-swu-1810.webp"
+      }
+    ]
   }
 }
