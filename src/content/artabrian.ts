@@ -23,7 +23,10 @@ export const caseStudy = {
   facts: [
     { label: "Papel", value: "Desarrollo front-end y dirección de arte" },
     { label: "Periodo", value: "2024 – actualidad" },
-    { label: "Organiza", value: "Artabrian Nights, asociación sin ánimo de lucro" },
+    {
+      label: "Organiza",
+      value: "Artabrian Nights, asociación sin ánimo de lucro",
+    },
     { label: "Web", value: "React 19 • Vite • Material UI • JavaScript" },
   ] satisfies CaseStudyFact[],
 
@@ -74,6 +77,11 @@ export default function MagicTheGathering() {
 }`,
       },
     ] satisfies CodeSample[],
+    // El repositorio de 2026 es privado; el de la primera versión, público.
+    previousRepo: {
+      label: "Ver el código de la versión de 2025 (Angular)",
+      href: "https://github.com/Lameton/artabrian-weekend-2025",
+    },
     outro: [
       "Las páginas de cada juego se cargan en diferido (React.lazy), así que quien entra a ver Magic no descarga el código de One Piece. La web se despliega en Vercel desde la rama main mediante GitHub Actions; el trabajo diario va en develop.",
     ],
@@ -89,7 +97,10 @@ export default function MagicTheGathering() {
       { value: "720+", label: "Participaciones en 2026" },
       { value: "+30 %", label: "Respecto a 2025 (557)" },
       { value: "1.000+", label: "Asistentes en 2026" },
-      { value: "140 kg", label: "De comida para el Banco de Alimentos Rías Altas" },
+      {
+        value: "140 kg",
+        label: "De comida para el Banco de Alimentos Rías Altas",
+      },
     ] satisfies ProjectStat[],
     text: "Una participación es un jugador en un torneo: quien juega varios días cuenta varias veces. En 2026 vinieron jugadores de Galicia, de otras comunidades y de Portugal, Alemania y Francia.",
   },

@@ -6,7 +6,8 @@ import { caseStudy } from "@/content/artabrian";
 import { featuredProject } from "@/content/home";
 import { baseOpenGraph } from "@/lib/site";
 
-const title = "Artabrian Weekend · Caso de estudio de Rodrigo Lamela Sanfacundo";
+const title =
+  "Artabrian Weekend · Caso de estudio de Rodrigo Lamela Sanfacundo";
 const description =
   "Web en React guiada por datos e identidad gráfica para el Artabrian Weekend, un fin de semana de torneos de cartas en Ferrol.";
 const path = "/proyectos/artabrian-weekend";
@@ -150,6 +151,15 @@ export default function ArtabrianWeekendPage() {
               </pre>
             </figure>
           ))}
+
+          <a
+            href={caseStudy.web.previousRepo.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="type-action mt-6 inline-flex text-ink underline-offset-4 transition hover:text-accent hover:underline"
+          >
+            {caseStudy.web.previousRepo.label} ↗
+          </a>
 
           {caseStudy.web.outro.map((paragraph) => (
             <p key={paragraph} className="type-body mt-6 text-ink/85">
