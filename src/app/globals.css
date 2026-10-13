@@ -7,30 +7,437 @@
  * colores a mano, así que cambiar la paleta es cambiar este bloque.
  */
 @theme {
-  /* Paleta "azul" */
-  --color-paper: #e8e1d1;
-  --color-ink: #1c2647;
-  --color-accent: #3f5894;
-  --color-fill: #7c93c3;
-  --color-muted: #454b60;
+  /* Paleta oscura (principal) */
+  --color-bone: #e1e8e3;
+  --color-paper: #071711;
+  --color-ink: var(--color-bone);
+  --color-accent: #6fe7d3;
+  --color-fill: #2bb5a2;
+  --color-muted: #9ec7bb;
 
   /* Identidad propia del Artabrian Weekend */
   --color-aw-black: #0e0d0b;
   --color-aw-gold: #d4a72c;
 }
 
+.theme-light {
+  --color-paper: var(--color-bone);
+  --color-ink: #071711;
+  --color-accent: #0f6b60;
+  --color-fill: #a5cdbd;
+  --color-muted: #52645d;
+  --panel: rgba(7, 23, 17, 0.04);
+  --inset-panel: rgba(255, 255, 255, 0.48);
+  --paper-strong: #f3f6f1;
+  --ink-soft: rgba(7, 23, 17, 0.72);
+  --gradient-start: #f6f8f3;
+  --gradient-mid: #dce9e1;
+  --gradient-end: #a5cdbd;
+  --gradient-glow: rgba(15, 107, 96, 0.12);
+  --card-overlay: rgba(255, 255, 255, 0.42);
+  --shadow-color: rgba(7, 23, 17, 0.12);
+  --noise-opacity: 0.08;
+  --noise-blend: multiply;
+  --selection-bg: rgba(15, 107, 96, 0.18);
+}
+
+.theme-dark {
+  --color-paper: #071711;
+  --color-ink: var(--color-bone);
+  --color-accent: #6fe7d3;
+  --color-fill: #2bb5a2;
+  --color-muted: #9ec7bb;
+  --panel: rgba(255, 255, 255, 0.04);
+  --inset-panel: rgba(0, 0, 0, 0.2);
+  --paper-strong: #0d1f1b;
+  --ink-soft: rgba(225, 232, 227, 0.72);
+  --gradient-start: #071711;
+  --gradient-mid: #0d2b27;
+  --gradient-end: #176b60;
+  --gradient-glow: rgba(111, 231, 211, 0.18);
+  --card-overlay: rgba(0, 0, 0, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.35);
+  --noise-opacity: 0.14;
+  --noise-blend: screen;
+  --selection-bg: rgba(111, 231, 211, 0.25);
+}
+
+.profile-frame {
+  box-shadow: 0 30px 80px var(--shadow-color);
+}
+
+.profile-gradient-surface {
+  background-image:
+    radial-gradient(circle at top left, var(--gradient-glow), transparent 38%),
+    linear-gradient(
+      135deg,
+      var(--gradient-start),
+      var(--gradient-mid) 55%,
+      var(--gradient-end)
+    );
+}
+
+.project-gradient-surface {
+  background-image: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-mid) 55%,
+    var(--gradient-end)
+  );
+}
+
+.gallery-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gallery-mid, var(--gradient-mid)) 55%,
+    var(--gallery-end, var(--gradient-end))
+  );
+}
+
+.gallery-gradient--sea-glass {
+  --gallery-mid: #124b43;
+  --gallery-end: #176b60;
+}
+
+.theme-light .gallery-gradient--sea-glass {
+  --gallery-mid: #cddfd5;
+  --gallery-end: #8fbba9;
+}
+
 /*
- * `inline` hace que Tailwind escriba var(--font-rubik) tal cual en cada
+ * `inline` hace que Tailwind escriba var(--font-inknut) tal cual en cada
  * utilidad, en lugar de resolverla en :root, porque esas variables las
  * define next/font en <html> (ver layout.tsx).
  */
 @theme inline {
-  --font-display: var(--font-rubik), sans-serif; /* font-display: titulares */
+  --font-display: var(--font-inknut), serif; /* font-display: titulares */
   --font-sans: var(--font-archivo), sans-serif; /* font-sans: texto */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+footer[id],
+[id="top"] {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.type-display {
+  font-family: var(--font-inknut), serif;
+  font-size: clamp(2.75rem, 6vw, 5.4rem);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: -0.065em;
+  text-wrap: balance;
+}
+
+.type-section {
+  font-family: var(--font-inknut), serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+.type-project-title {
+  font-family: var(--font-inknut), serif;
+  font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.type-card-title {
+  font-family: var(--font-inknut), serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+}
+
+.type-stat {
+  font-family: var(--font-inknut), serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.type-lead {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.type-body {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.type-detail {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.type-meta {
+  font-family: var(--font-archivo), sans-serif;
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.type-action {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.type-action.bg-ink {
+  color: var(--color-paper);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  gap: 0.55rem;
+  white-space: nowrap;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 22%, transparent);
+  border-radius: 9999px;
+  background: var(--panel);
+  padding: 0.35rem 0.65rem;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle-track {
+  display: flex;
+  width: 2.25rem;
+  height: 1.2rem;
+  align-items: center;
+  border-radius: 9999px;
+  background: var(--color-ink);
+  padding: 0.15rem;
+}
+
+.theme-toggle-thumb {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 0.9rem;
+  border-radius: 9999px;
+  background: var(--color-paper);
+  transition: transform 180ms ease;
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle-thumb {
+  transform: translateX(1.05rem);
+}
+
+.type-nav {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .type-display {
+    font-size: 3rem;
+  }
+
+  .type-section {
+    font-size: 2rem;
+  }
+
+  .type-project-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .type-display {
+    font-size: 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle-thumb {
+    transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  margin: 0;
+  min-height: 100vh;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+main,
+main *,
+header,
+header *,
+footer,
+footer *,
+a,
+button,
+input,
+label {
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease,
+    box-shadow 300ms ease,
+    opacity 300ms ease,
+    transform 300ms ease;
+}
+
+.noise-surface {
+  position: relative;
+  background-color: var(--color-paper);
+  isolation: isolate;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.45rem;
+  width: 100%;
+  height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.back-to-top {
+  z-index: 60;
+  box-shadow: 0 14px 32px rgba(7, 23, 17, 0.14);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
+}
+
+.noise-surface::before {
+  content: "";
+  position: absolute;
+  inset: -10% -6% -10% -6%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.7 0 0 0 0 0.92 0 0 0 0 0.86 0 0 0 -2.4 1.25'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: var(--noise-opacity, 0.14);
+  mix-blend-mode: var(--noise-blend, screen);
+  pointer-events: none;
+}
+
+.theme-light.noise-surface::before {
+  filter: brightness(0.18);
+}
+
+.noise-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--selection-bg, rgba(111, 231, 211, 0.25));
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.gallery-filter-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-filter-label {
+  cursor: pointer;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 22%, transparent);
+  background: var(--panel);
+  color: var(--color-ink);
+  border-radius: 9999px;
+  padding: 0.6rem 1rem;
+  transition: all 180ms ease;
+}
+
+.gallery-filter-input:checked + .gallery-filter-label {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery-item {
+  display: block;
+}
+
+#gallery-all:checked ~ .gallery-grid .gallery-item,
+#gallery-marcas:checked ~ .gallery-grid .gallery-item[data-category="marcas"],
+#gallery-carteles:checked ~ .gallery-grid .gallery-item[data-category="carteles"] {
+  display: block;
+}
+
+#gallery-marcas:checked ~ .gallery-grid .gallery-item[data-category="carteles"],
+#gallery-carteles:checked ~ .gallery-grid .gallery-item[data-category="marcas"] {
+  display: none;
 }
