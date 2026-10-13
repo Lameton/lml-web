@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { PersonJsonLd } from "@/components/PersonJsonLd";
 import { baseOpenGraph, SITE_URL } from "@/lib/site";
@@ -27,6 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <PersonJsonLd />
         {children}
+        {/* Analítica de Vercel: sin cookies. Su script solo existe cuando la
+            web está desplegada en Vercel; en local no envía nada. */}
+        <Analytics />
       </body>
     </html>
   );
