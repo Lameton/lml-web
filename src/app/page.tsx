@@ -10,6 +10,7 @@ import {
   outsideWork,
   profile,
   services,
+  socialLinks,
 } from "@/content/home";
 import { FeaturedProject } from "@/components/FeaturedProject";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
@@ -146,6 +147,9 @@ export default function Home() {
                 </div>
                 <h3 className="type-card-title text-ink">{service.title}</h3>
                 <p className="type-body mt-3 text-ink/75">{service.text}</p>
+                <p className="type-meta mt-4 text-ink/60">
+                  {service.tools.join(" • ")}
+                </p>
               </article>
             ))}
           </div>
@@ -306,10 +310,10 @@ export default function Home() {
         >
           <p className="type-meta text-ink/60">Fuera del trabajo</p>
           <h2 className="type-section mt-2 text-ink">
-            Juegos, eventos y comunidad con la misma mirada.
+            Mis aficiones me han dado mis mejores proyectos.
           </h2>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {outsideWork.map((item) => (
               <article
                 key={item.title}
@@ -337,6 +341,20 @@ export default function Home() {
             >
               {profile.email}
             </a>
+            <ul className="type-action mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-ink/80">
+              {socialLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-accent"
+                  >
+                    {link.label} ↗
+                  </a>
+                </li>
+              ))}
+            </ul>
             <div className="mt-6">
               <a
                 href="#top"

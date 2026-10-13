@@ -1,6 +1,13 @@
 export type Service = {
   title: string;
   text: string;
+  /** Herramientas y tecnologías que uso para este servicio. */
+  tools: string[];
+};
+
+export type SocialLink = {
+  label: string;
+  href: string;
 };
 
 export type GalleryItem = {
@@ -64,6 +71,12 @@ export const profile = {
   email: "lameladev@gmail.com",
 };
 
+export const socialLinks: SocialLink[] = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rodrigolamela/" },
+  { label: "GitHub", href: "https://github.com/Lameton" },
+  { label: "Behance", href: "https://www.behance.net/lameton/" },
+];
+
 // PDFs en public/cv/. Llevan el teléfono: en el HTML de la web no aparece
 // para no exponerlo a los bots que recopilan números.
 export const cvFiles = {
@@ -108,15 +121,27 @@ export const featuredProject: FeaturedProject = {
 export const services: Service[] = [
   {
     title: "Desarrollo front-end",
-    text: "Interfaces limpias, accesibles y pensadas para comunicar con claridad y convertir visitas en acciones.",
+    text: "Interfaces en React, responsive y accesibles, con el contenido separado del código para que se pueda actualizar sin tocar componentes.",
+    tools: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Next.js",
+      "Angular",
+      "Tailwind CSS",
+      "Vite",
+      "Git",
+    ],
   },
   {
-    title: "Diseño de marca",
-    text: "Identidades visuales con coherencia, personalidad y sistemas que escalan a lo largo del tiempo.",
+    title: "Diseño de marcas",
+    text: "Identidades completas: logotipo, sistema gráfico y aplicaciones, de la papelería a las redes y la web. La mayoría de las marcas que he diseñado desde 2023 se registraron después en la OEPM y la EUIPO.",
+    tools: ["Illustrator", "Photoshop", "InDesign", "Figma"],
   },
   {
-    title: "Cartelismo y cultura",
-    text: "Comunicaciones con fuerza visual, ritmo tipográfico y una mirada de serigrafía y evento.",
+    title: "Carteles",
+    text: "Carteles para conciertos, torneos y eventos: tipografía pesada, información en bloques y paletas de dos o tres tintas. En 2026, la serie de los juegos del Artabrian Weekend.",
+    tools: ["Photoshop", "Illustrator", "After Effects"],
   },
 ];
 
@@ -201,18 +226,13 @@ export const education: EducationItem[] = [
 
 export const outsideWork: OutsideWorkItem[] = [
   {
-    title: "Juegos de cartas",
+    title: "Juegos de cartas y eventos",
     description:
-      "Miro el diseño y la mecánica con la misma atención: equilibrio visual, reglas claras y una buena experiencia de lectura.",
+      "Con Artabrian Nights organizo torneos de juegos de cartas coleccionables en Ferrol. El Artabrian Weekend es el más grande, pero no el único.",
   },
   {
-    title: "Eventos y cultura",
+    title: "Esports",
     description:
-      "Me interesa la energía de los espacios vivos, la comunicación que acompaña a la gente y la identidad que se vive en una cita.",
-  },
-  {
-    title: "Esports y comunidad",
-    description:
-      "Desde la estructura de la información hasta la identidad visual, busco piezas que funcionen con rapidez y tengan carácter.",
+      "Cofundé Galicia Esports y fui director de arte de Kings Dragon: identidades, gráficos para directos en Twitch y webs para la escena gallega.",
   },
 ];
