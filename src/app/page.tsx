@@ -96,22 +96,15 @@ export default function Home() {
               {profile.statement}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#proyecto"
-                className="type-action inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-accent"
-              >
-                Ver el proyecto
-              </a>
-              {/* `download` guarda el PDF en lugar de abrirlo en la pestaña. */}
-              <a
-                href={cvFiles.frontend.href}
-                download
-                className="type-action inline-flex items-center justify-center rounded-full border border-ink/25 bg-transparent px-5 py-3 text-ink transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-              >
-                Descargar CV ↓
-              </a>
-            </div>
+            {/* Sin botón al proyecto: es la sección que viene justo debajo.
+                `download` guarda el PDF en lugar de abrirlo en la pestaña. */}
+            <a
+              href={cvFiles.frontend.href}
+              download
+              className="type-action mt-8 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-accent"
+            >
+              Descargar CV ↓
+            </a>
 
             <p className="type-detail mt-6 text-ink/70">
               {profile.availability}
