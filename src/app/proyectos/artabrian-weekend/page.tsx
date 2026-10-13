@@ -4,11 +4,25 @@ import { BrowserFrame } from "@/components/BrowserFrame";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import { caseStudy } from "@/content/artabrian";
 import { featuredProject } from "@/content/home";
+import { baseOpenGraph } from "@/lib/site";
+
+const title = "Artabrian Weekend · Caso de estudio de Rodrigo Lamela";
+const description =
+  "Web en React guiada por datos e identidad gráfica para el Artabrian Weekend, un fin de semana de torneos de cartas en Ferrol.";
+const path = "/proyectos/artabrian-weekend";
 
 export const metadata: Metadata = {
-  title: "Artabrian Weekend · Caso de estudio",
-  description:
-    "Web en React guiada por datos e identidad gráfica para el Artabrian Weekend, un fin de semana de torneos de cartas en Ferrol.",
+  title,
+  description,
+  alternates: { canonical: path },
+  // Sustituye entero el openGraph del layout: hay que repetir lo común.
+  openGraph: {
+    ...baseOpenGraph,
+    type: "article",
+    title,
+    description,
+    url: path,
+  },
 };
 
 export default function ArtabrianWeekendPage() {
@@ -183,9 +197,7 @@ export default function ArtabrianWeekendPage() {
               </div>
             ))}
           </dl>
-          <p className="type-body mt-6 text-ink/85">
-            {caseStudy.results.text}
-          </p>
+          <p className="type-body mt-6 text-ink/85">{caseStudy.results.text}</p>
         </section>
 
         {/* Se muestra cuando haya respuesta de Rodrigo (ver lessons). */}
