@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Página no encontrada · Rodrigo Lamela",
+  title: "Página no encontrada · Rodrigo Lamela Sanfacundo",
   // Sin esto heredaría del layout un canonical que apunta a la portada.
   alternates: { canonical: null },
 };

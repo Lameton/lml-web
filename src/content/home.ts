@@ -64,7 +64,7 @@ export type OutsideWorkItem = {
 };
 
 export const profile = {
-  name: "Rodrigo Lamela",
+  name: "Rodrigo Lamela Sanfacundo",
   roles: ["Desarrollador front-end", "Diseñador de marcas", "A Coruña"],
   statement: "Construyo interfaces en React con ojo de director de arte.",
   availability: "Disponible para trabajo presencial o híbrido en Galicia.",

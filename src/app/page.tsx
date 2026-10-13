@@ -35,7 +35,7 @@ export default function Home() {
               className="flex items-center gap-3 transition hover:text-accent"
             >
               {/* El monograma es decorativo: el nombre accesible del enlace es
-                  el texto visible, "Rodrigo Lamela" (lo exige WCAG 2.5.3 para
+                  el texto visible, "Rodrigo Lamela Sanfacundo" (lo exige WCAG 2.5.3 para
                   el control por voz). */}
               <span
                 aria-hidden="true"
@@ -71,7 +71,7 @@ export default function Home() {
         <section className="mx-auto grid max-w-[1500px] gap-8 pb-20 pt-4 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16 lg:pb-28 lg:pt-12">
           <div>
             <h1 className="type-display text-ink">
-              {/* Nombre y apellido en dos líneas, como en un cartel. */}
+              {/* Nombre y apellidos, una palabra por línea, como en un cartel. */}
               {profile.name.split(" ").map((word) => (
                 <span key={word} className="block">
                   {word}
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="order-first w-24 overflow-hidden rounded-2xl border border-ink/15 sm:w-32 lg:order-last lg:w-72">
             <ResponsiveImage
               src="perfil/rodrigo-lamela-foto"
-              alt="Retrato de Rodrigo Lamela"
+              alt="Retrato de Rodrigo Lamela Sanfacundo"
               sizes="(min-width: 1024px) 18rem, (min-width: 640px) 8rem, 6rem"
               priority
               className="block h-auto w-full"

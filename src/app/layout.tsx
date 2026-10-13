@@ -5,7 +5,7 @@ import { baseOpenGraph, SITE_URL } from "@/lib/site";
 import { archivo, inknut } from "./fonts";
 import "./globals.css";
 
-const title = "Rodrigo Lamela · Desarrollador front-end";
+const title = "Rodrigo Lamela Sanfacundo · Desarrollador front-end";
 const description =
   "Desarrollador front-end (React) y diseñador de marcas en A Coruña. Disponible para trabajo presencial o híbrido en Galicia.";
 

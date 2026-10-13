@@ -7,7 +7,7 @@
  */
 export const SITE_URL = "https://lml-web.vercel.app";
 
-export const SITE_NAME = "Rodrigo Lamela";
+export const SITE_NAME = "Rodrigo Lamela Sanfacundo";
 
 // Los metadatos se fusionan solo en el primer nivel: si una página define
 // `openGraph`, sustituye entero el del layout. Por eso lo común va aquí y
