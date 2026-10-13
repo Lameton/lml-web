@@ -2,7 +2,7 @@
 
 13 de octubre de 2026. Objetivo: cerrar la dirección del header y de la hero (¿más minimalista o más impactante?) mirando cómo resuelven lo mismo otros perfiles que mezclan diseño y desarrollo.
 
-**Método.** Capturas en escritorio (1440 px, al cargar y tras bajar una pantalla) y en móvil (390 px) de cada web, y extracción automática de tipografías, tamaño del titular, navegación y estructura de títulos. Tu portada actual se analizó igual. Las capturas están en `recursos/investigacion/`, fuera de git porque son de webs de terceros.
+**Método.** Capturas en escritorio (1440 px, al cargar y tras bajar una pantalla) y en móvil (390 px) de cada web, y extracción automática de tipografías, tamaño del titular, navegación y estructura de títulos. Tu portada actual se analizó igual. Las capturas están fuera del repositorio, en `LAMETON/investigacion-portfolios/`, porque son de webs de terceros.
 
 ---
 
