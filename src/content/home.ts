@@ -36,9 +36,19 @@ export type FeaturedProject = {
 };
 
 export type ExperienceItem = {
-  kind: string;
+  period: string;
+  role: string;
+  organization: string;
+  place?: string;
+  /** Para escanear de un vistazo qué parte del perfil se trabajó. */
+  area: "Desarrollo" | "Diseño" | "Desarrollo y diseño";
+  summary: string;
+};
+
+export type EducationItem = {
+  period: string;
   title: string;
-  description: string;
+  school: string;
 };
 
 export type OutsideWorkItem = {
@@ -52,6 +62,19 @@ export const profile = {
   statement: "Construyo interfaces en React con ojo de director de arte.",
   availability: "Disponible para trabajo presencial o híbrido en Galicia.",
   email: "lameladev@gmail.com",
+};
+
+// PDFs en public/cv/. Llevan el teléfono: en el HTML de la web no aparece
+// para no exponerlo a los bots que recopilan números.
+export const cvFiles = {
+  frontend: {
+    label: "CV de desarrollo front-end",
+    href: "/cv/cv-rodrigo-lamela-frontend.pdf",
+  },
+  design: {
+    label: "CV de diseño y dirección de arte",
+    href: "/cv/cv-rodrigo-lamela-diseno.pdf",
+  },
 };
 
 export const featuredProject: FeaturedProject = {
@@ -124,18 +147,79 @@ export const galleryItems: GalleryItem[] = [
   },
 ];
 
+// De más reciente a más antiguo, con los datos de los CV.
 export const experience: ExperienceItem[] = [
   {
-    kind: "Diseño gráfico",
-    title: "Identidad visual y comunicación",
-    description:
-      "Trabajo la imagen de marcas, carteles y piezas de contenido con una lógica clara y un enfoque editorial.",
+    period: "2024 – actualidad",
+    role: "Desarrollador front-end y director de arte",
+    organization: "Artabrian Nights",
+    place: "Ferrol",
+    area: "Desarrollo y diseño",
+    summary:
+      "Diseño y desarrollo la web del Artabrian Weekend en React y dirijo la identidad gráfica, los carteles y la comunicación de cada edición.",
   },
   {
-    kind: "Front-end",
-    title: "Interfaces útiles, envolventes y escalables",
-    description:
-      "Construyo experiencias rápidas, ligeras y consistentes con React, buenas prácticas y atención al detalle visual.",
+    period: "2023 – actualidad",
+    role: "Diseñador de marcas",
+    organization: "Encargos independientes",
+    area: "Diseño",
+    summary:
+      "Marcas, logotipos, newsletters y cartelería. La mayoría de las marcas se registraron después en la OEPM y la EUIPO.",
+  },
+  {
+    period: "2023 – 2024",
+    role: "Desarrollador web en prácticas",
+    organization: "Motivo 36",
+    place: "A Coruña",
+    area: "Desarrollo",
+    summary:
+      "Webs con WordPress y Elementor Pro y newsletters maquetadas en HTML, dentro de las prácticas del ciclo de DAW.",
+  },
+  {
+    period: "2021 – 2022",
+    role: "Director de arte",
+    organization: "Kings Dragon",
+    place: "Santiago de Compostela",
+    area: "Desarrollo y diseño",
+    summary:
+      "Identidad del club y de sus jugadores, paquete gráfico para Twitch, redes, cartelería, merchandising y la web con WordPress.",
+  },
+  {
+    period: "2020 – 2021",
+    role: "Cofundador y director de arte",
+    organization: "Galicia Esports",
+    area: "Desarrollo y diseño",
+    summary:
+      "Identidad, gráficos para Twitch y redes sociales, y la web con WordPress.",
+  },
+  {
+    period: "2019 – 2021",
+    role: "Diseñador gráfico autónomo",
+    organization: "Lameton Branding & Posters",
+    area: "Diseño",
+    summary:
+      "Diseño en Figma de una aplicación forestal que estuvo tres años en uso y material para licitaciones forestales, varias de ellas adjudicadas.",
+  },
+  {
+    period: "2017 – 2018",
+    role: "Diseñador gráfico",
+    organization: "AQA Deporte y Salud",
+    area: "Diseño",
+    summary:
+      "Único diseñador del departamento de marketing: identidad, rotulación, campañas, newsletters y anuncios en Google Ads.",
+  },
+];
+
+export const education: EducationItem[] = [
+  {
+    period: "2021 – 2023",
+    title: "Técnico Superior en Desarrollo de Aplicaciones Web",
+    school: "Chios Formación",
+  },
+  {
+    period: "2011 – 2016",
+    title: "Título Superior de Diseño, especialidad en Diseño Gráfico",
+    school: "EASD Pablo Picasso, A Coruña",
   },
 ];
 

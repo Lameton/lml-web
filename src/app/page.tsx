@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import {
+  cvFiles,
+  education,
   experience,
   featuredProject,
   galleryItems,
@@ -101,15 +103,19 @@ export default function Home() {
               >
                 Ver el proyecto
               </a>
+              {/* `download` guarda el PDF en lugar de abrirlo en la pestaña. */}
               <a
-                href="#contacto"
+                href={cvFiles.frontend.href}
+                download
                 className="type-action inline-flex items-center justify-center rounded-full border border-ink/25 bg-transparent px-5 py-3 text-ink transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
               >
-                Contactar
+                Descargar CV ↓
               </a>
             </div>
 
-            <p className="type-detail mt-6 text-ink/70">{profile.availability}</p>
+            <p className="type-detail mt-6 text-ink/70">
+              {profile.availability}
+            </p>
           </div>
 
           {/* En móvil la foto va primero y pequeña; en escritorio, a la
@@ -157,18 +163,63 @@ export default function Home() {
           className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
         >
           <p className="type-meta text-ink/60">Experiencia</p>
-          <div className="mt-6 grid gap-5 md:grid-cols-2">
+          <h2 className="type-section mt-2 text-ink">
+            Experiencia y formación
+          </h2>
+
+          {/* Lista ordenada: el orden (de más reciente a más antiguo)
+              forma parte del contenido. */}
+          <ol className="mt-10 max-w-4xl divide-y divide-ink/10 border-y border-ink/10">
             {experience.map((item) => (
-              <div
-                key={item.title}
-                className={`rounded-[1.4rem] border border-ink/10 p-5 ${
-                  item.kind === "Front-end" ? "bg-accent/8" : "bg-ink/[0.02]"
-                }`}
+              <li
+                key={`${item.organization}-${item.period}`}
+                className="grid gap-2 py-6 sm:grid-cols-[10rem_1fr] sm:gap-8"
               >
-                <p className="type-meta text-ink/60">{item.kind}</p>
-                <h3 className="type-card-title mt-3 text-ink">{item.title}</h3>
-                <p className="type-body mt-4 text-ink/75">{item.description}</p>
-              </div>
+                <p className="type-meta text-ink/60">{item.period}</p>
+                <div>
+                  <h3 className="type-card-title text-ink">{item.role}</h3>
+                  <p className="type-meta mt-2 text-ink/70">
+                    {[item.organization, item.place]
+                      .filter(Boolean)
+                      .join(" • ")}
+                  </p>
+                  <p className="type-body mt-3 max-w-2xl text-ink/80">
+                    {item.summary}
+                  </p>
+                  <p className="type-meta mt-3 inline-flex rounded-full border border-accent/40 px-2.5 py-0.5 text-accent">
+                    {item.area}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          <h3 className="type-meta mt-12 text-ink/60">Formación</h3>
+          <ul className="mt-4 max-w-4xl divide-y divide-ink/10 border-y border-ink/10">
+            {education.map((item) => (
+              <li
+                key={item.title}
+                className="grid gap-2 py-5 sm:grid-cols-[10rem_1fr] sm:gap-8"
+              >
+                <p className="type-meta text-ink/60">{item.period}</p>
+                <div>
+                  <p className="type-card-title text-ink">{item.title}</p>
+                  <p className="type-meta mt-2 text-ink/70">{item.school}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 flex flex-wrap gap-3">
+            {[cvFiles.frontend, cvFiles.design].map((cv) => (
+              <a
+                key={cv.href}
+                href={cv.href}
+                download
+                className="type-action inline-flex items-center justify-center rounded-full border border-ink/25 px-5 py-3 text-ink transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+              >
+                Descargar {cv.label} ↓
+              </a>
             ))}
           </div>
         </section>
