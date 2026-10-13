@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import {
   cvFiles,
   education,
@@ -12,6 +9,7 @@ import {
   services,
   socialLinks,
 } from "@/content/home";
+import { BackToTop } from "@/components/BackToTop";
 import { FeaturedProject } from "@/components/FeaturedProject";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -24,19 +22,6 @@ const navLinks = [
 ];
 
 export default function Home() {
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 500);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <main
       id="site-main"
@@ -373,17 +358,7 @@ export default function Home() {
         </footer>
       </div>
 
-      <a
-        href="#top"
-        aria-label="Volver arriba"
-        className={`back-to-top fixed bottom-6 right-6 inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink/20 bg-paper text-lg text-ink shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-200 ${
-          showBackToTop
-            ? "translate-y-0 opacity-100"
-            : "pointer-events-none translate-y-2 opacity-0"
-        }`}
-      >
-        ↑
-      </a>
+      <BackToTop />
     </main>
   );
 }
