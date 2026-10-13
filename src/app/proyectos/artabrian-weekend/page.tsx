@@ -34,6 +34,9 @@ export default function ArtabrianWeekendPage() {
           src="artabrian/fondo-grabado"
           alt=""
           sizes="100vw"
+          // Está arriba del todo y es lo más grande de la pantalla: si carga
+          // en diferido, retrasa el LCP.
+          priority
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
         <div
