@@ -139,6 +139,22 @@ footer[id],
   text-wrap: balance;
 }
 
+/* Nombre de la portada como titular de cartel: crece con el ancho de la
+   pantalla. En móvil va una palabra por línea y por eso es más grande en vw. */
+.type-poster {
+  font-family: var(--font-inknut), serif;
+  font-size: 14vw;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+@media (min-width: 640px) {
+  .type-poster {
+    font-size: min(11vw, 10.5rem);
+  }
+}
+
 .type-section {
   font-family: var(--font-inknut), serif;
   font-size: clamp(1.8rem, 3vw, 2.8rem);

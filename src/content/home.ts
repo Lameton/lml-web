@@ -67,8 +67,18 @@ export const profile = {
   name: "Rodrigo Lamela Sanfacundo",
   roles: ["Desarrollador front-end", "Diseñador de marcas", "A Coruña"],
   statement: "Construyo interfaces en React con ojo de director de arte.",
-  availability: "Disponible para trabajo presencial o híbrido en Galicia.",
   email: "lameladev@gmail.com",
+};
+
+// Bloque «Ahora» de la portada. Hay que revisarlo cada pocos meses: si se
+// queda viejo, resta en vez de sumar.
+export const now = {
+  updated: "Octubre de 2026",
+  items: [
+    "Busco puesto de desarrollador front-end en Galicia, presencial o híbrido.",
+    "Preparo la cuarta edición del Artabrian Weekend, en marzo de 2027.",
+    "Me formo en IA aplicada al desarrollo con Anthropic Academy.",
+  ],
 };
 
 export const socialLinks: SocialLink[] = [

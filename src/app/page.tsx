@@ -4,6 +4,7 @@ import {
   experience,
   featuredProject,
   galleryItems,
+  now,
   outsideWork,
   profile,
   services,
@@ -20,6 +21,9 @@ const navLinks = [
   { href: "#experiencia", label: "Experiencia" },
   { href: "#contacto", label: "Contacto" },
 ];
+
+// Palabras del nombre, para componer el titular en líneas.
+const nameWords = profile.name.split(" ");
 
 export default function Home() {
   return (
@@ -68,50 +72,69 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="mx-auto grid max-w-[1500px] gap-8 pb-20 pt-4 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-16 lg:pb-28 lg:pt-12">
-          <div>
-            <h1 className="type-display text-ink">
-              {/* Nombre y apellidos, una palabra por línea, como en un cartel. */}
-              {profile.name.split(" ").map((word) => (
-                <span key={word} className="block">
-                  {word}
-                </span>
-              ))}
-            </h1>
+        <section className="mx-auto max-w-[1500px] pb-20 pt-4 lg:pb-28 lg:pt-10">
+          {/* El nombre como titular de cartel, a todo el ancho. En móvil, una
+              palabra por línea; desde sm, la última baja sola («Rodrigo
+              Lamela» / «Sanfacundo»). */}
+          <h1 className="type-poster text-ink">
+            {nameWords.map((word, index) => (
+              <span
+                key={word}
+                className={
+                  index === nameWords.length - 1 ? "block" : "block sm:inline"
+                }
+              >
+                {word}
+                {index < nameWords.length - 2 ? " " : ""}
+              </span>
+            ))}
+          </h1>
 
-            <p className="type-role mt-6 text-accent">
-              {profile.roles.join(" • ")}
-            </p>
+          <div className="mt-8 grid gap-10 border-t border-ink/20 pt-8 lg:grid-cols-[1fr_auto] lg:gap-16">
+            <div>
+              <p className="type-role text-accent">
+                {profile.roles.join(" • ")}
+              </p>
 
-            <p className="type-lead mt-6 max-w-xl text-ink/85">
-              {profile.statement}
-            </p>
+              <p className="type-lead mt-4 max-w-xl text-ink/85">
+                {profile.statement}
+              </p>
 
-            {/* Sin botón al proyecto: es la sección que viene justo debajo.
-                `download` guarda el PDF en lugar de abrirlo en la pestaña. */}
-            <a
-              href={cvFiles.frontend.href}
-              download
-              className="type-action mt-8 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-accent"
-            >
-              Descargar CV ↓
-            </a>
+              {/* Sin botón al proyecto: es la sección que viene justo debajo.
+                  `download` guarda el PDF en lugar de abrirlo en la pestaña. */}
+              <a
+                href={cvFiles.frontend.href}
+                download
+                className="type-action mt-8 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-accent"
+              >
+                Descargar CV ↓
+              </a>
 
-            <p className="type-detail mt-6 text-ink/70">
-              {profile.availability}
-            </p>
-          </div>
+              <section aria-labelledby="ahora" className="mt-10 max-w-xl">
+                <h2 id="ahora" className="type-meta text-ink/60">
+                  Ahora · {now.updated}
+                </h2>
+                <ul className="type-body mt-3 space-y-1.5 text-ink/85">
+                  {now.items.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="text-accent" aria-hidden="true">
+                        •
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </div>
 
-          {/* En móvil la foto va primero y pequeña; en escritorio, a la
-              derecha y grande. */}
-          <div className="order-first w-24 overflow-hidden rounded-2xl border border-ink/15 sm:w-32 lg:order-last lg:w-72">
-            <ResponsiveImage
-              src="perfil/rodrigo-lamela-foto"
-              alt="Retrato de Rodrigo Lamela Sanfacundo"
-              sizes="(min-width: 1024px) 18rem, (min-width: 640px) 8rem, 6rem"
-              priority
-              className="block h-auto w-full"
-            />
+            <div className="w-32 overflow-hidden rounded-2xl border border-ink/15 sm:w-40 lg:w-60">
+              <ResponsiveImage
+                src="perfil/rodrigo-lamela-foto"
+                alt="Retrato de Rodrigo Lamela Sanfacundo"
+                sizes="(min-width: 1024px) 15rem, (min-width: 640px) 10rem, 8rem"
+                className="block h-auto w-full"
+              />
+            </div>
           </div>
         </section>
 
