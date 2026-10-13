@@ -224,85 +224,88 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          id="galeria"
-          className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
-        >
-          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="type-meta text-ink/60">Galería</p>
-              <h2 className="type-section mt-2 text-ink">
-                Marca y cartelismo en una misma mirada.
-              </h2>
-            </div>
+        {/* Oculta mientras no haya piezas reales (ver galleryItems). */}
+        {galleryItems.length > 0 && (
+          <section
+            id="galeria"
+            className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
+          >
+            <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="type-meta text-ink/60">Galería</p>
+                <h2 className="type-section mt-2 text-ink">
+                  Marca y cartelismo en una misma mirada.
+                </h2>
+              </div>
 
-            <div
-              className="flex flex-wrap gap-2"
-              aria-label="Filtro de galería"
-            >
-              <input
-                type="radio"
-                name="gallery-filter"
-                id="gallery-all"
-                defaultChecked
-                className="gallery-filter-input"
-              />
-              <label
-                htmlFor="gallery-all"
-                className="type-meta gallery-filter-label"
+              <div
+                className="flex flex-wrap gap-2"
+                aria-label="Filtro de galería"
               >
-                Todo
-              </label>
-
-              <input
-                type="radio"
-                name="gallery-filter"
-                id="gallery-marcas"
-                className="gallery-filter-input"
-              />
-              <label
-                htmlFor="gallery-marcas"
-                className="type-meta gallery-filter-label"
-              >
-                Marcas
-              </label>
-
-              <input
-                type="radio"
-                name="gallery-filter"
-                id="gallery-carteles"
-                className="gallery-filter-input"
-              />
-              <label
-                htmlFor="gallery-carteles"
-                className="type-meta gallery-filter-label"
-              >
-                Carteles
-              </label>
-            </div>
-          </div>
-
-          <div className="gallery-grid">
-            {galleryItems.map((item) => (
-              <article
-                key={item.title}
-                className="gallery-item"
-                data-category={item.category}
-              >
-                <div
-                  className={`gallery-gradient gallery-gradient--${item.accent} h-72 rounded-[1.5rem] p-4`}
+                <input
+                  type="radio"
+                  name="gallery-filter"
+                  id="gallery-all"
+                  defaultChecked
+                  className="gallery-filter-input"
+                />
+                <label
+                  htmlFor="gallery-all"
+                  className="type-meta gallery-filter-label"
                 >
-                  <div className="flex h-full flex-col justify-between rounded-[1rem] border border-ink/20 bg-[var(--card-overlay)] p-4 text-ink backdrop-blur-[2px]">
-                    <span className="type-meta text-ink/80">{item.tag}</span>
-                    <div>
-                      <p className="type-card-title">{item.title}</p>
+                  Todo
+                </label>
+
+                <input
+                  type="radio"
+                  name="gallery-filter"
+                  id="gallery-marcas"
+                  className="gallery-filter-input"
+                />
+                <label
+                  htmlFor="gallery-marcas"
+                  className="type-meta gallery-filter-label"
+                >
+                  Marcas
+                </label>
+
+                <input
+                  type="radio"
+                  name="gallery-filter"
+                  id="gallery-carteles"
+                  className="gallery-filter-input"
+                />
+                <label
+                  htmlFor="gallery-carteles"
+                  className="type-meta gallery-filter-label"
+                >
+                  Carteles
+                </label>
+              </div>
+            </div>
+
+            <div className="gallery-grid">
+              {galleryItems.map((item) => (
+                <article
+                  key={item.title}
+                  className="gallery-item"
+                  data-category={item.category}
+                >
+                  <div
+                    className={`gallery-gradient gallery-gradient--${item.accent} h-72 rounded-[1.5rem] p-4`}
+                  >
+                    <div className="flex h-full flex-col justify-between rounded-[1rem] border border-ink/20 bg-[var(--card-overlay)] p-4 text-ink backdrop-blur-[2px]">
+                      <span className="type-meta text-ink/80">{item.tag}</span>
+                      <div>
+                        <p className="type-card-title">{item.title}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section
           id="fuera-del-trabajo"

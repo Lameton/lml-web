@@ -120,32 +120,8 @@ export const services: Service[] = [
   },
 ];
 
-export const galleryItems: GalleryItem[] = [
-  {
-    title: "NEXA Studio",
-    category: "marcas",
-    accent: "emerald",
-    tag: "Identidad",
-  },
-  {
-    title: "Artabrian Weekend",
-    category: "carteles",
-    accent: "emerald",
-    tag: "Cartel",
-  },
-  {
-    title: "Marea Brillante",
-    category: "marcas",
-    accent: "sea-glass",
-    tag: "Marca",
-  },
-  {
-    title: "Festival Nocturno",
-    category: "carteles",
-    accent: "sea-glass",
-    tag: "Cartel",
-  },
-];
+// Vacía hasta tener piezas reales: mientras lo esté, la galería no se muestra.
+export const galleryItems: GalleryItem[] = [];
 
 // De más reciente a más antiguo, con los datos de los CV.
 export const experience: ExperienceItem[] = [
