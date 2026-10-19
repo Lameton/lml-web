@@ -2,7 +2,7 @@
 
 Web profesional de **Rodrigo Lamela**, desarrollador front-end (React) y diseñador de marcas en A Coruña.
 
-Incluye una portada con mis trabajos de desarrollo, marcas y carteles, y un caso de estudio del Artabrian Weekend, un evento de juegos de cartas del que hice la web y la identidad visual.
+Incluye una portada con el Artabrian Weekend como proyecto de desarrollo destacado y una selección de marcas, además de un caso de estudio del evento y su identidad visual.
 
 > En construcción. Se publicará en Vercel cuando esté completa.
 
@@ -31,14 +31,17 @@ npm install
 npm run dev       # servidor de desarrollo en http://localhost:3000
 ```
 
-| Comando | Qué hace |
-| --- | --- |
-| `npm run dev` | Servidor de desarrollo |
-| `npm run build` | Exportación estática en `out/` |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | Comprobación de tipos con TypeScript |
-| `npm run test` | Pruebas con Vitest |
-| `npm run images` | Optimiza las imágenes de `recursos/` |
+| Comando             | Qué hace                              |
+| ------------------- | ------------------------------------- |
+| `npm run dev`       | Servidor de desarrollo                |
+| `npm run build`     | Exportación estática en `out/`        |
+| `npm start`         | Sirve `out/` localmente tras compilar |
+| `npm run lint`      | ESLint                                |
+| `npm run typecheck` | Comprobación de tipos con TypeScript  |
+| `npm run test`      | Pruebas con Vitest                    |
+| `npm run images`    | Optimiza las imágenes de `recursos/`  |
+
+`npm start` sirve `out/` después de ejecutar `npm run build`, por defecto en `http://localhost:8080`.
 
 ## Imágenes
 

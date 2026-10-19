@@ -4,6 +4,7 @@ import { BrowserFrame } from "@/components/BrowserFrame";
 import { CaseStudyBlock } from "@/components/case-study/CaseStudyBlock";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import type { CaseStudy } from "@/content/case-study";
+import { profile, socialLinks } from "@/content/home";
 
 type CaseStudyPageProps = {
   study: CaseStudy;
@@ -12,8 +13,8 @@ type CaseStudyPageProps = {
 /**
  * Plantilla de los casos de estudio. La paleta del caso (study.theme) se
  * aplica como variables CSS sobre la página: las clases bg-paper, text-ink,
- * text-accent… toman esos colores sin estilos nuevos. El footer queda fuera,
- * con el estilo general de la web.
+ * text-accent… toman esos colores sin estilos nuevos. El footer comparte el
+ * contacto del portfolio y también usa la paleta del caso.
  */
 export function CaseStudyPage({ study }: CaseStudyPageProps) {
   const { theme } = study;
@@ -124,24 +125,60 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
         </div>
       </main>
 
-      {/* Footer con el estilo general de la web, igual en todos los casos. */}
-      <footer className="theme-light noise-surface bg-paper text-ink">
-        <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 border-t border-ink/15 px-4 py-8 sm:px-6">
-          <Link
-            href="/"
-            className="type-action text-ink transition hover:text-accent"
-          >
-            ← Volver al inicio
-          </Link>
+      <footer style={themeStyle} className="noise-surface bg-paper text-ink">
+        <div
+          style={{
+            backgroundColor:
+              "color-mix(in srgb, var(--color-accent) 28%, transparent)",
+          }}
+          className="border-y border-accent/45 backdrop-blur-sm"
+        >
+          <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6 sm:py-16">
+            <p className="type-meta text-accent">{study.footer.eyebrow}</p>
+            <h2 className="type-section mt-3 text-ink">
+              Busco mi próximo puesto de front-end
+            </h2>
+            <p className="type-body mx-auto mt-4 max-w-2xl text-ink/75">
+              {study.footer.description}
+            </p>
+            <a
+              href={`mailto:${profile.email}`}
+              className="type-action mt-6 inline-flex max-w-full items-center justify-center rounded-full bg-ink px-5 py-3 text-center text-paper transition hover:bg-accent"
+            >
+              {profile.email}
+            </a>
+            <ul className="type-action mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-ink/80">
+              {socialLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-accent"
+                  >
+                    {link.label} ↗
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <nav
+          aria-label={`Enlaces de ${study.name}`}
+          className="type-action mx-auto flex max-w-375 flex-wrap justify-center gap-x-6 gap-y-3 px-4 py-6 text-ink/75 sm:px-6 lg:px-8"
+        >
           <a
             href={study.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="type-action text-ink transition hover:text-accent"
+            className="transition hover:text-accent"
           >
-            Ver la web ↗
+            Ver {study.urlLabel} ↗
           </a>
-        </div>
+          <Link href="/" className="transition hover:text-accent">
+            Volver al inicio
+          </Link>
+        </nav>
       </footer>
     </>
   );

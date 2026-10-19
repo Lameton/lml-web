@@ -1,4 +1,53 @@
 {
+  "perfil/forma-cera": {
+    "width": 1764,
+    "height": 2112,
+    "blurDataURL": "data:image/webp;base64,UklGRqICAABXRUJQVlA4WAoAAAAQAAAAEwAAFwAAQUxQSE4BAAABkHPbtrG92ve5n23bts3YVeqkzUhp27btpLJt+/X76LNtf9+riJgA6LQmZgYimJSIkT4rR6RuPpRhZw6QGU0gOJSvkjr+fLxc4pFrBx0AYX9dNa+Qfj64vbjYU8/C6zUNHb29rQ3Cb/E2QIwh9H+loOJ4Qaz/K2sdyne2hhkSaxrra0SOV8s3bOv+6hR4KgCwk420N2o4nm9+N2OND7C1OhDIvlQtKWTvn75fAiKC5Y26C+fmY8nI4LAq28KczAnEsKx/5H3xiZH+kWMwY5jIYPWwpk6SNY2MbASDbjPMq6sQFMoR7tgKZ10M5epWSRKFhvtXDkfpILjNeqOubRAruP9cPtgEwBwxT+tbaySVsqZQH0Ps7TsNGkmoWWQJ0gXYLzn/QCbUvrAEQS9h2vrdAld/AARDzZDxRX7EzghzRG5fEAuCwQQARDCeMegHVlA4IC4BAACwBwCdASoUABgAPtFYpE0oJSOiKA1RABoJbACdMzQgCmA6gGgA8Tn1uvQBvAG8ZfbNZAGQ+ZlCBi2aFoyFsLevynLvX3gAAP0WsmGjwEbpX7X7soLtgaOIDT5AJ7LZaz8I9h9OBpqz1xwfDsGCXBncDHvr9kmIknq7asLYlcZ3Wtx9UIrUbj4iF4vfDlLFaVjzpU6DHGLZsfjEHmDSQ6I6uH4apFVvmYCEMvq2+Rl0KCXzKzdHXFEdMdJgoS6MOBJmNnXtvvx8K/TFUF8l4y8r/Q1+HXiR4+/srQwhjDMo3P9Gx6GDot15UJviziuS4A8lVr2Or7semDwnlHPD7qNDkBO1yDJ4SeCYSTmI9nfHlGN+z/zLfSzW/lxlO8+MsfE6dHv7V/fc3/hCAu74AA==",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/perfil/forma-cera-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/perfil/forma-cera-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/perfil/forma-cera-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/perfil/forma-cera-1600.avif"
+      },
+      {
+        "width": 1764,
+        "src": "/images/perfil/forma-cera-1764.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/perfil/forma-cera-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/perfil/forma-cera-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/perfil/forma-cera-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/perfil/forma-cera-1600.webp"
+      },
+      {
+        "width": 1764,
+        "src": "/images/perfil/forma-cera-1764.webp"
+      }
+    ]
+  },
   "perfil/rodrigo-lamela-foto": {
     "width": 496,
     "height": 709,
@@ -21,6 +70,734 @@
       {
         "width": 496,
         "src": "/images/perfil/rodrigo-lamela-foto-496.webp"
+      }
+    ]
+  },
+  "marcas/appoison-pantallazos": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoUAAsAPtFUo0uoJKMhsAgBABoJQBOj+DE/wHkSVyYenEZuZkgA/uDWKAYuwnounKuAJZ+7GpPxbYcelwdGLYkLi5wRmkFRA3wXnixdAhl60IxGsh+YLog2d4xQfuqL1uMPwxGXKgizfOvk220cQAAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/appoison-pantallazos-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/appoison-pantallazos-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/appoison-pantallazos-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/appoison-pantallazos-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/appoison-pantallazos-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/appoison-pantallazos-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/appoison-pantallazos-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/appoison-pantallazos-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/appoison-pantallazos-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/appoison-pantallazos-1920.webp"
+      }
+    ]
+  },
+  "marcas/coolmod-propuesta-logo": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADQBACdASoUAAsAPtFUo0uoJKMhsAgBABoJbACdMoRwHuriwACi4Fefl/osVo1RAAD+2FMn7UdZVWhYI0DdESV9jqQZzpe9JwDGOJqTJ5+4tlCrk+EjWHWRaIPivBtG9gQKO/Lw9VEcycfVrRNVpdDPplA7hhCRC0ZTdgOofD74hHMYG0m0n2N0dQEDYIJdhUiJBEu333b/bBOJ9L0n/8gBeVP/JyQzxQAAAA==",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/coolmod-propuesta-logo-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/coolmod-propuesta-logo-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/coolmod-propuesta-logo-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/coolmod-propuesta-logo-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/coolmod-propuesta-logo-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/coolmod-propuesta-logo-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/coolmod-propuesta-logo-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/coolmod-propuesta-logo-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/coolmod-propuesta-logo-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/coolmod-propuesta-logo-1920.webp"
+      }
+    ]
+  },
+  "marcas/despav": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACQBACdASoUAAsAPtFUo0uoJKMhsAgBABoJZACdMoAlsRObN5AqHvyVUm5DagAA/okMF1xs0cq0bp3vVNSolUfZv66DmwDdvzfEO2DeHUvWt8qtXbbxj5XUss45K10Lbhu1PklaV+mfDE9iD1bJ505K8RqN/3oE0PShSecze/wckFF5E9KnwGiF8j9m1DYkwAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/despav-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/despav-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/despav-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/despav-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/despav-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/despav-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/despav-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/despav-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/despav-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/despav-1920.webp"
+      }
+    ]
+  },
+  "marcas/diseno-modular": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABQAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJbAC7ABANPM6uoAD+7jFB+VXa71JTrNiUH9zXumYY/LEkc0FQzmRXBLetF/6g1eRXHCaIX7kCm0mlIQE3x4/W/zdlVRzTfy/P/5N14Wp250Lfj2Y9C3hkAGgLYOpQS+bFFoN0tmcXSmQ3AAAAAA==",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/diseno-modular-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/diseno-modular-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/diseno-modular-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/diseno-modular-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/diseno-modular-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/diseno-modular-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/diseno-modular-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/diseno-modular-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/diseno-modular-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/diseno-modular-1920.webp"
+      }
+    ]
+  },
+  "marcas/distrito-picasso": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoUAAsAPtFUo0uoJKMhsAgBABoJbACxGwAByyi83jNOK7puGgAA/uvubAP9CWe6tl/YdrBbjUee+t5RZdpUEA7tH7X9KZ+gWoXYIjTYX+2NnluAoxpY26Y9yMo0rXGbwe6iHLo9Smxp2V0zgn6sStR3av/HppLTwb/YT+O0AAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/distrito-picasso-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/distrito-picasso-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/distrito-picasso-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/distrito-picasso-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/distrito-picasso-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/distrito-picasso-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/distrito-picasso-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/distrito-picasso-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/distrito-picasso-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/distrito-picasso-1920.webp"
+      }
+    ]
+  },
+  "marcas/ecosistema-marcas-propuesta": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAgCdASoUAAsAPtFUo0uoJKMhsAgBABoJZwDE2DKUAAD+8H6Y74oDkz1YIZCYblspzK3vWgoNsMawAAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/ecosistema-marcas-propuesta-1920.webp"
+      }
+    ]
+  },
+  "marcas/kings-dragon-pridedragon": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAADwBQCdASoUAAsAPtFUo0uoJKMhsAgBABoJbACdMoR3JoIoBuAN4A3jgiMhex52bhbNJ9KRNPC6AAD4YOG6so7+OePpG37SH9UHqFIqtfcI/npyTEvz0npQZlrO2fqcbjomCA7Wiat2C8M/KUAdQ8n89j5iigDV5GjcHATTlFBv0YgwHu5HqIvRwxknX7ScI/G0duMXQxzfMQr3HPDDy2gx13DToMarY5zLZiYa7T45mmvz7+kNZG2JzjP8HJio/+Xp2Yu9//87RVH/2dK4psCWP7q4cTAAAAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/kings-dragon-pridedragon-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/kings-dragon-pridedragon-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/kings-dragon-pridedragon-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/kings-dragon-pridedragon-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/kings-dragon-pridedragon-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/kings-dragon-pridedragon-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/kings-dragon-pridedragon-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/kings-dragon-pridedragon-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/kings-dragon-pridedragon-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/kings-dragon-pridedragon-1920.webp"
+      }
+    ]
+  },
+  "marcas/pagina-bandcamp": {
+    "width": 1400,
+    "height": 1400,
+    "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACQBACdASoUABQAPtFap04oJKOiKAqpABoJZwDE2BDOXIBMrdb9Kc4G2hA50/AA/nWzyIG0rwdchZWP7lq8scoKz5374Y0t7rqCuCc8wk95bU3Go1dGcGh0QrtqKKoQIhCU7GmQ0QUVycl2Yz3BguvCVU19oGFHQlV/QlbgAAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/pagina-bandcamp-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/pagina-bandcamp-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/pagina-bandcamp-1024.avif"
+      },
+      {
+        "width": 1400,
+        "src": "/images/marcas/pagina-bandcamp-1400.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/pagina-bandcamp-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/pagina-bandcamp-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/pagina-bandcamp-1024.webp"
+      },
+      {
+        "width": 1400,
+        "src": "/images/marcas/pagina-bandcamp-1400.webp"
+      }
+    ]
+  },
+  "marcas/portada-y-contraportada": {
+    "width": 3000,
+    "height": 1500,
+    "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADQAwCdASoUAAoAPtFUo0uoJKMhsAgBABoJZQDCgBSRocBW9kdsgAAA/DP+ZSfbmMCD/01eS4647Me0ohjX6pYuUMjLiQytmgcla51eJfDXFmgW35u7AgS0qr33W0GaCnKVbiyBZtaZBWx0/DhqyDev/VABj3//4eJEwYl99p0PgAAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/portada-y-contraportada-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/portada-y-contraportada-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/portada-y-contraportada-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/portada-y-contraportada-1600.avif"
+      },
+      {
+        "width": 2400,
+        "src": "/images/marcas/portada-y-contraportada-2400.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/portada-y-contraportada-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/portada-y-contraportada-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/portada-y-contraportada-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/portada-y-contraportada-1600.webp"
+      },
+      {
+        "width": 2400,
+        "src": "/images/marcas/portada-y-contraportada-2400.webp"
+      }
+    ]
+  },
+  "marcas/rediseno-vinilos": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBACdASoUAAsAPtFUo0uoJKMhsAgBABoJbACdMoRwACHkBKrfihpSEQAAy0OfPxZaWTKsKq9OCs1jrgUm9s1b4N8c5ZyC90s75vek3zU6vKoHBZ1gQJXXzW0vhZYwjknxgFHnUv+Miinj/vv/JezrQvEQdLR4hV3WaLSCui14GsU/8aUBLQziDgaiEuwKUtPI0FDAAAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/rediseno-vinilos-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/rediseno-vinilos-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/rediseno-vinilos-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/rediseno-vinilos-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/rediseno-vinilos-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/rediseno-vinilos-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/rediseno-vinilos-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/rediseno-vinilos-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/rediseno-vinilos-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/rediseno-vinilos-1920.webp"
+      }
+    ]
+  },
+  "marcas/valoe-logo": {
+    "width": 1920,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwAwCdASoUAAsAPtFUo0uoJKMhsAgBABoJYgAAWph6Y6tawAAA/ujQeqfVsv66wXFdm9rp5nO7Ye7f4GBYcvUQOSCly/Ur//Erz0omefaRnXdBHCv8DUJCXHosY8P2YAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/valoe-logo-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/valoe-logo-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/valoe-logo-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/valoe-logo-1600.avif"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/valoe-logo-1920.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/valoe-logo-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/marcas/valoe-logo-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/marcas/valoe-logo-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/marcas/valoe-logo-1600.webp"
+      },
+      {
+        "width": 1920,
+        "src": "/images/marcas/valoe-logo-1920.webp"
+      }
+    ]
+  },
+  "marcas/lml/lamela-logo-2025": {
+    "width": 570,
+    "height": 134,
+    "blurDataURL": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4WAoAAAAQAAAAEwAABAAAQUxQSGUAAAAAjFsAAwEAAAECAAQCAwAYoSIAAgGufwAdBAALAgAAAAABABDXLQIXAIt7Kr6JOcUjoC1nOCB2D7s1XstXj39jq8UeyhfENqt5q9tWsFCFwZSie5C+pFi3P65SknmGnTu2XbawkABWUDggUAAAAPACAJ0BKhQABQA+0VajS6gkoyGwCAEAGglpAACJsevAAP7voE5Ec9s3w/R8hhY9bnvh1yxY03537a2qTRm5Y2P+nO+RmGvt4sIEoJSg96AA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/lml/lamela-logo-2025-320.avif"
+      },
+      {
+        "width": 570,
+        "src": "/images/marcas/lml/lamela-logo-2025-570.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/lml/lamela-logo-2025-320.webp"
+      },
+      {
+        "width": 570,
+        "src": "/images/marcas/lml/lamela-logo-2025-570.webp"
+      }
+    ]
+  },
+  "marcas/lml/lml-logo-2025": {
+    "width": 600,
+    "height": 247,
+    "blurDataURL": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4WAoAAAAQAAAAEwAABwAAQUxQSJcAAAABgKtt//nl+dvKNlYbU21NzcbUrFWz7do6Addk4wBcq3EAbzyHiJiA4PHbAkxG/jV1P1Tj2VIhZjCYwGAysqB6qFch9hQrGAAjBWqAJmUmXXxGxk8M4aotp1SN0Kg8+5F8tdpkUZ2U/WpQKT2K4GyPDHVRqgboUAXTSjDfnJGuXqrUQtz502DB5WNr89NN5ej7XvrS86oHAFZQOCBaAAAAEAQAnQEqFAAIAD7RVKNLqCSjIbAIAQAaCWcAtOgh6VOYVb/CoR6TmAAA/u6k3ipfxaSKvFll/offx2mgSY3vaA/77WMpDv37HcPHgQ7K5yPrwvmRfO1p6cAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/marcas/lml/lml-logo-2025-320.avif"
+      },
+      {
+        "width": 600,
+        "src": "/images/marcas/lml/lml-logo-2025-600.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/marcas/lml/lml-logo-2025-320.webp"
+      },
+      {
+        "width": 600,
+        "src": "/images/marcas/lml/lml-logo-2025-600.webp"
+      }
+    ]
+  },
+  "carteles/cartel-a-violencia-non-esta-no-xogo-a3": {
+    "width": 2121,
+    "height": 3000,
+    "blurDataURL": "data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAADQBQCdASoUABwAPtFYpk0oJSOiMBgIAQAaCWUAyJ2oJQFcA625A19PdPn5WpjeIlpTYjqU8V4AAP7vji5N9vK27ASOL3QAfmYPFsBLqDV5FBKTiSGcr5jpn+u+UJ2UtCT6COQg/9INey2DNZJ5ZpZ+MgmZfn7xJfuK3fcfALFe0HY+LxCrKduTYwrPPtxomN4Oqdm2/Yn49GthH8Hfq4D3o6GmUBzJacrCbTKpB7+n1aH9PHedHqisUZJQhy5qeWI4o4PKAryOE/Njhj0wZ2JzxRC+OkOaPYZ42sS/d2EykBBgAAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-1600.avif"
+      },
+      {
+        "width": 2121,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-2121.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-1600.webp"
+      },
+      {
+        "width": 2121,
+        "src": "/images/carteles/cartel-a-violencia-non-esta-no-xogo-a3-2121.webp"
+      }
+    ]
+  },
+  "carteles/cartel-aqa-torneo-escuela": {
+    "width": 2000,
+    "height": 2828,
+    "blurDataURL": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAAAQBQCdASoUABwAPtFcqE4oJSQiKAqpABoJQBbZAXUJnSEqDLGQNLKSydTd1yXfYMp8APzXf3E1+WE4Y8KAof+WbZ0iBijfHVa6Z00BpalBdfwnQqhaGSyr5h+dj4V/lra3AIwf0rPrDYfuGyi728KvyvuQ/X3lNg7tyEXFp4p23cYUU6S5bQaj5YAVLj4jfXO5hrGcPQ6CB2pLlIhxqQ7L39jQxq+UOLyJR6lC0bGBhPbxYRJQb1ocECIb8v+xIq0xofUkIAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-1600.avif"
+      },
+      {
+        "width": 2000,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-2000.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-1600.webp"
+      },
+      {
+        "width": 2000,
+        "src": "/images/carteles/cartel-aqa-torneo-escuela-2000.webp"
+      }
+    ]
+  },
+  "carteles/cartel-la-frontera": {
+    "width": 2121,
+    "height": 3000,
+    "blurDataURL": "data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAACQBQCdASoUABwAPtFgqE+oJSOiKAgBABoJagCdMtU5adCIg1pGcByELr1O/JSiQB52+gZtYADOKqU8RNt6xGs0VQDP65iptKc+6q+2iIqsdThznsMRZNXHx1esA65bV2lYSJFmG8JEKBGHYSd72ILqorkEhsjdKoWJzea/11B8VCvY0s3ISiznLfeCr7tZf9Jmd7Wd05ya27XQjp5zeDd/6Iin/frT+CQ7nqbdH7lz5/vHMk5WzXrBxsGdcRDkWKzQ1kiKDgAkf310j/ZqCKTz9pSCowZuLeDwMT10U5U4tpJhYDPew8lL2wF5VUZu+9Raz0qNHKQu3ZEGleRBdaqe+RWg2AAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/carteles/cartel-la-frontera-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/cartel-la-frontera-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/cartel-la-frontera-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/cartel-la-frontera-1600.avif"
+      },
+      {
+        "width": 2121,
+        "src": "/images/carteles/cartel-la-frontera-2121.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/carteles/cartel-la-frontera-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/carteles/cartel-la-frontera-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/carteles/cartel-la-frontera-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/carteles/cartel-la-frontera-1600.webp"
+      },
+      {
+        "width": 2121,
+        "src": "/images/carteles/cartel-la-frontera-2121.webp"
       }
     ]
   },
@@ -73,39 +850,6 @@
       }
     ]
   },
-  "carteles/honeytomb-bandits-entrada": {
-    "width": 662,
-    "height": 1783,
-    "blurDataURL": "data:image/webp;base64,UklGRoQBAABXRUJQVlA4IHgBAABwCQCdASoUADYAPtFgpk4oJaOiKBgMAQAaCWoAgxg4nx14tTG56rTK2sCnXQAe8YLJdPaGUEx2TEJDSdhzKYVJg96s3v3N5Zs8NFfZNwSmFoebZdAA/o5lPI7k0qxmw/TN9G+e7DW8Rn6t6PEmvEiAaOXj7xzeD6xEOKncNQJsSPJs49H/82GXELrsr3YtssR7e3I9xxAAa/2fBBS8Tgnn0tAuriRVfkBxd+p1IoSySgS03QtH8G/c2ckiQCdH/RnXOAlQkJI2h4ULJ2vTWZTTDKxYm2pVCcm5T5tOVzbE05iA6J5xB75wVJ42+lHzHp4fuvLv3nlKP2aRiv9FB4OHcMXkM/U1APC/cY8AA0fBks9q+Rvnl1slrcmIOJ5rW179Fpt6S9niS9+8zYprZ67w1FvP73sNgsfSmPHvbxO4IiR8whJFrtYwoghywMYWbQul/jlYBHR4TIyB8oCoCTEVYsQESrFW7KXWRf7vyXI+oXlVmYb4AAAA",
-    "avif": [
-      {
-        "width": 320,
-        "src": "/images/carteles/honeytomb-bandits-entrada-320.avif"
-      },
-      {
-        "width": 640,
-        "src": "/images/carteles/honeytomb-bandits-entrada-640.avif"
-      },
-      {
-        "width": 662,
-        "src": "/images/carteles/honeytomb-bandits-entrada-662.avif"
-      }
-    ],
-    "webp": [
-      {
-        "width": 320,
-        "src": "/images/carteles/honeytomb-bandits-entrada-320.webp"
-      },
-      {
-        "width": 640,
-        "src": "/images/carteles/honeytomb-bandits-entrada-640.webp"
-      },
-      {
-        "width": 662,
-        "src": "/images/carteles/honeytomb-bandits-entrada-662.webp"
-      }
-    ]
-  },
   "carteles/honeytomb-low-gain-cartel": {
     "width": 2121,
     "height": 3000,
@@ -152,55 +896,6 @@
       {
         "width": 2121,
         "src": "/images/carteles/honeytomb-low-gain-cartel-2121.webp"
-      }
-    ]
-  },
-  "carteles/honeytomb-low-gain-entrada": {
-    "width": 1783,
-    "height": 662,
-    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwAwCdASoUAAcAPtFUo0uoJKMhsAgBABoJYwAAXuwXyenv7vCgAAD8rAndQ/d+8Kh742/NVLtkoKAyHl0n6Mh385REIinjWXNioyfPfFPZhpJ9k6m0Xlyxo7X+1q9q1CL73QoeIf57UPvBeLgAAA==",
-    "avif": [
-      {
-        "width": 320,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-320.avif"
-      },
-      {
-        "width": 640,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-640.avif"
-      },
-      {
-        "width": 1024,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-1024.avif"
-      },
-      {
-        "width": 1600,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-1600.avif"
-      },
-      {
-        "width": 1783,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-1783.avif"
-      }
-    ],
-    "webp": [
-      {
-        "width": 320,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-320.webp"
-      },
-      {
-        "width": 640,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-640.webp"
-      },
-      {
-        "width": 1024,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-1024.webp"
-      },
-      {
-        "width": 1600,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-1600.webp"
-      },
-      {
-        "width": 1783,
-        "src": "/images/carteles/honeytomb-low-gain-entrada-1783.webp"
       }
     ]
   },
@@ -299,6 +994,104 @@
       {
         "width": 1776,
         "src": "/images/artabrian/web-escritorio-1776.webp"
+      }
+    ]
+  },
+  "artabrian/carteles/cartel-2024-artabrian-weekend": {
+    "width": 4500,
+    "height": 8000,
+    "blurDataURL": "data:image/webp;base64,UklGRhoBAABXRUJQVlA4IA4BAABwBgCdASoUACQAPtFepk4oJSMiKqgBABoJQBcMbSTgQBLr7FhpGwuiW89Tq6A1AfMMvAmSvixTURgV8gAA/vMAfbiGtalQpXlNl+WEAgF8n1vN78QN1dchfjSzMJgj3JUIp5Md3iGRdWbSemM7sBcyRqUcLWdSdB+TdykGS4Ed/qeIZYnUZ2z7D8Hp5tgaS0fH8BJosYeBZ1ReHu95LdLUJokwuKWElK6Zi5+KqXJdQ+oxieuVH+W7umaf7/0RQqs5o6Z1GMPb3ybPyqS5064GmZOed743ij5WiRxAAngaZ95gU3C1QyZZ5GsRA7nqrH5/p3URiHFBGOfVpTxmqxOXSdO5y4B1zVf2lqapgAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-1600.avif"
+      },
+      {
+        "width": 2400,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-2400.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-1600.webp"
+      },
+      {
+        "width": 2400,
+        "src": "/images/artabrian/carteles/cartel-2024-artabrian-weekend-2400.webp"
+      }
+    ]
+  },
+  "artabrian/carteles/cartel-2025-artabrian-weekend": {
+    "width": 1754,
+    "height": 2480,
+    "blurDataURL": "data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAAAwBQCdASoUABwAPtFcp04oJSOiKAqpABoJYgC7AdzucDOUj9Se08L7b9BH+gqfV77QAAD+5oUc/LcYmScO1REebsoTVaQ2l4kc2erljYT6a88loy8u0WyB0Vuf3Avk8anTfh8XCKzBpsnbKUzZeUljkI2uaKdR2NdtbIwo19zw/KNq+p0OBIbFjdDa/epK1so3J6uYZgIzyqoszOW2/AGgpqAYcX2oTW153NNe2IzNAqZOEf2+kkhiHfLhYlRJVNrRqqTnDo2SZS9sWCWol9hr7Nv1xSq3X+ulZJYCqCijd5OaAAA=",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-1024.avif"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-1600.avif"
+      },
+      {
+        "width": 1754,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-1754.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-1024.webp"
+      },
+      {
+        "width": 1600,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-1600.webp"
+      },
+      {
+        "width": 1754,
+        "src": "/images/artabrian/carteles/cartel-2025-artabrian-weekend-1754.webp"
       }
     ]
   },
@@ -495,6 +1288,47 @@
       {
         "width": 1810,
         "src": "/images/artabrian/carteles/cartel-2026-swu-1810.webp"
+      }
+    ]
+  },
+  "artabrian/carteles/propuesta-2027-artabrian-weekend": {
+    "width": 1080,
+    "height": 1350,
+    "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBACdASoUABkAPtFeqE+oJKOiKAgBABoJYwDG9BBX5hv4DcoHCN02kB884QAA/vQy27gJuZf5NAuXcj4GGXtW1blTcgsuN1FwyQBT1senbCmiBoIGkwOrzZqZjgoxJJVEAHxlxe9Fay5xAsEYhgLT4bElb7Olcm6AAAAA",
+    "avif": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-320.avif"
+      },
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-640.avif"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-1024.avif"
+      },
+      {
+        "width": 1080,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-1080.avif"
+      }
+    ],
+    "webp": [
+      {
+        "width": 320,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-320.webp"
+      },
+      {
+        "width": 640,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-640.webp"
+      },
+      {
+        "width": 1024,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-1024.webp"
+      },
+      {
+        "width": 1080,
+        "src": "/images/artabrian/carteles/propuesta-2027-artabrian-weekend-1080.webp"
       }
     ]
   }

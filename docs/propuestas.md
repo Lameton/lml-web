@@ -12,11 +12,11 @@ Nada de lo que hay aquí está aplicado. Las propuestas visuales son solo propue
 
 Es tu portfolio anterior en Angular: público, tres commits (3 al 26 de marzo de 2025). No he subido nada para no sobrescribirlo. Opciones:
 
-| Opción | Qué pasa | Mi opinión |
-| --- | --- | --- |
-| **A. Renombrar el antiguo** a `lml-web-angular` y archivarlo; crear `lml-web` nuevo | Conservas el antiguo intacto, en solo lectura | **Recomendada.** Un reclutador ve un repositorio limpio y el antiguo no estorba |
-| B. Sobrescribirlo (force push) | El historial de Angular desaparece de `main` (podría guardarse en una rama) | Mezcla dos proyectos en un mismo repositorio |
-| C. Borrar el antiguo | Se pierde para siempre | Innecesario |
+| Opción                                                                              | Qué pasa                                                                    | Mi opinión                                                                      |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **A. Renombrar el antiguo** a `lml-web-angular` y archivarlo; crear `lml-web` nuevo | Conservas el antiguo intacto, en solo lectura                               | **Recomendada.** Un reclutador ve un repositorio limpio y el antiguo no estorba |
+| B. Sobrescribirlo (force push)                                                      | El historial de Angular desaparece de `main` (podría guardarse en una rama) | Mezcla dos proyectos en un mismo repositorio                                    |
+| C. Borrar el antiguo                                                                | Se pierde para siempre                                                      | Innecesario                                                                     |
 
 Con la A, al crear el repositorio nuevo con el mismo nombre, GitHub deja de redirigir la URL antigua al renombrado; no importa si no enlazaste el antiguo en ningún sitio.
 
@@ -37,25 +37,25 @@ Son **una sola**, encadenada: `braces` ≤ 3.0.3 (denegación de servicio con pa
 
 ### 1.3 El CV front-end dice que la web del Artabrian usa Node.js
 
-> **Pendiente de Rodrigo:** corregir la frase en el original del CV (*«y después con React, Vite y Material UI»*).
+> **Pendiente de Rodrigo:** corregir la frase en el original del CV (_«y después con React, Vite y Material UI»_).
 
-En el perfil profesional: *«primero con Angular y Tailwind CSS, y después con React y Node.js»*. CLAUDE.md dice que **no** se mencione Node.js, y la experiencia del mismo CV dice *«React 19, Vite y Material UI»*. Como el PDF va a ser público, conviene corregirlo antes de publicarlo.
+En el perfil profesional: _«primero con Angular y Tailwind CSS, y después con React y Node.js»_. CLAUDE.md dice que **no** se mencione Node.js, y la experiencia del mismo CV dice _«React 19, Vite y Material UI»_. Como el PDF va a ser público, conviene corregirlo antes de publicarlo.
 
 ### 1.4 El mapa de la portada no coincide entre el briefing y CLAUDE.md
 
-> **Resuelto:** orden A (Presentación, Proyecto destacado, Qué hago, Experiencia, Galería de diseño, Fuera del trabajo, Contacto). Marcas y carteles van en una galería mezclada con filtro por categoría. Actualizado en CLAUDE.md.
+> **Resuelto:** orden A (Presentación, Proyecto destacado, Qué hago, Experiencia, Galería de marcas, Fuera del trabajo, Contacto). La portada muestra solo marcas; los carteles del Artabrian Weekend quedan en su caso de estudio. Actualizado en CLAUDE.md.
 
-| Briefing | CLAUDE.md y maqueta |
-| --- | --- |
-| Otros trabajos (4-6 piezas) | Marcas + Carteles |
-| **Experiencia** (línea temporal y descarga de los CV) | No aparece |
+| Briefing                                              | CLAUDE.md y maqueta |
+| ----------------------------------------------------- | ------------------- |
+| Otros trabajos (4-6 piezas)                           | Marcas + Carteles   |
+| **Experiencia** (línea temporal y descarga de los CV) | No aparece          |
 
 ¿Va la sección Experiencia? Mi opinión: sí. Para un reclutador es lo más rápido de leer, y es el sitio natural para descargar los CV.
 
 ### 1.5 Datos de la maqueta que no salen de los CV
 
 - **«Stack: React • TypeScript • Next.js»** y **«Qué hago: … Next.js …»**: los CV no mencionan Next.js. Con esta web pasa a ser verdad. Conviene añadirlo también a los CV para que todo coincida.
-- **«Identidades registradas en la OEPM y la EUIPO»**: los CV dicen *«la mayoría se han registrado»*. Propongo *«La mayoría, registradas en la OEPM y la EUIPO»*.
+- **«Identidades registradas en la OEPM y la EUIPO»**: los CV dicen _«la mayoría se han registrado»_. Propongo _«La mayoría, registradas en la OEPM y la EUIPO»_.
 
 ### 1.6 Los CV que se descargan desde la web
 
@@ -85,15 +85,16 @@ Para ofrecerlos en la web, propongo copiarlos a `public/cv/` con nombres sin til
 
 1. **Contraste de la paleta azul** (WCAG; AA pide 4,5:1 para texto normal y 3:1 para texto grande y elementos de interfaz):
 
-   | Combinación | Contraste | Uso |
-   | --- | --- | --- |
-   | Tinta `#1C2647` sobre papel | 11,37 | Cualquier texto |
-   | Secundario `#454B60` sobre papel | 6,64 | Cualquier texto |
-   | Acento `#3F5894` sobre papel | 5,31 | Cualquier texto y enlaces |
-   | Tinta sobre relleno `#7C93C3` | 4,81 | Texto sobre bloques de relleno |
-   | **Relleno `#7C93C3` sobre papel** | **2,36** | **No sirve para texto, iconos ni bordes de botones** |
+   | Combinación                       | Contraste | Uso                                                  |
+   | --------------------------------- | --------- | ---------------------------------------------------- |
+   | Tinta `#1C2647` sobre papel       | 11,37     | Cualquier texto                                      |
+   | Secundario `#454B60` sobre papel  | 6,64      | Cualquier texto                                      |
+   | Acento `#3F5894` sobre papel      | 5,31      | Cualquier texto y enlaces                            |
+   | Tinta sobre relleno `#7C93C3`     | 4,81      | Texto sobre bloques de relleno                       |
+   | **Relleno `#7C93C3` sobre papel** | **2,36**  | **No sirve para texto, iconos ni bordes de botones** |
 
    Propuesta: usar el relleno solo como superficie, nunca como color de texto o de un elemento que haya que distinguir. La paleta del Artabrian cumple de sobra: oro sobre negro da 8,66.
+
 2. **Moteado de serigrafía.** La maqueta lo genera con un filtro SVG (`feTurbulence`) en vivo. En móvil puede costar rendimiento al hacer scroll. Propongo generar una textura pequeña en AVIF que se repita como fondo, con `mix-blend-mode: multiply`. El efecto es el mismo y no cuesta nada en pantalla.
 3. **Foto a dos tintas.** En lugar de conseguirlo con CSS, el script de imágenes podría generar la versión bitono (tinta + papel) con `sharp`. Saldría una imagen real, ligera y idéntica en todos los navegadores.
 4. **Foco visible.** Propongo un contorno de 3 px en acento con separación (`outline-offset`), coherente con los bloques de los carteles. Es obligatorio para el criterio de teclado.

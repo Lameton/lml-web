@@ -28,7 +28,15 @@ const MANIFEST_PATH = path.join(OUTPUT_DIR, "manifest.json");
 
 // 320: carteles y fotos pequeñas en móvil, para no descargar la versión de 640.
 const WIDTHS = [320, 640, 1024, 1600, 2400];
-const INPUT_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".avif", ".tif", ".tiff"];
+const INPUT_EXTENSIONS = [
+  ".jpg",
+  ".jpeg",
+  ".png",
+  ".webp",
+  ".avif",
+  ".tif",
+  ".tiff",
+];
 const POSTERS_DIR = "carteles";
 const BLUR_WIDTH = 20;
 
@@ -63,8 +71,18 @@ function getTargetWidths(originalWidth: number): number[] {
 async function processImage(file: string): Promise<[string, ImageEntry]> {
   const relative = path.relative(INPUT_DIR, file);
   const parsed = path.parse(relative);
-  // path.join usa "\" en Windows; las claves y URLs siempre llevan "/".
-  const key = path.join(parsed.dir, parsed.name).split(path.sep).join("/");
+  // Normaliza nombres habituales y conserva las claves de URL en ASCII.
+  const key = path
+    .join(parsed.dir, parsed.name)
+    .split(path.sep)
+    .map((segment) =>
+      segment
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/_/g, "-"),
+    )
+    .join("/");
 
   if (!VALID_KEY.test(key)) {
     throw new Error(
@@ -84,7 +102,13 @@ async function processImage(file: string): Promise<[string, ImageEntry]> {
 
   await mkdir(path.join(OUTPUT_DIR, parsed.dir), { recursive: true });
 
-  const entry: ImageEntry = { width, height, blurDataURL: "", avif: [], webp: [] };
+  const entry: ImageEntry = {
+    width,
+    height,
+    blurDataURL: "",
+    avif: [],
+    webp: [],
+  };
 
   for (const targetWidth of getTargetWidths(width)) {
     // clone() reutiliza el original leído sin volver a abrir el archivo.
@@ -104,7 +128,11 @@ async function processImage(file: string): Promise<[string, ImageEntry]> {
     entry.webp.push({ width: targetWidth, src: `/images/${baseName}.webp` });
   }
 
-  const blur = await image.clone().resize({ width: BLUR_WIDTH }).webp({ quality: 50 }).toBuffer();
+  const blur = await image
+    .clone()
+    .resize({ width: BLUR_WIDTH })
+    .webp({ quality: 50 })
+    .toBuffer();
   entry.blurDataURL = `data:image/webp;base64,${blur.toString("base64")}`;
 
   return [key, entry];
@@ -121,7 +149,8 @@ async function main() {
   );
 
   for (const file of files) {
-    if (!images.includes(file)) console.warn(`Se ignora (formato no admitido): ${file}`);
+    if (!images.includes(file))
+      console.warn(`Se ignora (formato no admitido): ${file}`);
   }
 
   // Se regenera todo desde cero para no dejar archivos de imágenes borradas.
@@ -131,9 +160,12 @@ async function main() {
   const manifest: Record<string, ImageEntry> = {};
   for (const file of images) {
     const [key, entry] = await processImage(file);
-    if (manifest[key]) throw new Error(`Hay dos originales con la clave "${key}".`);
+    if (manifest[key])
+      throw new Error(`Hay dos originales con la clave "${key}".`);
     manifest[key] = entry;
-    console.log(`✓ ${key} (${entry.webp.map((variant) => variant.width).join(", ")} px)`);
+    console.log(
+      `✓ ${key} (${entry.webp.map((variant) => variant.width).join(", ")} px)`,
+    );
   }
 
   await writeFile(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`);

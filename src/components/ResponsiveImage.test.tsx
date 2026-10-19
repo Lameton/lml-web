@@ -24,13 +24,21 @@ const SIZES = "(min-width: 1024px) 50vw, 100vw";
 
 describe("ResponsiveImage", () => {
   it("ofrece AVIF y WebP con srcset y sizes", () => {
-    const { container } = render(<ResponsiveImage src="foto" alt="Retrato" sizes={SIZES} />);
+    const { container } = render(
+      <ResponsiveImage src="foto" alt="Retrato" sizes={SIZES} />,
+    );
 
     const avif = container.querySelector('source[type="image/avif"]');
     const webp = container.querySelector('source[type="image/webp"]');
-    expect(avif).toHaveAttribute("srcset", "/images/foto-640.avif 640w, /images/foto-1024.avif 1024w");
+    expect(avif).toHaveAttribute(
+      "srcset",
+      "/images/foto-640.avif 640w, /images/foto-1024.avif 1024w",
+    );
     expect(avif).toHaveAttribute("sizes", SIZES);
-    expect(webp).toHaveAttribute("srcset", "/images/foto-640.webp 640w, /images/foto-1024.webp 1024w");
+    expect(webp).toHaveAttribute(
+      "srcset",
+      "/images/foto-640.webp 640w, /images/foto-1024.webp 1024w",
+    );
   });
 
   it("define alt, width y height y usa el WebP más grande como respaldo", () => {
@@ -56,5 +64,18 @@ describe("ResponsiveImage", () => {
     const img = screen.getByRole("img");
     expect(img).toHaveAttribute("loading", "eager");
     expect(img).toHaveAttribute("fetchpriority", "high");
+  });
+
+  it("permite desactivar la miniatura difuminada", () => {
+    render(
+      <ResponsiveImage
+        src="foto"
+        alt="Retrato"
+        sizes={SIZES}
+        showBlurPlaceholder={false}
+      />,
+    );
+
+    expect(screen.getByRole("img").style.backgroundImage).toBe("");
   });
 });

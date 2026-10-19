@@ -11,6 +11,7 @@ type ResponsiveImageProps = {
   sizes: string;
   /** Solo para la imagen principal de la portada: carga sin esperar. */
   priority?: boolean;
+  showBlurPlaceholder?: boolean;
   className?: string;
 };
 
@@ -24,6 +25,7 @@ export function ResponsiveImage({
   alt,
   sizes,
   priority = false,
+  showBlurPlaceholder = true,
   className,
 }: ResponsiveImageProps) {
   const image = getImage(src);
@@ -45,7 +47,9 @@ export function ResponsiveImage({
         className={className}
         // Miniatura difuminada de fondo mientras carga la imagen real.
         style={{
-          backgroundImage: `url(${image.blurDataURL})`,
+          backgroundImage: showBlurPlaceholder
+            ? `url(${image.blurDataURL})`
+            : undefined,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { BrowserFrame } from "@/components/BrowserFrame";
+import { FeaturedEditionGallery } from "@/components/FeaturedEditionGallery";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { getImage } from "@/lib/images";
 import type { FeaturedProject as FeaturedProjectData } from "@/content/home";
 
 type FeaturedProjectProps = {
@@ -37,9 +39,16 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-375 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
           <div>
+            <Link
+              href={project.caseStudyHref}
+              aria-label={`Abrir el caso de estudio de ${project.name}`}
+              className="type-action mb-8 inline-flex min-h-11 items-center justify-center rounded-full border border-aw-gold bg-aw-gold px-5 py-3 text-aw-black transition hover:border-aw-cream hover:bg-aw-cream"
+            >
+              Abrir caso de estudio ↗
+            </Link>
             <p className="type-meta text-aw-gold">Proyecto destacado</p>
             <h2 id="proyecto-titulo" className="type-display mt-3">
               {project.name}
@@ -91,18 +100,16 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
           />
         </div>
 
-        <ul className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
-          {project.posters.map((poster) => (
-            <li key={poster.src}>
-              <ResponsiveImage
-                src={poster.src}
-                alt={`Cartel del Artabrian Weekend 2026 de ${poster.game}`}
-                sizes="(min-width: 1500px) 340px, (min-width: 640px) 25vw, 50vw"
-                className="h-auto w-full rounded-lg shadow-[0_18px_40px_rgba(0,0,0,0.5)] transition-transform duration-300 motion-safe:hover:-translate-y-1"
-              />
-            </li>
-          ))}
-        </ul>
+        <div className="mt-14">
+          <p className="type-meta text-aw-gold">La evolución del evento</p>
+          <FeaturedEditionGallery
+            projectName={project.name}
+            posters={project.editionPosters.map((poster) => ({
+              ...poster,
+              image: getImage(poster.src),
+            }))}
+          />
+        </div>
 
         <Link
           href={project.caseStudyHref}

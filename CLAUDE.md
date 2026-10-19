@@ -19,16 +19,16 @@ Rodrigo vive en A Coruña (Galicia) y busca trabajo presencial o híbrido allí.
 
 ## Stack
 
-| Pieza | Elección |
-| --- | --- |
-| Framework | Next.js 16, App Router, exportación estática (`output: 'export'` en `next.config.ts`) |
-| Lenguaje | TypeScript en modo estricto |
-| Estilos | Tailwind CSS. Los colores y tipografías de la marca se definen como variables de tema, nunca a mano en cada componente |
-| Contenido | Archivos de datos tipados en `src/content/`, preparados para español e inglés |
-| Imágenes | Script propio con `sharp` (ver más abajo) y componente `ResponsiveImage` |
-| Analítica | Vercel Analytics, sin cookies |
-| Pruebas | Vitest + Testing Library en los componentes con lógica |
-| Despliegue | Repositorio público en GitHub + Vercel |
+| Pieza      | Elección                                                                                                               |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Framework  | Next.js 16, App Router, exportación estática (`output: 'export'` en `next.config.ts`)                                  |
+| Lenguaje   | TypeScript en modo estricto                                                                                            |
+| Estilos    | Tailwind CSS. Los colores y tipografías de la marca se definen como variables de tema, nunca a mano en cada componente |
+| Contenido  | Archivos de datos tipados en `src/content/`, preparados para español e inglés                                          |
+| Imágenes   | Script propio con `sharp` (ver más abajo) y componente `ResponsiveImage`                                               |
+| Analítica  | Vercel Analytics, sin cookies                                                                                          |
+| Pruebas    | Vitest + Testing Library en los componentes con lógica                                                                 |
+| Despliegue | Repositorio público en GitHub + Vercel                                                                                 |
 
 Con la exportación estática **no** se pueden usar: Server Actions, rutas dinámicas sin `generateStaticParams`, cookies, rewrites ni el optimizador de imágenes por defecto de `next/image`.
 
@@ -64,12 +64,12 @@ lml-web/
    2. Proyecto destacado: Artabrian Weekend.
    3. Qué hago: Desarrollo y Diseño.
    4. Experiencia: línea temporal breve con los puestos de los CV y descarga de los dos PDF.
-   5. Galería de diseño: marcas y carteles mezclados, con un filtro para ver una categoría o ambas. Sin JavaScript se ven todas las piezas; el filtro solo oculta.
-   6. Fuera del trabajo: juegos de cartas, eventos y esports.
-   7. Contacto.
-2. **Casos de estudio** con la plantilla `CaseStudyPage` (`src/components/case-study/`). Cada caso es un objeto `CaseStudy` en su archivo de `src/content/` (tipos en `src/content/case-study.ts`) con su propia paleta (`theme`), que se aplica como variables CSS a toda la página salvo el footer, que mantiene el estilo general. Para uno nuevo: archivo de contenido + ruta en `src/app/proyectos/<slug>/page.tsx` con sus metadatos.
+2. Galería de marcas: una selección breve de identidades visuales y sus aplicaciones. Los carteles del Artabrian Weekend aparecen en su caso de estudio, no en la galería de portada.
+3. Galería de marcas: todas las identidades visuales disponibles y sus aplicaciones. Los carteles del Artabrian Weekend aparecen en su caso de estudio, no en la galería de portada.
+4. Contacto.
+5. **Casos de estudio** con la plantilla `CaseStudyPage` (`src/components/case-study/`). Cada caso es un objeto `CaseStudy` en su archivo de `src/content/` (tipos en `src/content/case-study.ts`) con su propia paleta (`theme`), que se aplica como variables CSS a toda la página salvo el footer, que mantiene el estilo general. Para uno nuevo: archivo de contenido + ruta en `src/app/proyectos/<slug>/page.tsx` con sus metadatos.
    - Artabrian Weekend (`/proyectos/artabrian-weekend`), en negro, crema y oro: contexto, papel de Rodrigo, la web (de Angular a React, arquitectura basada en JSON), la identidad, resultados y qué haría distinto.
-3. **404** con enlace al inicio.
+6. **404** con enlace al inicio.
 
 Datos del perfil: usa siempre los de los CV de Rodrigo. La web del Artabrian Weekend está hecha con **React 19, Vite y Material UI, en JavaScript**; no digas que usa TypeScript ni Node.js.
 
@@ -77,22 +77,24 @@ Datos del perfil: usa siempre los de los CV de Rodrigo. La web del Artabrian Wee
 
 - Identidad editorial, sobria y contundente: más marca que aplicación. Poca densidad visual, jerarquía tipográfica clara y composición pensada primero para escritorio (sin descuidar los 360 px).
 - Tipografías: Inknut Antiqua para titulares y Archivo para texto y etiquetas. Se cargan con `next/font` en `src/app/fonts.ts` y se exponen como `font-display` y `font-sans`.
-- Paleta verde con dos modos, definida en `src/app/globals.css` (`.theme-light` y `.theme-dark`). Los componentes usan solo los nombres del tema (`bg-paper`, `text-ink`…):
+- Paleta editorial con dos modos, definida en `src/app/globals.css` (`.theme-light` y `.theme-dark`). Los componentes usan solo los nombres del tema (`bg-paper`, `text-ink`…):
 
-  | Variable | Claro | Oscuro |
-  | --- | --- | --- |
-  | `paper` (fondo) | `#E1E8E3` | `#071711` |
-  | `ink` (texto) | `#071711` | `#E1E8E3` |
-  | `accent` | `#0F6B60` | `#6FE7D3` |
-  | `fill` | `#A5CDBD` | `#2BB5A2` |
-  | `muted` (texto secundario) | `#52645D` | `#9EC7BB` |
+  | Variable                        | Claro                 | Oscuro                                |
+  | ------------------------------- | --------------------- | ------------------------------------- |
+  | `paper` (fondo)                 | `#E1E8E3`             | `#071711`                             |
+  | `ink` (texto)                   | `#071711`             | `color-mix(#E1E8E3 80%, #071711 20%)` |
+  | `accent`                        | Ultramarino `#3047B6` | Lavanda `#A6B5FF`                     |
+  | `fill` (superficie)             | Coral `#FF6B4A`       | Coral claro `#FF795C`                 |
+  | `fill-ink` (texto sobre `fill`) | `#071711`             | `#071711`                             |
+  | `muted` (texto secundario)      | `#555B69`             | `#AEB9CC`                             |
+
+- `accent` se reserva para texto, enlaces y controles; `fill` es una superficie con texto `fill-ink`. Ambos acentos superan WCAG AA sobre sus fondos.
 
 - El interruptor `ThemeToggle` cambia entre los dos modos. La página arranca en modo claro.
 - El proyecto destacado y el caso de estudio del Artabrian Weekend usan su propia identidad: negro `#0E0D0B`, crema `#F1EDE3` y oro `#D4A72C` (variables `aw-*` del tema).
 
 ### Pendiente de decidir
 
-- Textos definitivos de la portada y del caso de estudio.
 - Si el header y la hero finales van más minimalistas o más impactantes.
 - Ajustes visuales finos en algunas secciones.
 - Revisar portfolios reales de diseñadores-desarrolladores para cerrar la dirección.

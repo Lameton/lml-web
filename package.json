@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "sirv out",
     "lint": "eslint",
     "images": "tsx scripts/optimize-images.ts",
     "test": "vitest",
@@ -30,6 +30,7 @@
     "eslint-config-next": "16.4.0",
     "jsdom": "^29.1.1",
     "sharp": "^0.35.5",
+    "sirv-cli": "3.0.1",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5",

@@ -13,7 +13,7 @@ export default function NotFound() {
     <main className="theme-light noise-surface grid min-h-screen place-items-center px-4 text-ink">
       <div className="max-w-xl text-center">
         <p className="type-meta text-ink/60">Error 404</p>
-        <h1 className="type-display mt-3">Esta página no existe.</h1>
+        <h1 className="type-display mt-3">Esta página no existe</h1>
         <p className="type-lead mt-6 text-ink/80">
           Puede que el enlace esté mal escrito o que la página se haya movido.
         </p>

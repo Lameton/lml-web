@@ -34,6 +34,31 @@ describe("CaseStudyBlock", () => {
     expect(pre).toHaveAttribute("tabindex", "0");
   });
 
+  it("presenta los carteles como botones accesibles de ampliación", () => {
+    render(
+      <CaseStudyBlock
+        block={{
+          type: "images",
+          items: [
+            {
+              src: "artabrian/carteles/cartel-2026-mtg",
+              alt: "Cartel de Magic: The Gathering",
+              title: "Magic: The Gathering",
+              category: "Cartel",
+              tag: "Artabrian Weekend 2026",
+            },
+          ],
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByRole("button", {
+        name: "Ampliar Magic: The Gathering: Artabrian Weekend 2026",
+      }),
+    ).toBeInTheDocument();
+  });
+
   it("pinta las cifras como lista de definiciones", () => {
     render(
       <CaseStudyBlock

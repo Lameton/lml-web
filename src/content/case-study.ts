@@ -22,6 +22,9 @@ export type CaseStudyImage = {
   /** Clave de la imagen en public/images/manifest.json. */
   src: string;
   alt: string;
+  title?: string;
+  category?: string;
+  tag?: string;
 };
 
 export type CaseStudyFact = {
@@ -50,11 +53,17 @@ export type CaseStudySection = {
   blocks: CaseStudyBlock[];
 };
 
+export type CaseStudyFooter = {
+  eyebrow: string;
+  description: string;
+};
+
 export type CaseStudy = {
   name: string;
   summary: string;
   url: string;
   urlLabel: string;
+  footer: CaseStudyFooter;
   theme: CaseStudyTheme;
   /** Imagen de fondo de la cabecera (opcional). */
   heroBackground?: string;

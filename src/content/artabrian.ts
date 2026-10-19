@@ -9,6 +9,11 @@ export const artabrianCaseStudy: CaseStudy = {
     "Un fin de semana de torneos de juegos de cartas coleccionables en el Pazo do Monte, en Ferrol. Desde 2024 diseño y desarrollo su web y dirijo la identidad gráfica de cada edición.",
   url: "https://artabrianweekends.com",
   urlLabel: "artabrianweekends.com",
+  footer: {
+    eyebrow: "Diseño y desarrollo · Artabrian Weekend",
+    description:
+      "Una web que reúne torneos de varios juegos y facilita preparar cada nueva edición con una estructura basada en datos.",
+  },
 
   // La identidad del evento: negro, crema y oro (definidos en globals.css).
   theme: {
@@ -38,8 +43,8 @@ export const artabrianCaseStudy: CaseStudy = {
         {
           type: "paragraphs",
           items: [
-            "El Artabrian Weekend reúne cada marzo en Ferrol los Main Events de varios juegos de cartas coleccionables —Magic: The Gathering, Star Wars: Unlimited, One Piece y Riftbound, entre otros— en un mismo espacio y un mismo fin de semana, con un máximo de 64 jugadores por Main Event.",
-            "La web tiene que resolver algo muy concreto: que cada jugador encuentre en segundos los torneos de su juego, con horarios, premios e inscripción, y que todo cambie con facilidad de una edición a otra.",
+            "El Artabrian Weekend reúne cada marzo en Ferrol los Main Events de varios juegos de cartas coleccionables —Magic: The Gathering, Star Wars: Unlimited, One Piece y Riftbound, entre otros— en un mismo espacio y un mismo fin de semana, con un máximo de 64 jugadores por evento principal.",
+            "El reto no era solo comunicar una cita del calendario, sino guiar a cada participante hasta la información que necesitaba en segundos: el juego correcto, el torneo adecuado, el horario, los premios y el paso para inscribirse. Además, la web tenía que adaptarse con facilidad a cada edición, sin fricción para el equipo organizador.",
           ],
         },
       ],
@@ -51,10 +56,10 @@ export const artabrianCaseStudy: CaseStudy = {
         {
           type: "list",
           items: [
-            "Diseño y desarrollo de la web, de la primera versión a la actual.",
-            "Rediseño de la identidad de Artabrian Nights y sistema gráfico de cada edición.",
-            "Carteles de cada juego, publicaciones para redes sociales y comunicación por WhatsApp, que planifico y produzco yo.",
-            "Otro miembro del equipo se encarga de la conexión con Vercel y de que la web esté en línea.",
+            "Diseño y desarrollo de la web desde la primera versión hasta la actual, con foco en la claridad de la información y la velocidad de uso.",
+            "Rediseño de la identidad de Artabrian Nights y construcción de un sistema gráfico reusable para cada edición.",
+            "Diseño de carteles por juego, creación de contenido para redes y gestión de la comunicación por WhatsApp, con la coordinación del resto del equipo.",
+            "Otro miembro del equipo se encarga del despliegue en Vercel y del mantenimiento técnico de la web en producción.",
           ],
         },
       ],
@@ -66,9 +71,9 @@ export const artabrianCaseStudy: CaseStudy = {
         {
           type: "paragraphs",
           items: [
-            "La primera versión, de 2025, la hice con Angular y Tailwind CSS. Para la edición de 2026 la reescribí en React 19 con Vite, Material UI, React Router y CSS Modules, en JavaScript.",
-            "La clave de la reescritura es que la web está guiada por datos. Cada juego tiene su archivo JSON con sus torneos, y un único componente, Tournament, genera todas las páginas de torneos a partir de ellos. Lo que cambia entre juegos (color, fondo, ruta, cartel y formulario de inscripción) vive en un objeto de configuración.",
-            "Resultado: añadir un torneo es añadir una entrada a un JSON, sin tocar componentes. Añadir un juego entero es un JSON, una entrada de configuración y una página de pocas líneas como esta:",
+            "La primera versión, de 2025, la desarrollé con Angular y Tailwind CSS. Para la edición de 2026 la reescribí en React 19 con Vite, Material UI, React Router y CSS Modules, en JavaScript, para ganar más flexibilidad y un mejor control visual.",
+            "La clave de la reescritura fue transformar la web en un sistema basado en datos. Cada juego tiene su propio archivo JSON con los torneos, y un único componente, Tournament, genera todas las páginas a partir de esos datos. Lo que cambia entre juegos —color, fondo, ruta, cartel y formulario de inscripción— vive en una configuración centralizada.",
+            "El resultado es muy claro: añadir un torneo consiste en sumar una entrada a un JSON; añadir un juego entero implica un JSON, una configuración y una página mínima como esta:",
           ],
         },
         {
@@ -109,7 +114,7 @@ export default function MagicTheGathering() {
         {
           type: "paragraphs",
           items: [
-            "Las páginas de cada juego se cargan en diferido (React.lazy), así que quien entra a ver Magic no descarga el código de One Piece. La web se despliega en Vercel desde la rama main mediante GitHub Actions; el trabajo diario va en develop.",
+            "Las páginas de cada juego se cargan en diferido (React.lazy), así que quien entra a Magic no descarga el código de One Piece. La web se despliega en Vercel desde la rama main mediante GitHub Actions, mientras el trabajo diario sigue desarrollándose en develop.",
           ],
         },
       ],
@@ -121,8 +126,8 @@ export default function MagicTheGathering() {
         {
           type: "paragraphs",
           items: [
-            "La identidad parte del logotipo, una luna sobre una estrella de cuatro puntas, y de un sistema de carteles con una estructura común: titular en palo seco muy pesado, fechas separadas por puntos, información en bloques con contorno y un grabado de fondo con la figura encapuchada entre lunas.",
-            "Cada juego tiene su propia tinta —oro para Magic, rojo para Star Wars— sobre el mismo negro, de modo que los carteles funcionan solos y también como serie.",
+            "La identidad parte del logotipo, una luna sobre una estrella de cuatro puntas, y de un sistema visual común para los carteles: titular en palo seco muy pesado, fechas separadas por puntos, información en bloques con contorno y un grabado de fondo con la figura encapuchada entre lunas.",
+            "Cada juego tiene su propia tinta —oro para Magic, rojo para Star Wars— sobre el mismo negro, de modo que cada cartel funciona por sí solo y también como parte de una serie coherente.",
           ],
         },
         {
@@ -130,6 +135,9 @@ export default function MagicTheGathering() {
           items: featuredProject.posters.map((poster) => ({
             src: poster.src,
             alt: `Cartel del Artabrian Weekend 2026 de ${poster.game}`,
+            title: poster.game,
+            category: "Cartel",
+            tag: "Artabrian Weekend 2026",
           })),
         },
       ],
@@ -153,12 +161,22 @@ export default function MagicTheGathering() {
         {
           type: "paragraphs",
           items: [
-            "Una participación es un jugador en un torneo: quien juega varios días cuenta varias veces. En 2026 vinieron jugadores de Galicia, de otras comunidades y de Portugal, Alemania y Francia.",
+            "Una participación equivale a un jugador en un torneo: quien juega varios días cuenta varias veces. En 2026 llegaron jugadores de Galicia, de otras comunidades y también de Portugal, Alemania y Francia.",
           ],
         },
       ],
     },
-    // PENDIENTE: sección «Qué haría distinto» con la respuesta de Rodrigo a
-    // la pregunta 2.26 del cuestionario.
+    {
+      id: "que-haria-distinto",
+      title: "Qué haría distinto",
+      blocks: [
+        {
+          type: "paragraphs",
+          items: [
+            "En una próxima edición, haría más directo el recorrido hasta la inscripción: ayudaría a comparar torneos y horarios y dejaría más claro el siguiente paso. También llevaría más información variable del evento a la configuración, para actualizarla sin tocar los componentes.",
+          ],
+        },
+      ],
+    },
   ],
 };

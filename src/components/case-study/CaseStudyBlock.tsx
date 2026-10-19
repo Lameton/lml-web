@@ -1,4 +1,7 @@
 import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { GalleryZoom } from "@/components/GalleryZoom";
+import type { GalleryZoomImage } from "@/components/GalleryZoom";
+import { getImage } from "@/lib/images";
 import type { CaseStudyBlock as Block } from "@/content/case-study";
 
 type CaseStudyBlockProps = {
@@ -54,21 +57,43 @@ export function CaseStudyBlock({ block }: CaseStudyBlockProps) {
         </figure>
       );
 
-    case "images":
+    case "images": {
+      const galleryImages: GalleryZoomImage[] = block.items.map((item) => {
+        const image = getImage(item.src);
+
+        return {
+          title: item.title ?? item.alt,
+          category: item.category ?? "Imagen",
+          tag: item.tag ?? "Caso de estudio",
+          alt: item.alt,
+          image: {
+            width: image.width,
+            height: image.height,
+            avif: image.avif,
+            webp: image.webp,
+          },
+        };
+      });
+
       return (
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {block.items.map((image) => (
+          {block.items.map((image, index) => (
             <li key={image.src}>
-              <ResponsiveImage
-                src={image.src}
-                alt={image.alt}
-                sizes="(min-width: 768px) 11rem, 50vw"
-                className="h-auto w-full rounded-lg shadow-[0_12px_30px_rgba(0,0,0,0.35)]"
-              />
+              <div className="aspect-3/4 overflow-hidden rounded-lg border border-accent/40 bg-ink/5 shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+                <GalleryZoom images={galleryImages} index={index}>
+                  <ResponsiveImage
+                    src={image.src}
+                    alt={image.alt}
+                    sizes="(min-width: 768px) 11rem, 50vw"
+                    className="gallery-image"
+                  />
+                </GalleryZoom>
+              </div>
             </li>
           ))}
         </ul>
       );
+    }
 
     case "stats":
       return (

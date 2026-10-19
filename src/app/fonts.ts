@@ -13,10 +13,10 @@ export const archivo = Archivo({
 });
 
 // Inknut Antiqua no es variable: cada peso es un archivo aparte que se descarga.
-// Solo los que usa la web (600 en los números de Qué hago, 700 y 800 en los
-// títulos): cada peso de más retrasa el pintado del titular en móvil.
+// Solo los que usa la web (600 en los números de Qué hago y 700 en los títulos):
+// cada peso de más retrasa el pintado del titular en móvil.
 export const inknut = Inknut_Antiqua({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["600", "700"],
   variable: "--font-inknut",
 });

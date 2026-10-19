@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import {
   colophon,
   cvFiles,
@@ -13,9 +12,13 @@ import {
   socialLinks,
 } from "@/content/home";
 import { BackToTop } from "@/components/BackToTop";
+import { BrandLogo } from "@/components/BrandLogo";
 import { FeaturedProject } from "@/components/FeaturedProject";
+import { GalleryZoom, type GalleryZoomImage } from "@/components/GalleryZoom";
+import { HeaderPaletteObserver } from "@/components/HeaderPaletteObserver";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
 import ThemeToggle from "@/components/ThemeToggle";
+import { getImage } from "@/lib/images";
 
 // Solo las secciones principales: el resto se descubre al bajar.
 const navLinks = [
@@ -24,44 +27,45 @@ const navLinks = [
   { href: "#contacto", label: "Contacto" },
 ];
 
-// Filtro de la galería: «Todo» más una opción por cada categoría presente.
-const galleryCategoryLabels = { marcas: "Marcas", carteles: "Carteles" };
-const galleryFilters = [
-  { id: "gallery-all", label: "Todo" },
-  ...[...new Set(galleryItems.map((item) => item.category))].map(
-    (category) => ({
-      id: `gallery-${category}`,
-      label: galleryCategoryLabels[category],
-    }),
-  ),
-];
-
 // Palabras del nombre, para componer el titular en líneas.
 const nameWords = profile.name.split(" ");
 
 export default function Home() {
+  const galleryZoomImages: GalleryZoomImage[] = galleryItems.map((item) => {
+    const image = getImage(item.src);
+
+    return {
+      title: item.title,
+      category: "Marca",
+      tag: item.tag,
+      year: item.year,
+      alt: item.alt,
+      image: {
+        width: image.width,
+        height: image.height,
+        avif: image.avif,
+        webp: image.webp,
+      },
+    };
+  });
+
   return (
     <main
       id="site-main"
       className="theme-light noise-surface min-h-screen text-ink transition-colors duration-300 ease-out"
     >
       <div id="top" className="w-full px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-        <header className="sticky top-0 z-50 mx-auto mb-12 w-full max-w-[1500px] border-b border-ink/10 bg-paper/80 backdrop-blur-sm">
+        <header
+          id="site-header"
+          className="site-header-surface sticky top-0 z-50 mx-auto mb-12 w-full max-w-375 border-b border-ink/10 backdrop-blur-md transition-colors duration-200"
+        >
           <div className="flex items-center justify-between gap-4 py-3">
             <a
               href="#top"
+              aria-label={`Inicio: ${profile.name}`}
               className="flex items-center gap-3 transition hover:text-accent"
             >
-              {/* El monograma es decorativo: el nombre accesible del enlace es
-                  el texto visible, "Rodrigo Lamela Sanfacundo" (lo exige WCAG 2.5.3 para
-                  el control por voz). */}
-              <span
-                aria-hidden="true"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 bg-[var(--paper-strong)] text-[0.62rem] font-bold tracking-[0.14em] text-ink"
-              >
-                RL
-              </span>
-              <span className="type-meta text-ink/70">{profile.name}</span>
+              <BrandLogo src="marcas/lml/lml-logo-2025" className="h-9 w-22" />
             </a>
 
             <div className="flex items-center gap-6">
@@ -85,12 +89,12 @@ export default function Home() {
             </div>
           </div>
         </header>
+        <HeaderPaletteObserver />
 
-        <section className="mx-auto max-w-[1500px] pb-20 pt-4 lg:pb-28 lg:pt-10">
-          {/* El nombre como titular de cartel, a todo el ancho. En móvil, una
-              palabra por línea; desde sm, la última baja sola («Rodrigo
-              Lamela» / «Sanfacundo»). */}
-          <h1 className="type-poster text-ink">
+        <section className="mx-auto grid max-w-375 grid-cols-1 gap-y-8 pb-20 pt-4 lg:grid-cols-[minmax(0,1fr)_minmax(24rem,36rem)] lg:gap-x-10 lg:gap-y-6 lg:pb-28 lg:pt-10">
+          {/* El nombre sigue siendo el titular principal. Desde sm, la última
+              palabra baja sola («Rodrigo Lamela» / «Sanfacundo»). */}
+          <h1 className="type-poster text-ink lg:col-start-1 lg:row-start-1">
             {nameWords.map((word, index) => (
               <span
                 key={word}
@@ -104,7 +108,7 @@ export default function Home() {
             ))}
           </h1>
 
-          <div className="mt-8 grid gap-10 border-t border-ink/20 pt-8 lg:grid-cols-[1fr_auto] lg:gap-16">
+          <div className="grid gap-10 lg:col-start-1 lg:row-start-2 lg:gap-8">
             <div>
               <p className="type-role text-accent">
                 {profile.roles.join(" • ")}
@@ -116,13 +120,21 @@ export default function Home() {
 
               {/* Sin botón al proyecto: es la sección que viene justo debajo.
                   `download` guarda el PDF en lugar de abrirlo en la pestaña. */}
-              <a
-                href={cvFiles.frontend.href}
-                download
-                className="type-action mt-8 inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-accent"
-              >
-                Descargar CV ↓
-              </a>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={cvFiles.frontend.href}
+                  download
+                  className="type-action inline-flex min-h-11 items-center justify-center rounded-full bg-ink px-5 py-3 text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-accent"
+                >
+                  Descargar CV ↓
+                </a>
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="type-action inline-flex min-h-11 items-center justify-center rounded-full border border-ink/25 px-5 py-3 text-ink transition hover:border-accent hover:text-accent"
+                >
+                  Contactar ↗
+                </a>
+              </div>
 
               <section aria-labelledby="ahora" className="mt-10 max-w-xl">
                 <h2 id="ahora" className="type-meta text-ink/60">
@@ -140,43 +152,50 @@ export default function Home() {
                 </ul>
               </section>
             </div>
-
-            <div className="w-32 overflow-hidden rounded-2xl border border-ink/15 sm:w-40 lg:w-60">
-              <ResponsiveImage
-                src="perfil/rodrigo-lamela-foto"
-                alt="Retrato de Rodrigo Lamela Sanfacundo"
-                sizes="(min-width: 1024px) 15rem, (min-width: 640px) 10rem, 8rem"
-                className="block h-auto w-full"
-              />
-            </div>
+          </div>
+          <div className="hero-support-visual hidden overflow-hidden items-center justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:flex">
+            <ResponsiveImage
+              src="perfil/forma-cera"
+              alt="Escultura cerámica multicolor con forma de criatura fantástica."
+              sizes="(min-width: 1024px) 32rem, 0px"
+              showBlurPlaceholder={false}
+              className="block h-auto w-full object-contain lg:h-full"
+            />
           </div>
         </section>
 
         <FeaturedProject project={featuredProject} />
 
-        <section
-          id="que-hago"
-          className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
-        >
+        <section id="que-hago" className="scroll-mt-28 mx-auto max-w-375 py-10">
           <p className="type-meta text-ink/60">Qué hago</p>
           <h2 className="type-section mt-2 text-ink">
-            Desarrollo y diseño con una sola intención: comunicar bien.
+            Desarrollo y diseño con una sola intención: comunicar bien
           </h2>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {services.map((service, index) => (
               <article
                 key={service.title}
-                className="rounded-[1.6rem] border border-ink/10 bg-[var(--paper-strong)] p-5 transition duration-200 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_10px_20px_rgba(0,0,0,0.03)]"
+                className="rounded-[1.6rem] border border-ink/10 bg-(--paper-strong) p-5 transition duration-200 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_10px_20px_rgba(0,0,0,0.03)]"
               >
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-accent/15 font-display text-lg font-semibold text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </div>
                 <h3 className="type-card-title text-ink">{service.title}</h3>
                 <p className="type-body mt-3 text-ink/75">{service.text}</p>
-                <p className="type-meta mt-4 text-ink/60">
-                  {service.tools.join(" • ")}
-                </p>
+                <ul
+                  aria-label={`Programas y herramientas de ${service.title}`}
+                  className="mt-5 flex flex-wrap gap-2"
+                >
+                  {service.tools.map((tool) => (
+                    <li
+                      key={tool}
+                      className="type-meta rounded-md border border-accent/45 bg-accent/10 px-2.5 py-1.5 text-accent"
+                    >
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
@@ -184,7 +203,7 @@ export default function Home() {
 
         <section
           id="experiencia"
-          className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
+          className="scroll-mt-28 mx-auto max-w-375 py-10"
         >
           <p className="type-meta text-ink/60">Experiencia</p>
           <h2 className="type-section mt-2 text-ink">
@@ -254,85 +273,52 @@ export default function Home() {
         {galleryItems.length > 0 && (
           <section
             id="galeria"
-            className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
+            className="scroll-mt-28 mx-auto max-w-375 py-10"
           >
             <p className="type-meta text-ink/60">Galería</p>
-            <h2 className="type-section mt-2 text-ink">
-              Carteles para conciertos.
-            </h2>
+            <h2 className="type-section mt-2 text-ink">Marcas en uso</h2>
             <p className="type-body mt-3 max-w-2xl text-ink/80">
-              Tipografía pesada, ilustración grabada y dos o tres tintas, con la
-              entrada a juego.
+              Una selección de identidades visuales y sus aplicaciones.
             </p>
 
-            {/* Filtro sin JavaScript (ver .gallery-* en globals.css): los
-                radios, sus etiquetas y la lista tienen que ser hermanos para
-                que funcione el selector «~». Sin CSS se ven todas las piezas.
-                Solo aparece si hay más de una categoría. */}
-            <div className="mt-8 flex flex-wrap gap-2">
-              {galleryFilters.length > 2 &&
-                galleryFilters.map((filter, index) => (
-                  <Fragment key={filter.id}>
-                    <input
-                      type="radio"
-                      name="gallery-filter"
-                      id={filter.id}
-                      defaultChecked={index === 0}
-                      className="gallery-filter-input"
-                    />
-                    <label
-                      htmlFor={filter.id}
-                      className="type-meta gallery-filter-label"
-                    >
-                      {filter.label}
-                    </label>
-                  </Fragment>
-                ))}
-
-              <ul className="gallery-grid mt-6 basis-full">
-                {galleryItems.map((item) => (
-                  <li
-                    key={item.src}
-                    className="gallery-item"
-                    data-category={item.category}
-                  >
-                    <figure>
-                      <ResponsiveImage
-                        src={item.src}
-                        alt={item.alt}
-                        sizes="(min-width: 768px) 25vw, 50vw"
-                        // Altura máxima: una entrada vertical no debe ocupar
-                        // el doble que un cartel.
-                        className="h-auto max-h-[28rem] w-auto max-w-full rounded-lg shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
-                      />
-                      <figcaption className="mt-3">
-                        <p className="type-card-title text-ink">{item.title}</p>
-                        <p className="type-meta mt-1 text-ink/60">
-                          {item.tag} • {item.year}
-                        </p>
-                      </figcaption>
-                    </figure>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="gallery-grid mt-8">
+              {galleryItems.map((item, index) => (
+                <li key={item.src} className="gallery-item">
+                  <figure>
+                    <div className="gallery-frame">
+                      <GalleryZoom images={galleryZoomImages} index={index}>
+                        <ResponsiveImage
+                          src={item.src}
+                          alt={item.alt}
+                          sizes="(min-width: 1024px) min(278px, calc(20vw - 28.8px)), (min-width: 768px) calc(50vw - 1.75rem), calc(50vw - 1.625rem)"
+                          className="gallery-image"
+                        />
+                      </GalleryZoom>
+                    </div>
+                    <figcaption className="mt-3 min-w-0">
+                      <p className="type-meta text-ink/70">{item.tag}</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              ))}
+            </ul>
           </section>
         )}
 
         <section
           id="fuera-del-trabajo"
-          className="scroll-mt-28 mx-auto max-w-[1500px] py-10"
+          className="scroll-mt-28 mx-auto max-w-375 py-10"
         >
           <p className="type-meta text-ink/60">Fuera del trabajo</p>
           <h2 className="type-section mt-2 text-ink">
-            Mis aficiones me han dado mis mejores proyectos.
+            Mis aficiones me han dado mis mejores proyectos
           </h2>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {outsideWork.map((item) => (
               <article
                 key={item.title}
-                className="rounded-[1.6rem] border border-ink/10 bg-[var(--paper-strong)] p-5 transition duration-200 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_10px_20px_rgba(0,0,0,0.03)]"
+                className="rounded-[1.6rem] border border-ink/10 bg-(--paper-strong) p-5 transition duration-200 hover:-translate-y-1 hover:border-accent/35 hover:shadow-[0_10px_20px_rgba(0,0,0,0.03)]"
               >
                 <h3 className="type-card-title text-ink">{item.title}</h3>
                 <p className="type-body mt-3 text-ink/75">{item.description}</p>
@@ -343,7 +329,7 @@ export default function Home() {
 
         <section
           aria-labelledby="esta-web"
-          className="mx-auto max-w-[1500px] border-t border-ink/15 py-10"
+          className="mx-auto max-w-375 border-t border-ink/15 py-10"
         >
           <h2 id="esta-web" className="type-meta text-ink/60">
             Esta web
@@ -361,14 +347,11 @@ export default function Home() {
           </a>
         </section>
 
-        <footer
-          id="contacto"
-          className="scroll-mt-28 mx-auto max-w-[1500px] pt-12"
-        >
-          <div className="rounded-[2rem] border border-ink/20 bg-[var(--paper-strong)] p-8 text-center">
+        <footer id="contacto" className="scroll-mt-28 mx-auto max-w-375 pt-12">
+          <div className="rounded-4xl border border-ink/20 bg-(--paper-strong) p-8 text-center">
             <p className="type-meta text-ink/60">Contacto</p>
             <h2 className="type-section mt-3 text-ink">
-              Hablemos de tu próximo proyecto.
+              ¿Hablamos de una oportunidad laboral?
             </h2>
             <a
               href={`mailto:${profile.email}`}
@@ -390,6 +373,11 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <BrandLogo
+              src="marcas/lml/lamela-logo-2025"
+              alt="Logotipo Lamela"
+              className="mx-auto mt-8 w-36"
+            />
             <div className="mt-6">
               <a
                 href="#top"

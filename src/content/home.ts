@@ -12,10 +12,9 @@ export type SocialLink = {
 
 export type GalleryItem = {
   title: string;
-  category: "marcas" | "carteles";
   /** Qué pieza es: cartel, entrada, logotipo… */
   tag: string;
-  year: string;
+  year?: string;
   /** Clave de la imagen en public/images/manifest.json. */
   src: string;
   alt: string;
@@ -32,6 +31,14 @@ export type ProjectPoster = {
   game: string;
 };
 
+export type ProjectEditionPoster = {
+  /** Clave de la imagen en public/images/manifest.json. */
+  src: string;
+  alt: string;
+  label: string;
+  fit: "contain" | "cover";
+};
+
 export type FeaturedProject = {
   name: string;
   meta: string;
@@ -43,6 +50,7 @@ export type FeaturedProject = {
   stats: ProjectStat[];
   stack: string[];
   posters: ProjectPoster[];
+  editionPosters: ProjectEditionPoster[];
   caseStudyHref: string;
 };
 
@@ -70,7 +78,8 @@ export type OutsideWorkItem = {
 export const profile = {
   name: "Rodrigo Lamela Sanfacundo",
   roles: ["Desarrollador front-end", "Diseñador de marcas", "A Coruña"],
-  statement: "Construyo interfaces en React con ojo de director de arte.",
+  statement:
+    "Desarrollo interfaces en React con navegación clara, contenido fácil de mantener y una dirección visual coherente.",
   email: "lameladev@gmail.com",
 };
 
@@ -114,7 +123,7 @@ export const featuredProject: FeaturedProject = {
   name: "Artabrian Weekend",
   meta: "Ferrol • 2024 – actualidad",
   summary:
-    "Fin de semana de torneos de juegos de cartas coleccionables en el Pazo do Monte, en Ferrol. Diseño y desarrollo la web y dirijo la identidad gráfica de cada edición.",
+    "Fin de semana de torneos de juegos de cartas coleccionables en el Pazo do Monte, en Ferrol. Diseño, desarrollo la web y dirijo la identidad gráfica de cada edición.",
   highlight:
     "Reescribí la web de Angular a React con una arquitectura basada en JSON: añadir un torneo nuevo no requiere tocar el código.",
   url: "artabrianweekends.com",
@@ -134,6 +143,32 @@ export const featuredProject: FeaturedProject = {
     { src: "artabrian/carteles/cartel-2026-swu", game: "Star Wars: Unlimited" },
     { src: "artabrian/carteles/cartel-2026-onepiece", game: "One Piece" },
     { src: "artabrian/carteles/cartel-2026-riftbound", game: "Riftbound" },
+  ],
+  editionPosters: [
+    {
+      src: "artabrian/carteles/cartel-2024-artabrian-weekend",
+      alt: "Cartel Artabrian Weekend 2024",
+      label: "Cartel Artabrian Weekend 2024",
+      fit: "contain",
+    },
+    {
+      src: "artabrian/carteles/cartel-2025-artabrian-weekend",
+      alt: "Cartel Artabrian Weekend 2025",
+      label: "Cartel Artabrian Weekend 2025",
+      fit: "cover",
+    },
+    {
+      src: "artabrian/carteles/cartel-2026-mtg",
+      alt: "Cartel Artabrian Weekend 2026",
+      label: "Cartel Artabrian Weekend 2026",
+      fit: "cover",
+    },
+    {
+      src: "artabrian/carteles/propuesta-2027-artabrian-weekend",
+      alt: "Cartel Artabrian Weekend 2027",
+      label: "Cartel Artabrian Weekend 2027",
+      fit: "cover",
+    },
   ],
   caseStudyHref: "/proyectos/artabrian-weekend",
 };
@@ -155,51 +190,72 @@ export const services: Service[] = [
   },
   {
     title: "Diseño de marcas",
-    text: "Identidades completas: logotipo, sistema gráfico y aplicaciones, de la papelería a las redes y la web. La mayoría de las marcas que he diseñado desde 2023 se registraron después en la OEPM y la EUIPO.",
-    tools: ["Illustrator", "Photoshop", "InDesign", "Figma"],
-  },
-  {
-    title: "Carteles",
-    text: "Carteles para conciertos, torneos y eventos: tipografía pesada, información en bloques y paletas de dos o tres tintas. En 2026, la serie de los juegos del Artabrian Weekend.",
-    tools: ["Photoshop", "Illustrator", "After Effects"],
+    text: "Diseño identidades visuales desde el concepto y el logotipo hasta un sistema gráfico que funciona en web, redes y soportes impresos.",
+    tools: ["Adobe Creative Cloud", "Figma", "Microsoft 365", "Jira", "Trello"],
   },
 ];
 
-// Solo piezas reales. El filtro por categoría aparece cuando hay más de una.
-// PENDIENTE: marcas (Geomocyl, Valoe…) cuando Rodrigo confirme que puede
-// enseñarlas.
+// Selección de las identidades de marca disponibles para la portada.
 export const galleryItems: GalleryItem[] = [
   {
-    title: "Honeytomb + Low Gain",
-    category: "carteles",
-    tag: "Cartel",
-    year: "2026",
-    src: "carteles/honeytomb-low-gain-cartel",
-    alt: "Cartel del concierto de Honeytomb y Low Gain en la sala Filomatic: un lobo grabado en azul sobre papel crema.",
+    title: "Appoison",
+    tag: "Diseño de interfaz",
+    src: "marcas/appoison-pantallazos",
+    alt: "Pantallas de Appoison, una aplicación para registrar incidencias medioambientales.",
   },
   {
-    title: "Honeytomb + Low Gain",
-    category: "carteles",
-    tag: "Entrada",
-    year: "2026",
-    src: "carteles/honeytomb-low-gain-entrada",
-    alt: "Entrada numerada del concierto de Honeytomb y Low Gain, con el lobo del cartel.",
+    title: "Despav",
+    tag: "Aplicación de identidad",
+    src: "marcas/despav",
+    alt: "Aplicaciones de la identidad visual de Despav en papelería y tarjetas.",
   },
   {
-    title: "The Bandits + Honeytomb",
-    category: "carteles",
-    tag: "Cartel",
-    year: "2025",
-    src: "carteles/honeytomb-bandits-cartel",
-    alt: "Cartel del concierto de The Bandits y Honeytomb en Malavida: una figura grabada con túnica y fusil sobre fondo azul y amarillo.",
+    title: "Distrito Picasso",
+    tag: "Variantes de logotipo",
+    src: "marcas/distrito-picasso",
+    alt: "Variantes del logotipo de Distrito Picasso en azul y blanco.",
   },
   {
-    title: "The Bandits + Honeytomb",
-    category: "carteles",
-    tag: "Entrada",
-    year: "2025",
-    src: "carteles/honeytomb-bandits-entrada",
-    alt: "Entrada vertical numerada del concierto de The Bandits y Honeytomb.",
+    title: "Honeytomb: Bandcamp",
+    tag: "Diseño web",
+    src: "marcas/pagina-bandcamp",
+    alt: "Página de Bandcamp de Honeytomb con el álbum No Mirage in Sight / Chasing Demons.",
+  },
+  {
+    title: "Coolmod",
+    tag: "Variantes de logotipo",
+    src: "marcas/coolmod-propuesta-logo",
+    alt: "Propuesta de identidad visual de Coolmod aplicada a una camiseta y en variantes de logotipo azules.",
+  },
+  {
+    title: "Kings Dragon",
+    tag: "Diseño de camiseta",
+    src: "marcas/kings-dragon-pridedragon",
+    alt: "Diseño de camiseta del equipo Kings Dragon con una versión especial Pride Dragon.",
+  },
+  {
+    title: "Ecosistema de marcas",
+    tag: "Sistema tipográfico",
+    src: "marcas/ecosistema-marcas-propuesta",
+    alt: "Comparativa tipográfica para las identidades de Gesfomex, Agroquímicos Álvarez y Naturgarden Center.",
+  },
+  {
+    title: "Diseño modular",
+    tag: "Sistema gráfico",
+    src: "marcas/diseno-modular",
+    alt: "Sistema gráfico modular aplicado a símbolos, una bolsa y una camiseta.",
+  },
+  {
+    title: "Honeytomb: vinilos",
+    tag: "Diseño de vinilos",
+    src: "marcas/rediseno-vinilos",
+    alt: "Diseño de vinilos para los álbumes de Honeytomb.",
+  },
+  {
+    title: "Valoe",
+    tag: "Identidad visual",
+    src: "marcas/valoe-logo",
+    alt: "Propuesta de identidad visual de Valoe Gestoría Administrativa.",
   },
 ];
 
@@ -212,7 +268,7 @@ export const experience: ExperienceItem[] = [
     place: "Ferrol",
     area: "Desarrollo y diseño",
     summary:
-      "Diseño y desarrollo la web del Artabrian Weekend en React y dirijo la identidad gráfica, los carteles y la comunicación de cada edición.",
+      "Diseño, desarrollo la web del Artabrian Weekend en React y dirijo la identidad gráfica, los carteles y la comunicación de cada edición.",
   },
   {
     period: "2023 – actualidad",
@@ -220,7 +276,7 @@ export const experience: ExperienceItem[] = [
     organization: "Encargos independientes",
     area: "Diseño",
     summary:
-      "Marcas, logotipos, newsletters y cartelería. La mayoría de las marcas se registraron después en la OEPM y la EUIPO.",
+      "Diseño identidades de marca y sus aplicaciones: logotipos, newsletters y cartelería.",
   },
   {
     period: "2023 – 2024",
@@ -229,7 +285,7 @@ export const experience: ExperienceItem[] = [
     place: "A Coruña",
     area: "Desarrollo",
     summary:
-      "Webs con WordPress y Elementor Pro y newsletters maquetadas en HTML, dentro de las prácticas del ciclo de DAW.",
+      "Webs con WordPress, Elementor Pro y newsletters maquetadas en HTML, dentro de las prácticas del ciclo de DAW.",
   },
   {
     period: "2021 – 2022",
@@ -254,7 +310,7 @@ export const experience: ExperienceItem[] = [
     organization: "Lameton Branding & Posters",
     area: "Diseño",
     summary:
-      "Diseño en Figma de una aplicación forestal que estuvo tres años en uso y material para licitaciones forestales, varias de ellas adjudicadas.",
+      "Durante dos años trabajé en proyectos del sector forestal. Diseñé en Figma la interfaz de una aplicación que estuvo en uso durante tres años y preparé material gráfico para licitaciones; varias fueron adjudicadas.",
   },
   {
     period: "2017 – 2018",
