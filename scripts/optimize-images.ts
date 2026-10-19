@@ -37,6 +37,7 @@ const INPUT_EXTENSIONS = [
   ".tif",
   ".tiff",
 ];
+const EXCLUDED_INPUT_FILES = new Set(["perfil/rodrigo-lamela-foto.jpg"]);
 const POSTERS_DIR = "carteles";
 const BLUR_WIDTH = 20;
 
@@ -144,11 +145,20 @@ async function main() {
   }
 
   const files = await listFiles(INPUT_DIR);
-  const images = files.filter((file) =>
-    INPUT_EXTENSIONS.includes(path.extname(file).toLowerCase()),
-  );
+  const images = files.filter((file) => {
+    const relative = path.relative(INPUT_DIR, file).split(path.sep).join("/");
+    return (
+      INPUT_EXTENSIONS.includes(path.extname(file).toLowerCase()) &&
+      !EXCLUDED_INPUT_FILES.has(relative)
+    );
+  });
 
   for (const file of files) {
+    const relative = path.relative(INPUT_DIR, file).split(path.sep).join("/");
+    if (EXCLUDED_INPUT_FILES.has(relative)) {
+      console.log(`Se excluye de la web: ${relative}`);
+      continue;
+    }
     if (!images.includes(file))
       console.warn(`Se ignora (formato no admitido): ${file}`);
   }

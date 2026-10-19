@@ -48,31 +48,6 @@
       }
     ]
   },
-  "perfil/rodrigo-lamela-foto": {
-    "width": 496,
-    "height": 709,
-    "blurDataURL": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAABQBQCdASoUABwAPslSnkunpKKhsAwA8BkJQBOgMYdb7Ysx6DfbLaNeWLBrdaHnJvbAYgAA/vNxnU8qtXvMc0vL6o/GPGG+8Tq6WES3LTIhr1lAVYxmjVtMFJHhrx52sllaLTrlQ1X1tXYyI92VEC23i2mviElUH5b7UeaBPQ+06eIZrUUkII7xA8wXqQj+830H3qr71aO3NoZLQwfUgn2KFWovOFzLwErYA8qAAioATQAA",
-    "avif": [
-      {
-        "width": 320,
-        "src": "/images/perfil/rodrigo-lamela-foto-320.avif"
-      },
-      {
-        "width": 496,
-        "src": "/images/perfil/rodrigo-lamela-foto-496.avif"
-      }
-    ],
-    "webp": [
-      {
-        "width": 320,
-        "src": "/images/perfil/rodrigo-lamela-foto-320.webp"
-      },
-      {
-        "width": 496,
-        "src": "/images/perfil/rodrigo-lamela-foto-496.webp"
-      }
-    ]
-  },
   "marcas/appoison-pantallazos": {
     "width": 1920,
     "height": 1080,

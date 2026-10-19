@@ -8,6 +8,7 @@
     "start": "sirv out",
     "lint": "eslint",
     "images": "tsx scripts/optimize-images.ts",
+    "opengraph": "tsx scripts/generate-opengraph-image.ts",
     "test": "vitest",
     "typecheck": "next typegen && tsc --noEmit"
   },

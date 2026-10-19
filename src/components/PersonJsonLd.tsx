@@ -13,7 +13,6 @@ export function PersonJsonLd() {
     jobTitle: "Desarrollador front-end",
     url: SITE_URL,
     email: `mailto:${profile.email}`,
-    image: `${SITE_URL}/images/perfil/rodrigo-lamela-foto-496.webp`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "A Coruña",
